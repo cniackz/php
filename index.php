@@ -84,34 +84,34 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     // false for not mobile device
     document.addEventListener('DOMContentLoaded', function(event) {
         //the event occurred
-	    document.getElementById("comentario_p").style.fontSize = '30px';
-	    if (document.getElementById("clave_p") !== null) {
-		    document.getElementById("clave_p").style.fontSize = '30px';
-		    document.getElementById("inputTextClave").style.fontSize = '30px';
-		    document.getElementById("inputTextClave").style.height = '75px';
-	    }
-	    document.getElementById("comentarios_p").style.fontSize = '30px';
-	    document.getElementById("inputSubmit").style.fontSize = '30px';
-	    document.getElementById("inputSubmit").style.height = '75px';
-	    document.getElementById("textareaComentario").style.fontSize = '30px';
-	    document.getElementById("textareaComentario").style.height = '75px';
-	    document.getElementById("boton_de_refrescar").style.fontSize = '30px';
-	    document.getElementById("boton_de_refrescar").style.height = '75px';
-	    var i;
-	    for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
-	    	document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
-	    }
-	    for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
-		    document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
-		    document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
-		    document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'white';
-	    }
-	    for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
-		    document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
-	    }
-	    for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
-		    document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
-	    }
+        document.getElementById("comentario_p").style.fontSize = '30px';
+        if (document.getElementById("clave_p") !== null) {
+            document.getElementById("clave_p").style.fontSize = '30px';
+            document.getElementById("inputTextClave").style.fontSize = '30px';
+            document.getElementById("inputTextClave").style.height = '75px';
+        }
+        document.getElementById("comentarios_p").style.fontSize = '30px';
+        document.getElementById("inputSubmit").style.fontSize = '30px';
+        document.getElementById("inputSubmit").style.height = '75px';
+        document.getElementById("textareaComentario").style.fontSize = '30px';
+        document.getElementById("textareaComentario").style.height = '75px';
+        document.getElementById("boton_de_refrescar").style.fontSize = '30px';
+        document.getElementById("boton_de_refrescar").style.height = '75px';
+        var i;
+        for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
+            document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
+        }
+        for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
+            document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
+            document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
+            document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'white';
+        }
+        for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
+            document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
+        }
+        for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
+            document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
+        }
     })
 }
 </script>
@@ -157,34 +157,25 @@ $sql = "select @rownum:=@rownum+1 'numero',coments.comentario,coments.nombre,com
 $result = $connection->query($sql);
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
-	$comentario = '<p class=';
-	if ($row['nombre'] == 'cesar'){
-		$comentario = '<p class="comentarios_de_cesar">';
-		$comentario = $comentario . 'id: ' . $row['id'] . '<BR>';
-	        $comentario = $comentario . 'fecha: ' . $row['fecha'];
-		$comentario = $comentario . '<BR> nombre: ' . $row['nombre'] . '<BR>';
-		$comentario = $comentario . 'comentario: ' . $row['comentario'] . '</p>';
-		echo $comentario;
-	        echo '<BR>';
-                echo '<hr>';
+    $comentario = '<p class="comentarios_de_';
+    if ($row['nombre'] == 'cesar'){
+        $comentario = $comentario . 'cesar">';
     } elseif($row['nombre'] == 'juan'){
-	    echo '<p id="comentario_de_juan" class="comentarios_de_juan">' . $row['id'] . ': ' .  $row['fecha'] . ': '  . $row['nombre'] . ': '  . '</p>';
-	    echo '<p id="comentario_de_juan" class="comentarios_de_juan">' . $row['comentario'] . '</p>';
-                echo '<BR>';
-                echo '<hr>';
+        $comentario = $comentario . 'juan">';
     } elseif($row['nombre'] == 'gogo') {
-        echo '<p id="comentario_de_gogo" class="comentarios_de_gogo">' . $row['id'] . ': ' .  $row['fecha'] . ': '  . $row['nombre'] . ': '  . $row['comentario']  . '</p>';
-        echo '<BR>';
-                echo '<hr>';
+        $comentario = $comentario . 'gogo">';
     } elseif($row['nombre'] == 'liz'){
-        echo '<p id="comentario_de_liz" class="comentarios_de_liz">' . $row['id'] . ': ' .  $row['fecha'] . ': '  . $row['nombre'] . ': '  . $row['comentario']  . '</p>';
-                echo '<BR>';
-                echo '<hr>';
+        $comentario = $comentario . 'liz">';
     } else {
-        echo $row['fecha'] . ': '  . $row['nombre'] . ': '  . $row['comentario'];
-        echo '<BR>';
-        echo '<hr>';
+        $comentario = $comentario . 'anonimo">';
     }
+    $comentario = $comentario . 'id: ' . $row['id'] . '<BR>';
+    $comentario = $comentario . 'fecha: ' . $row['fecha'];
+    $comentario = $comentario . '<BR> nombre: ' . $row['nombre'] . '<BR>';
+    $comentario = $comentario . 'comentario: ' . $row['comentario'] . '</p>';
+    echo $comentario;
+    echo '<BR>';
+    echo '<hr>';
 }
 
 mysqli_close($connection);
