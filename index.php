@@ -225,38 +225,24 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             }
 
             // Para Liz
-            var label_de_liz = document.getElementsByClassName("label_de_liz");
-            var liz_comments = document.getElementsByClassName("comentarios_de_liz");
-            loop_por_persona(label_de_liz, liz_comments, 'Violet');
+            var label = document.getElementsByClassName("label_de_liz");
+            var comment = document.getElementsByClassName("comentarios_de_liz");
+            loop_por_persona(labe, comment, 'Violet');
 
             // Para mi
-            var label_de_liz = document.getElementsByClassName("label_de_cesar");
-            var liz_comments = document.getElementsByClassName("comentarios_de_cesar");
-            loop_por_persona(label_de_liz, liz_comments, 'Gray');
+            var label = document.getElementsByClassName("label_de_cesar");
+            var comment = document.getElementsByClassName("comentarios_de_cesar");
+            loop_por_persona(label, comment, 'Gray');
 
             // Para mi Papa
-            for (i = 0; i < document.getElementsByClassName("label_de_juan").length; i++) {
-                document.getElementsByClassName("label_de_juan")[i].style.fontSize = '30px';
-                document.getElementsByClassName("label_de_juan")[i].style.backgroundColor = 'DodgerBlue';
-                document.getElementsByClassName("label_de_juan")[i].style.color = 'white';
-            }
-            for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
-                document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
-                document.getElementsByClassName("comentarios_de_juan")[i].style.backgroundColor = 'DodgerBlue';
-                document.getElementsByClassName("comentarios_de_juan")[i].style.color = 'black';
-            }
+            var label = document.getElementsByClassName("label_de_juan");
+            var comment = document.getElementsByClassName("comentarios_de_juan");
+            loop_por_persona(label, comment, 'DodgerBlue');
 
             // Para la Gogo
-            for (i = 0; i < document.getElementsByClassName("label_de_gogo").length; i++) {
-                document.getElementsByClassName("label_de_gogo")[i].style.fontSize = '30px';
-                document.getElementsByClassName("label_de_gogo")[i].style.backgroundColor = 'SlateBlue';
-                document.getElementsByClassName("label_de_gogo")[i].style.color = 'white';
-            }
-            for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
-                document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
-                document.getElementsByClassName("comentarios_de_gogo")[i].style.backgroundColor = 'SlateBlue';
-                document.getElementsByClassName("comentarios_de_gogo")[i].style.color = 'black';
-            }
+            var label = document.getElementsByClassName("label_de_gogo");
+            var comment = document.getElementsByClassName("comentarios_de_gogo");
+            loop_por_persona(label, comment, 'SlateBlue');
         }
     )
 }
