@@ -230,16 +230,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             loop_por_persona(label_de_liz, liz_comments, 'Violet');
 
             // Para mi
-            for (i = 0; i < document.getElementsByClassName("label_de_cesar").length; i++) {
-                document.getElementsByClassName("label_de_cesar")[i].style.fontSize = '30px';
-                document.getElementsByClassName("label_de_cesar")[i].style.backgroundColor = 'Gray';
-                document.getElementsByClassName("label_de_cesar")[i].style.color = 'white';
-            }
-            for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
-                document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
-                document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
-                document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'black';
-            }
+            var label_de_liz = document.getElementsByClassName("label_de_cesar");
+            var liz_comments = document.getElementsByClassName("comentarios_de_cesar");
+            loop_por_persona(label_de_liz, liz_comments, 'Gray');
 
             // Para mi Papa
             for (i = 0; i < document.getElementsByClassName("label_de_juan").length; i++) {
