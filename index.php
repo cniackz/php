@@ -1,3 +1,10 @@
+<!--
+################################################################################
+#
+#                                   CSS
+#
+################################################################################
+-->
 <style>
 .input-text-clave
 {
@@ -73,8 +80,49 @@ font-size:60px;
 
 
 
-<script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
 // To reload with the button actualizar
 function refrescar_comentarios() {
     location.reload();
@@ -87,53 +135,101 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
     // Es PC
     // Espera a que cargue la pagina para modificarla
-    document.addEventListener('DOMContentLoaded', function(event) {
-    //the event occurred, ya se cargo la pagina
+    document.addEventListener(
+        'DOMContentLoaded', 
+        function(event) {
+            
+            //the event occurred, ya se cargo la pagina
+            // Ahora si modifica el estilo:
+            document.getElementById("comentario_p").style.fontSize = '30px';
 
-    // Ahora si modifica el estilo:
-    document.getElementById("comentario_p").style.fontSize = '30px';
+            // Solo cambia el Style del elemento clave_p sino es Nulo
+            // Recuerda que el elemento es dinamico y puede desaparecer
+            // si se proporciona la clave correcta a las cookies
+            if (document.getElementById("clave_p") !== null) {
+                document.getElementById("clave_p").style.fontSize = '30px';
+                document.getElementById("inputTextClave").style.fontSize = '30px';
+                document.getElementById("inputTextClave").style.height = '75px';
+            }
 
-    // Solo cambia el Style del elemento clave_p sino es Nulo
-    // Recuerda que el elemento es dinamico y puede desaparecer
-    // si se proporciona la clave correcta a las cookies
-    if (document.getElementById("clave_p") !== null) {
-        document.getElementById("clave_p").style.fontSize = '30px';
-        document.getElementById("inputTextClave").style.fontSize = '30px';
-        document.getElementById("inputTextClave").style.height = '75px';
-    }
-
-    // El resto de cosas que queremos modificar cuando es una pc
-    document.getElementById("comentarios_p").style.fontSize = '30px';
-    document.getElementById("inputSubmit").style.fontSize = '30px';
-    document.getElementById("inputSubmit").style.height = '75px';
-    document.getElementById("textareaComentario").style.fontSize = '30px';
-    document.getElementById("textareaComentario").style.height = '75px';
-    document.getElementById("boton_de_refrescar").style.fontSize = '30px';
-    document.getElementById("boton_de_refrescar").style.height = '75px';
-    var i;
-    for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
-        document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
-        document.getElementsByClassName("comentarios_de_liz")[i].style.backgroundColor = 'Violet';
-        document.getElementsByClassName("comentarios_de_liz")[i].style.color = 'white';
-    }
-    for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
-        document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
-        document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
-        document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'white';
-    }
-    for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
-        document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
-        document.getElementsByClassName("comentarios_de_juan")[i].style.backgroundColor = 'DodgerBlue';
-        document.getElementsByClassName("comentarios_de_juan")[i].style.color = 'white';
-    }
-    for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
-        document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
-        document.getElementsByClassName("comentarios_de_gogo")[i].style.backgroundColor = 'SlateBlue';
-        document.getElementsByClassName("comentarios_de_gogo")[i].style.color = 'white';
-    }
-    })
+            // El resto de cosas que queremos modificar cuando es una pc
+            document.getElementById("comentarios_p").style.fontSize = '30px';
+            document.getElementById("inputSubmit").style.fontSize = '30px';
+            document.getElementById("inputSubmit").style.height = '75px';
+            document.getElementById("textareaComentario").style.fontSize = '30px';
+            document.getElementById("textareaComentario").style.height = '75px';
+            document.getElementById("boton_de_refrescar").style.fontSize = '30px';
+            document.getElementById("boton_de_refrescar").style.height = '75px';
+            var i;
+            for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
+                document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
+                document.getElementsByClassName("comentarios_de_liz")[i].style.backgroundColor = 'Violet';
+                document.getElementsByClassName("comentarios_de_liz")[i].style.color = 'white';
+            }
+            for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
+                document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
+                document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
+                document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'white';
+            }
+            for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
+                document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
+                document.getElementsByClassName("comentarios_de_juan")[i].style.backgroundColor = 'DodgerBlue';
+                document.getElementsByClassName("comentarios_de_juan")[i].style.color = 'white';
+            }
+            for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
+                document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
+                document.getElementsByClassName("comentarios_de_gogo")[i].style.backgroundColor = 'SlateBlue';
+                document.getElementsByClassName("comentarios_de_gogo")[i].style.color = 'white';
+            }
+        }
+    )
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
