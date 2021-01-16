@@ -326,7 +326,7 @@ $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
-    $comentario = '<p class="label_de_' . $row['nombre'];
+    $comentario = '<p class="label_de_' . $row['nombre'] . '">';
     $comentario = $comentario . 'id: ' . $row['id'] . '<BR>';
     $comentario = $comentario . 'fecha: ' . $row['fecha'];
     $comentario = $comentario . '<BR> nombre: ' . $row['nombre'] . '<BR>';
