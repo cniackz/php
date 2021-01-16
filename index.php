@@ -169,7 +169,13 @@ font-size:60px;
 
 
 
-
+<!--
+################################################################################
+#
+#                                   JavaScript
+#
+################################################################################
+-->
 <script>
 // To reload with the button actualizar
 function refrescar_comentarios() {
@@ -295,7 +301,13 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
 
 
-
+<!--
+################################################################################
+#
+#                                   HTML
+#
+################################################################################
+-->
 <!--Esta forma es donde se pone la clave y el comentario -->
 <form method="post" action="insert.php">
 <?php
@@ -319,10 +331,58 @@ echo '<input type="text" name="clave" class="input-text-clave" id="inputTextClav
 
 <button type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">Actualizar</button>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+################################################################################
+#
+#                                   PHP
+#
+################################################################################
+-->
 <?php
-
-
-
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 if (!$connection) {
  echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -331,7 +391,7 @@ if (!$connection) {
  exit;
 }
 
-$sql = "select @rownum:=@rownum+1 'numero',coments.comentario,coments.nombre,coments.fecha,coments.id from comentarios as coments, (select @rownum:=0)r order by numero desc";
+$sql = "SELECT @rownum:=@rownum+1 'numero',coments.comentario,coments.nombre,coments.fecha,coments.id from comentarios as coments, (SELECT @rownum:=0)r ORDER BY numero DESC";
 $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
@@ -348,6 +408,5 @@ while( $row = $result->fetch_assoc()){
     echo '<BR>';
     echo '<hr>';
 }
-
 mysqli_close($connection);
 ?>
