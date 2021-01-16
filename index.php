@@ -41,7 +41,7 @@ height:150px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-#comentario_de_cesar
+.comentario_de_cesars
 {
 background-color:Gray; 
 color:white;
@@ -103,6 +103,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 	    }
 	    for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
 		    document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
+		    document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
+		    document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'white';
 	    }
 	    for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
 		    document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
@@ -155,8 +157,9 @@ $sql = "select @rownum:=@rownum+1 'numero',coments.comentario,coments.nombre,com
 $result = $connection->query($sql);
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
+	$comentario = '<p class=';
 	if ($row['nombre'] == 'cesar'){
-		$comentario = '<p id="comentario_de_cesar" class="comentarios_de_cesar">';
+		$comentario = '<p class="comentarios_de_cesar">';
 		$comentario = $comentario . 'id: ' . $row['id'] . '<BR>';
 	        $comentario = $comentario . 'fecha: ' . $row['fecha'];
 		$comentario = $comentario . '<BR> nombre: ' . $row['nombre'] . '<BR>';
