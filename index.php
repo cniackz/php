@@ -391,7 +391,22 @@ if (!$connection) {
  exit;
 }
 
-$sql = "SELECT @rownum:=@rownum+1 'numero',coments.comentario,coments.nombre,coments.fecha,coments.id from comentarios as coments, (SELECT @rownum:=0)r ORDER BY numero DESC";
+// Query para seleccionar los comentarios de la base de datos MySQL
+$sql = "
+    SELECT 
+        @rownum:=@rownum+1 'numero',
+        coments.comentario,
+        coments.nombre,
+        coments.fecha,
+        coments.id
+    FROM
+        comentarios AS coments,
+        (SELECT @rownum:=0)r 
+    ORDER BY
+        numero
+    DESC
+";
+
 $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
