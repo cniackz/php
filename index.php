@@ -227,7 +227,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             // Para Liz
             var label = document.getElementsByClassName("label_de_liz");
             var comment = document.getElementsByClassName("comentarios_de_liz");
-            loop_por_persona(labe, comment, 'Violet');
+            loop_por_persona(label, comment, 'Violet');
 
             // Para mi
             var label = document.getElementsByClassName("label_de_cesar");
