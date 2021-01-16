@@ -48,21 +48,21 @@ color:white;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-#comentario_de_juan
+.comentarios_de_juan
 {
 background-color:DodgerBlue; 
 color:white;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-#comentario_de_gogo
+.comentarios_de_gogo
 {
 background-color:SlateBlue; 
 color:white;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-#comentario_de_liz
+.comentarios_de_liz
 {
 background-color:Violet;
 color:white;
@@ -100,6 +100,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         var i;
         for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
             document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
+            document.getElementsByClassName("comentarios_de_liz")[i].style.backgroundColor = 'Violet';
+            document.getElementsByClassName("comentarios_de_liz")[i].style.color = 'white';
         }
         for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
             document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
@@ -108,9 +110,13 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         }
         for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
             document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
+            document.getElementsByClassName("comentarios_de_juan")[i].style.backgroundColor = 'DodgerBlue';
+            document.getElementsByClassName("comentarios_de_juan")[i].style.color = 'white';
         }
         for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
             document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
+            document.getElementsByClassName("comentarios_de_gogo")[i].style.backgroundColor = 'SlateBlue';
+            document.getElementsByClassName("comentarios_de_gogo")[i].style.color = 'white';
         }
     })
 }
@@ -155,6 +161,7 @@ if (!$connection) {
 
 $sql = "select @rownum:=@rownum+1 'numero',coments.comentario,coments.nombre,coments.fecha,coments.id from comentarios as coments, (select @rownum:=0)r order by numero desc";
 $result = $connection->query($sql);
+
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="comentarios_de_';
