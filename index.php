@@ -212,15 +212,14 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
             // Para Liz
             var label_de_liz = document.getElementsByClassName("label_de_liz");
+            var liz_comments = document.getElementsByClassName("comentarios_de_liz");
             for (i = 0; i < label_de_liz.length; i++) {
                 label_de_liz[i].style.fontSize = '30px';
                 label_de_liz[i].style.backgroundColor = 'Violet';
                 label_de_liz[i].style.color = 'white';
-            }
-            for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
-                document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
-                document.getElementsByClassName("comentarios_de_liz")[i].style.backgroundColor = 'Violet';
-                document.getElementsByClassName("comentarios_de_liz")[i].style.color = 'black';
+                liz_comments[i].style.fontSize = '30px';
+                liz_comments[i].style.backgroundColor = 'Violet';
+                liz_comments[i].style.color = 'black';
             }
 
             // Para mi
