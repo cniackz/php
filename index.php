@@ -211,10 +211,11 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             var i;
 
             // Para Liz
-            for (i = 0; i < document.getElementsByClassName("label_de_liz").length; i++) {
-                document.getElementsByClassName("label_de_liz")[i].style.fontSize = '30px';
-                document.getElementsByClassName("label_de_liz")[i].style.backgroundColor = 'Violet';
-                document.getElementsByClassName("label_de_liz")[i].style.color = 'white';
+            var label_de_liz = document.getElementsByClassName("label_de_liz");
+            for (i = 0; i < label_de_liz.length; i++) {
+                label_de_liz[i].style.fontSize = '30px';
+                label_de_liz[i].style.backgroundColor = 'Violet';
+                label_de_liz[i].style.color = 'white';
             }
             for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
                 document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
