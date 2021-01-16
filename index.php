@@ -62,7 +62,7 @@ font-size:60px;
 .comentarios_de_cesar
 {
 background-color:Gray; 
-color:white;
+color:black;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
@@ -99,7 +99,7 @@ font-size:60px;
 .comentarios_de_gogo
 {
 background-color:SlateBlue; 
-color:white;
+color:black;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
@@ -118,7 +118,7 @@ font-size:60px;
 .comentarios_de_liz
 {
 background-color:Violet;
-color:white;
+color:black;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
