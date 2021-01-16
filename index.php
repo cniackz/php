@@ -224,25 +224,45 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
                 }
             }
 
+            // Creando un diccionario para el usuario y su color
+            var dict = {
+                'liz': 'Violet',
+                'cesar': 'Gray',
+                'juan': 'DodgerBlue',
+                'gogo': 'SlateBlue'
+            };
+
+            // Ahora vamos a loopear en el diccionario para setear los colors
+            for(var key in dict){
+                var color = dict[key];
+                var label = "label_de_";
+                var label = label.concat(key);
+                var comment = "comentarios_de_";
+                var comment = comment.concat(key);
+                var label = document.getElementsByClassName(label);
+                var comment = document.getElementsByClassName(comment);
+                loop_por_persona(label, comment, color);
+            }
+
             // Para Liz
-            var label = document.getElementsByClassName("label_de_liz");
-            var comment = document.getElementsByClassName("comentarios_de_liz");
-            loop_por_persona(label, comment, 'Violet');
+            //var label = document.getElementsByClassName("label_de_liz");
+            //var comment = document.getElementsByClassName("comentarios_de_liz");
+            //loop_por_persona(label, comment, 'Violet');
 
             // Para mi
-            var label = document.getElementsByClassName("label_de_cesar");
-            var comment = document.getElementsByClassName("comentarios_de_cesar");
-            loop_por_persona(label, comment, 'Gray');
+            //var label = document.getElementsByClassName("label_de_cesar");
+            //var comment = document.getElementsByClassName("comentarios_de_cesar");
+            //loop_por_persona(label, comment, 'Gray');
 
             // Para mi Papa
-            var label = document.getElementsByClassName("label_de_juan");
-            var comment = document.getElementsByClassName("comentarios_de_juan");
-            loop_por_persona(label, comment, 'DodgerBlue');
+            //var label = document.getElementsByClassName("label_de_juan");
+            //var comment = document.getElementsByClassName("comentarios_de_juan");
+            //loop_por_persona(label, comment, 'DodgerBlue');
 
             // Para la Gogo
-            var label = document.getElementsByClassName("label_de_gogo");
-            var comment = document.getElementsByClassName("comentarios_de_gogo");
-            loop_por_persona(label, comment, 'SlateBlue');
+            //var label = document.getElementsByClassName("label_de_gogo");
+            //var comment = document.getElementsByClassName("comentarios_de_gogo");
+            //loop_por_persona(label, comment, 'SlateBlue');
         }
     )
 }
