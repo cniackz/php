@@ -48,6 +48,17 @@ height:150px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
+
+
+
+
+.label_de_cesar
+{
+background-color:Gray; 
+color:white;
+font:Verdana, Geneva, sans-serif;
+font-size:60px;
+}
 .comentarios_de_cesar
 {
 background-color:Gray; 
@@ -55,9 +66,32 @@ color:white;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
+
+
+
+
+
+.label_de_juan
+{
+background-color:DodgerBlue; 
+color:white;
+font:Verdana, Geneva, sans-serif;
+font-size:60px;
+}
 .comentarios_de_juan
 {
 background-color:DodgerBlue; 
+color:black;
+font:Verdana, Geneva, sans-serif;
+font-size:60px;
+}
+
+
+
+
+.label_de_gogo
+{
+background-color:SlateBlue; 
 color:white;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
@@ -69,6 +103,18 @@ color:white;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
+
+
+
+
+
+.label_de_liz
+{
+background-color:Violet;
+color:white;
+font:Verdana, Geneva, sans-serif;
+font-size:60px;
+}
 .comentarios_de_liz
 {
 background-color:Violet;
@@ -76,6 +122,8 @@ color:white;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
+
+
 </style>
 
 
@@ -171,10 +219,15 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
                 document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
                 document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'white';
             }
-            for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
+            for (i = 0; i < document.getElementsByClassName("label_de_juan").length; i++) {
                 document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
                 document.getElementsByClassName("comentarios_de_juan")[i].style.backgroundColor = 'DodgerBlue';
                 document.getElementsByClassName("comentarios_de_juan")[i].style.color = 'white';
+            }
+            for (i = 0; i < document.getElementsByClassName("comentarios_de_juan").length; i++) {
+                document.getElementsByClassName("comentarios_de_juan")[i].style.fontSize = '30px';
+                document.getElementsByClassName("comentarios_de_juan")[i].style.backgroundColor = 'DodgerBlue';
+                document.getElementsByClassName("comentarios_de_juan")[i].style.color = 'black';
             }
             for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
                 document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
@@ -273,22 +326,12 @@ $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
-    $comentario = '<p class="comentarios_de_';
-    if ($row['nombre'] == 'cesar'){
-        $comentario = $comentario . 'cesar">';
-    } elseif($row['nombre'] == 'juan'){
-        $comentario = $comentario . 'juan">';
-    } elseif($row['nombre'] == 'gogo') {
-        $comentario = $comentario . 'gogo">';
-    } elseif($row['nombre'] == 'liz'){
-        $comentario = $comentario . 'liz">';
-    } else {
-        $comentario = $comentario . 'anonimo">';
-    }
+    $comentario = '<p class="label_de_' . $row['nombre'];
     $comentario = $comentario . 'id: ' . $row['id'] . '<BR>';
     $comentario = $comentario . 'fecha: ' . $row['fecha'];
     $comentario = $comentario . '<BR> nombre: ' . $row['nombre'] . '<BR>';
-    $comentario = $comentario . 'comentario:<BR><p class="comentarios">'; 
+    $comentario = $comentario . 'comentario:<BR>';
+    $comentario = $comentario . '<p class="comentarios_' . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</p></p>';
     echo $comentario;
     echo '<BR>';
