@@ -219,7 +219,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             for (i = 0; i < document.getElementsByClassName("comentarios_de_liz").length; i++) {
                 document.getElementsByClassName("comentarios_de_liz")[i].style.fontSize = '30px';
                 document.getElementsByClassName("comentarios_de_liz")[i].style.backgroundColor = 'Violet';
-                document.getElementsByClassName("comentarios_de_liz")[i].style.color = 'white';
+                document.getElementsByClassName("comentarios_de_liz")[i].style.color = 'black';
             }
 
             // Para mi
@@ -231,7 +231,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             for (i = 0; i < document.getElementsByClassName("comentarios_de_cesar").length; i++) {
                 document.getElementsByClassName("comentarios_de_cesar")[i].style.fontSize = '30px';
                 document.getElementsByClassName("comentarios_de_cesar")[i].style.backgroundColor = 'Gray';
-                document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'white';
+                document.getElementsByClassName("comentarios_de_cesar")[i].style.color = 'black';
             }
 
             // Para mi Papa
@@ -255,7 +255,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             for (i = 0; i < document.getElementsByClassName("comentarios_de_gogo").length; i++) {
                 document.getElementsByClassName("comentarios_de_gogo")[i].style.fontSize = '30px';
                 document.getElementsByClassName("comentarios_de_gogo")[i].style.backgroundColor = 'SlateBlue';
-                document.getElementsByClassName("comentarios_de_gogo")[i].style.color = 'white';
+                document.getElementsByClassName("comentarios_de_gogo")[i].style.color = 'black';
             }
         }
     )
