@@ -309,27 +309,34 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 ################################################################################
 -->
 <!--Esta forma es donde se pone la clave y el comentario -->
-<form method="post" action="insert.php">
+<FORM method="post" action="insert.php">
+
 <?php
-// Este codigo es para mostrar la clave solo si se necesita
-if(!isset($_COOKIE['usuario'])) {
-echo '<p id="clave_p">Clave:</p>';    
-echo '<input type="text" name="clave" class="input-text-clave" id="inputTextClave" >'; 
-}
+
+    // Este codigo es para mostrar la clave solo si se necesita
+    if(!isset($_COOKIE['usuario'])) {
+        echo '<P id="clave_p">Clave:</P>';    
+        echo '<INPUT type="text" name="clave" class="input-text-clave" id="inputTextClave" >'; 
+    }
+
 ?>
-    <p id="comentario_p">Comentario:</p>
-    <textarea type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></textarea>
-    <br>
-    <br>
-    <input type="submit" value="Enviar" class="input-submit" id="inputSubmit">
-</form>
 
-
-
-<hr>
-<p id="comentarios_p">Comentarios:</p>
-
-<button type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">Actualizar</button>
+    <P id="comentario_p">
+        Comentario:
+    </P>
+    <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario">
+    </TEXTAREA>
+    <BR>
+    <BR>
+    <INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">
+</FORM>
+<HR>
+<P id="comentarios_p">
+    Comentarios:
+</P>
+<BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
+    Actualizar
+</BUTTON>
 
 
 
