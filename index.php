@@ -244,25 +244,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
                 loop_por_persona(label, comment, color);
             }
 
-            // Para Liz
-            //var label = document.getElementsByClassName("label_de_liz");
-            //var comment = document.getElementsByClassName("comentarios_de_liz");
-            //loop_por_persona(label, comment, 'Violet');
-
-            // Para mi
-            //var label = document.getElementsByClassName("label_de_cesar");
-            //var comment = document.getElementsByClassName("comentarios_de_cesar");
-            //loop_por_persona(label, comment, 'Gray');
-
-            // Para mi Papa
-            //var label = document.getElementsByClassName("label_de_juan");
-            //var comment = document.getElementsByClassName("comentarios_de_juan");
-            //loop_por_persona(label, comment, 'DodgerBlue');
-
-            // Para la Gogo
-            //var label = document.getElementsByClassName("label_de_gogo");
-            //var comment = document.getElementsByClassName("comentarios_de_gogo");
-            //loop_por_persona(label, comment, 'SlateBlue');
         }
     )
 }
