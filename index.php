@@ -48,7 +48,7 @@ height:150px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-.comentarios_de_cesars
+.comentarios_de_cesar
 {
 background-color:Gray; 
 color:white;
