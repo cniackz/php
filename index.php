@@ -210,17 +210,24 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             document.getElementById("boton_de_refrescar").style.height = '75px';
             var i;
 
+            // Function para eficientar el uso de los cambios de estilo en el
+            // for de cada persona, asi solo tengo un for en una funcion en
+            // lugar de varios fors por persona
+            function loop_por_persona(label, comment, color){
+                for(i = 0; i < label.length; i++){
+                    label[i].style.fontSize = '30px';
+                    label[i].style.backgroundColor = color;
+                    label[i].style.color = 'white';
+                    comment[i].style.fontSize = '30px';
+                    comment[i].style.backgroundColor = color;
+                    comment[i].style.color = 'black';
+                }
+            }
+
             // Para Liz
             var label_de_liz = document.getElementsByClassName("label_de_liz");
             var liz_comments = document.getElementsByClassName("comentarios_de_liz");
-            for (i = 0; i < label_de_liz.length; i++) {
-                label_de_liz[i].style.fontSize = '30px';
-                label_de_liz[i].style.backgroundColor = 'Violet';
-                label_de_liz[i].style.color = 'white';
-                liz_comments[i].style.fontSize = '30px';
-                liz_comments[i].style.backgroundColor = 'Violet';
-                liz_comments[i].style.color = 'black';
-            }
+            loop_por_persona(label_de_liz, liz_comments, 'Violet');
 
             // Para mi
             for (i = 0; i < document.getElementsByClassName("label_de_cesar").length; i++) {
