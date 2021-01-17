@@ -227,6 +227,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
                     label[i].style.fontSize = '30px';
                     label[i].style.backgroundColor = color;
                     label[i].style.color = 'white';
+                    label[i].style.marginBottom = '0px';
+                    label[i].style.marginTop = '0px';
                     comment[i].style.fontSize = '30px';
                     comment[i].style.fontFamily = 'monospace';
                     comment[i].style.backgroundColor = color;
