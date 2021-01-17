@@ -202,7 +202,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             $('textarea').emoji(
                 {
                     place: 'after',
-                    button:'&#x1F643;'
+                    button:'&#x1F643;',
+                    fontSize:'60px'
                 }
             );
 
