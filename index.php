@@ -328,7 +328,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     </P>
     <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario">
     </TEXTAREA>
-    <BR>
     <INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">
 </FORM>
 <HR>
