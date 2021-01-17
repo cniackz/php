@@ -225,7 +225,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
                     label[i].style.backgroundColor = color;
                     label[i].style.color = 'white';
                     comment[i].style.fontSize = '30px';
-                    comment[i].style.fontFamily = 'fantasy';
+                    comment[i].style.fontFamily = 'monospace';
                     comment[i].style.backgroundColor = color;
                     comment[i].style.color = 'black';
                 }
