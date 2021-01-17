@@ -431,7 +431,6 @@ while( $row = $result->fetch_assoc()){
     $comentario = $comentario . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</span></p>';
     echo $comentario;
-    echo '<BR>';
     echo '<hr>';
 }
 mysqli_close($connection);
