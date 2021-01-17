@@ -196,7 +196,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             //the event occurred, ya se cargo la pagina
             // Ahora si modifica el estilo:
             document.getElementById("comentario_p").style.fontSize = '30px';
+            document.getElementById("comentarios_p").style.fontSize = '30px';
             document.getElementById("comentario_p").style.marginBottom = '0px';
+            document.getElementById("comentarios_p").style.marginBottom = '0px';
 
             // Solo cambia el Style del elemento clave_p sino es Nulo
             // Recuerda que el elemento es dinamico y puede desaparecer
@@ -208,7 +210,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             }
 
             // El resto de cosas que queremos modificar cuando es una pc
-            document.getElementById("comentarios_p").style.fontSize = '30px';
             document.getElementById("inputSubmit").style.fontSize = '30px';
             document.getElementById("inputSubmit").style.height = '75px';
             document.getElementById("textareaComentario").style.fontSize = '30px';
