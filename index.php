@@ -32,10 +32,6 @@ font-size:60px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-#comentarios_p{
-font:Verdana, Geneva, sans-serif;
-font-size:60px;
-}
 #boton_de_refrescar
 {
 width:400px;
@@ -190,10 +186,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             
             //the event occurred, ya se cargo la pagina
             // Ahora si modifica el estilo:
-            document.getElementById("comentarios_p").style.fontSize = '30px';
-            document.getElementById("comentarios_p").style.marginBottom = '0px';
-            document.getElementById("comentarios_p").style.marginTop = '0px';
-
             // Solo cambia el Style del elemento clave_p sino es Nulo
             // Recuerda que el elemento es dinamico y puede desaparecer
             // si se proporciona la clave correcta a las cookies
@@ -325,9 +317,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     <INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">
 </FORM>
 <HR>
-<P id="comentarios_p">
-    Comentarios:
-</P>
 <BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
     Actualizar
 </BUTTON>
