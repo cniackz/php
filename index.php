@@ -196,7 +196,7 @@ document.addEventListener(
             {
                 place: 'after',
                 button:'&#x1F643;',
-                fontSize:'40px'
+                fontSize:'60px'
             }
         );
     }
