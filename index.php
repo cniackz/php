@@ -300,6 +300,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 ################################################################################
 -->
 <!--Esta forma es donde se pone la clave y el comentario -->
+<BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
+    Actualizar
+</BUTTON>
 <FORM method="post" action="insert.php">
 
 <?php
@@ -317,9 +320,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     <INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">
 </FORM>
 <HR>
-<BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
-    Actualizar
-</BUTTON>
 
 
 
