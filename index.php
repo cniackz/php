@@ -199,6 +199,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             document.getElementById("comentarios_p").style.fontSize = '30px';
             document.getElementById("comentario_p").style.marginBottom = '0px';
             document.getElementById("comentarios_p").style.marginBottom = '0px';
+            document.getElementById("comentarios_p").style.marginTop = '0px';
 
             // Solo cambia el Style del elemento clave_p sino es Nulo
             // Recuerda que el elemento es dinamico y puede desaparecer
