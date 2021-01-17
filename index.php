@@ -252,8 +252,13 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         }
     )
 }
+$(function () {
+  $('textarea,input').emoji({
+    button:'&#x1F642;'
+  });
+})
+
 </script>
-<script src='inputEmoji.js'></script>
 
 
 
