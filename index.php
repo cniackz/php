@@ -32,11 +32,6 @@ font-size:60px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-#comentario_p
-{
-font:Verdana, Geneva, sans-serif;
-font-size:60px;
-}
 #comentarios_p{
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
@@ -195,9 +190,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             
             //the event occurred, ya se cargo la pagina
             // Ahora si modifica el estilo:
-            document.getElementById("comentario_p").style.fontSize = '30px';
             document.getElementById("comentarios_p").style.fontSize = '30px';
-            document.getElementById("comentario_p").style.marginBottom = '0px';
             document.getElementById("comentarios_p").style.marginBottom = '0px';
             document.getElementById("comentarios_p").style.marginTop = '0px';
 
@@ -326,10 +319,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     }
 
 ?>
-
-    <P id="comentario_p">
-        Comentario:
-    </P>
     <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario">
     </TEXTAREA>
     <INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">
