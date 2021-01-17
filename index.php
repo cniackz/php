@@ -183,6 +183,25 @@ function refrescar_comentarios() {
     location.reload();
 }
 
+// Espera a que cargue la pagina para modificarla
+document.addEventListener(
+    'DOMContentLoaded', 
+    function(event) {
+        
+        //the event occurred, ya se cargo la pagina
+        // Ponle emojis a tu textarea, ya que se cargo la pagina
+        // https://www.jqueryscript.net/form/emoji-picker-input-textarea.html
+        // https://ili4x.github.io/inputEmoji/demo.html
+        $('textarea').emoji(
+            {
+                place: 'after',
+                button:'&#x1F643;',
+                fontSize:'40px'
+            }
+        );
+    }
+)
+
 // Para cambiar el estilo con Javascript
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
     // Es mobile no hagas nada por ahora
@@ -195,18 +214,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         function(event) {
             
             //the event occurred, ya se cargo la pagina
-
-            // Ponle emojis a tu textarea, ya que se cargo la pagina
-            // https://www.jqueryscript.net/form/emoji-picker-input-textarea.html
-            // https://ili4x.github.io/inputEmoji/demo.html
-            $('textarea').emoji(
-                {
-                    place: 'after',
-                    button:'&#x1F643;',
-                    fontSize:'60px'
-                }
-            );
-
             // Ahora si modifica el estilo:
             // Solo cambia el Style del elemento clave_p sino es Nulo
             // Recuerda que el elemento es dinamico y puede desaparecer
