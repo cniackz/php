@@ -172,6 +172,11 @@ font-size:60px;
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"
 >
+$(function () {
+  $('textarea,input').emoji({
+    button:'&#x1F642;'
+  });
+})
 </script>
 <script type="text/javascript">
 // To reload with the button actualizar
@@ -252,12 +257,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         }
     )
 }
-$(function () {
-  $('textarea,input').emoji({
-    button:'&#x1F642;'
-  });
-})
-
 </script>
 
 
