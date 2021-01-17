@@ -406,7 +406,6 @@ while( $row = $result->fetch_assoc()){
     $comentario = $comentario . 'id: ' . $row['id'] . '<BR>';
     $comentario = $comentario . 'fecha: ' . $row['fecha'];
     $comentario = $comentario . '<BR> nombre: ' . $row['nombre'] . '<BR>';
-    $comentario = $comentario . 'comentario:<BR>';
     $comentario = $comentario . '<span class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</span></p>';
