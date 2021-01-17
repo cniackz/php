@@ -194,7 +194,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             //the event occurred, ya se cargo la pagina
 
             // Ponle emojis a tu textarea
-            $('textarea').emoji();
+            $('textarea').emoji({place: 'after'});
 
             // Ahora si modifica el estilo:
             // Solo cambia el Style del elemento clave_p sino es Nulo
