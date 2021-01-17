@@ -335,6 +335,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
 
 <textarea name="emoji" placeholder="type message here..."></textarea>
+<input name="emoji" placeholder="type message here..." />
 
 
 
