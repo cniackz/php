@@ -253,6 +253,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     )
 }
 </script>
+<script src='inputEmoji.js'></script>
 
 
 
