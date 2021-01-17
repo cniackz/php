@@ -404,7 +404,7 @@ $result = $connection->query($sql);
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
     $comentario = $comentario . $row['fecha'];
-    $comentario = $comentario . '<BR> nombre: ' . $row['nombre'] . '<BR>';
+    $comentario = $comentario . '<BR>' . $row['nombre'] . '<BR>';
     $comentario = $comentario . '<span class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</span></p>';
