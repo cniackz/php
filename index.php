@@ -173,6 +173,10 @@ font-size:60px;
     crossorigin="anonymous"
 >
 $(function () {
+  $('textarea,input').emoji();
+})
+
+$(function () {
   $('textarea,input').emoji({
     button:'&#x1F642;'
   });
