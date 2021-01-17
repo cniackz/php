@@ -197,8 +197,14 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             //the event occurred, ya se cargo la pagina
 
             // Ponle emojis a tu textarea, ya que se cargo la pagina
+            // https://www.jqueryscript.net/form/emoji-picker-input-textarea.html
             // https://ili4x.github.io/inputEmoji/demo.html
-            $('textarea').emoji({place: 'after'});
+            $('textarea').emoji(
+                {
+                    place: 'after',
+                    button:'&#x1F642;'
+                }
+            );
 
             // Ahora si modifica el estilo:
             // Solo cambia el Style del elemento clave_p sino es Nulo
