@@ -198,10 +198,12 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             // El resto de cosas que queremos modificar cuando es una pc
             document.getElementById("inputSubmit").style.fontSize = '30px';
             document.getElementById("inputSubmit").style.height = '75px';
+            document.getElementById("inputSubmit").style.width = '400px';
             document.getElementById("textareaComentario").style.fontSize = '30px';
             document.getElementById("textareaComentario").style.height = '75px';
             document.getElementById("boton_de_refrescar").style.fontSize = '30px';
             document.getElementById("boton_de_refrescar").style.height = '75px';
+            document.getElementById("boton_de_refrescar").style.width = '400px';
             var i;
 
             // Function para eficientar el uso de los cambios de estilo en el
