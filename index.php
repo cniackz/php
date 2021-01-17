@@ -192,6 +192,10 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         function(event) {
             
             //the event occurred, ya se cargo la pagina
+
+            // Ponle emojis a tu textarea
+            $('textarea').emoji();
+
             // Ahora si modifica el estilo:
             // Solo cambia el Style del elemento clave_p sino es Nulo
             // Recuerda que el elemento es dinamico y puede desaparecer
@@ -253,7 +257,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         }
     )
 }
-$('textarea').emoji();
 </script>
 
 
