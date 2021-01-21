@@ -30,6 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
             $result = $connection->query($sql);
         }
 	if ($clave == 'cch1987') {
+
+        // the message
+        $msg = "First line of text\nSecond line of text";
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg,70);
+
+        // send email
+        mail("celis.hernandez.cesar@gmail.com","My subject",$msg);
+
             $cookie_value = 'cch1987';
             $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  . "','cesar')";
             $result = $connection->query($sql);
