@@ -24,24 +24,25 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
         echo "comentario is empty";
     } else {
         $cookie_value = NULL;
+        $sql = "INSERT INTO comentarios (comentario, nombre) VALUES('"
         if ($clave == 'jacl1960') {
             $cookie_value = 'jacl1960';
-            $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  .  "','juan')";
+            $sql = $sql . $comentario  .  "','juan')";
             $result = $connection->query($sql);
         }
         if ($clave == 'cch1987') {
             $cookie_value = 'cch1987';
-            $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  . "','cesar')";
+            $sql = $sql . $comentario  . "','cesar')";
             $result = $connection->query($sql);
         }
         if ($clave == 'ejch1994'){
             $cookie_value = 'ejch1994';
-            $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  . "','gogo')";
+            $sql = $sql . $comentario  . "','gogo')";
             $result = $connection->query($sql);
         }
         if ($clave == 'larh1989'){
             $cookie_value = 'larh1989';
-            $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  . "','liz')";
+            $sql = $sql . $comentario  . "','liz')";
             $result = $connection->query($sql);
         }
 
