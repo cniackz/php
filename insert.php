@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
         echo "comentario is empty";
     } else {
         $cookie_value = NULL;
-        $sql = "INSERT INTO comentarios (comentario, nombre) VALUES('"
+        $sql = "INSERT INTO comentarios (comentario, nombre) VALUES('";
         if ($clave == 'jacl1960') {
             $cookie_value = 'jacl1960';
             $sql = $sql . $comentario  .  "','juan')";
