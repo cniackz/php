@@ -24,42 +24,32 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
         echo "comentario is empty";
     } else {
         $cookie_value = NULL;
-	if ($clave == 'jacl1960') {
+        if ($clave == 'jacl1960') {
             $cookie_value = 'jacl1960';
             $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  .  "','juan')";
             $result = $connection->query($sql);
         }
-	if ($clave == 'cch1987') {
-
-        // the message
-        $msg = "First line of text\nSecond line of text";
-
-        // use wordwrap() if lines are longer than 70 characters
-        $msg = wordwrap($msg,70);
-
-        // send email
-        mail("celis.hernandez.cesar@gmail.com","My subject",$msg);
-
+        if ($clave == 'cch1987') {
             $cookie_value = 'cch1987';
             $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  . "','cesar')";
             $result = $connection->query($sql);
-	}
-	if ($clave == 'ejch1994'){
+        }
+        if ($clave == 'ejch1994'){
             $cookie_value = 'ejch1994';
             $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  . "','gogo')";
             $result = $connection->query($sql);
         }
-	if ($clave == 'larh1989'){
+        if ($clave == 'larh1989'){
             $cookie_value = 'larh1989';
             $sql = "insert into comentarios (comentario,nombre) values('" . $comentario  . "','liz')";
             $result = $connection->query($sql);
-	}
+        }
 
-	// This code is to set the cookie with the clave if clave is correct the first time
-	if (!empty($cookie_value)) {
-            $cookie_name = "usuario";
-	    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", 'cesarcelis.com');
-	}
+        // This code is to set the cookie with the clave if clave is correct the first time
+        if (!empty($cookie_value)) {
+                $cookie_name = "usuario";
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", 'cesarcelis.com');
+        }
     }
 }
 mysqli_close($connection);
