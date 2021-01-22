@@ -23,32 +23,24 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     if(empty($comentario)){
         echo "comentario is empty";
     } else {
+        
+        // Obten todos los usuarios para sacarles su password
+        $query_para_obtener_las_passwords = "SELECT nombre, password FROM usuarios";
+        $nombre_contrasena = $connection->query($query_para_obtener_las_passwords);
         $cookie_value = NULL;
         $sql = "INSERT INTO comentarios (comentario, nombre) VALUES('";
-        if ($clave == 'jacl1960') {
-            $cookie_value = 'jacl1960';
-            $sql = $sql . $comentario  .  "','juan')";
-            $result = $connection->query($sql);
-        }
-        if ($clave == 'cch1987') {
-            $cookie_value = 'cch1987';
-            $sql = $sql . $comentario  . "','cesar')";
-            $result = $connection->query($sql);
-        }
-        if ($clave == 'ejch1994'){
-            $cookie_value = 'ejch1994';
-            $sql = $sql . $comentario  . "','gogo')";
-            $result = $connection->query($sql);
-        }
-        if ($clave == 'larh1989'){
-            $cookie_value = 'larh1989';
-            $sql = $sql . $comentario  . "','liz')";
-            $result = $connection->query($sql);
+        while( $row = $nombre_contrasena->fetch_assoc()){
+            if($clave == $row['password']){
+                $cookie_value = $row['password'];
+                sql = $sql . $comentario  .  "','" . $row['nombre'] . "')";
+                // Insert the comment of the user
+                $connection->query($sql);
+            }
         }
 
         // This code is to set the cookie with the clave if clave is correct the first time
         if (!empty($cookie_value)) {
-                $cookie_name = "usuario";
+            $cookie_name = "usuario";
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", 'cesarcelis.com');
         }
     }
