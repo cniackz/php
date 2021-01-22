@@ -98,6 +98,24 @@ font-size:60px;
 
 
 
+.label_de_martha
+{
+background-color:MediumSeaGreen; 
+color:white;
+font:Verdana, Geneva, sans-serif;
+font-size:60px;
+}
+.comentarios_de_martha
+{
+background-color:MediumSeaGreen; 
+color:black;
+font:Verdana, Geneva, sans-serif;
+font-size:60px;
+}
+
+
+
+
 
 .label_de_liz
 {
@@ -268,7 +286,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
                 'liz': 'Violet',
                 'cesar': 'Gray',
                 'juan': 'DodgerBlue',
-                'gogo': 'SlateBlue'
+                'gogo': 'SlateBlue',
+                'martha': 'MediumSeaGreen'
             };
 
             // Ahora vamos a loopear en el diccionario para setear los colors
