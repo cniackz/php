@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
         while( $row = $nombre_contrasena->fetch_assoc()){
             if($clave == $row['password']){
                 $cookie_value = $row['password'];
-                $sql = $sql . $comentario  .  "','" . $row['nombre'] 
+                $sql = $sql . $comentario  .  "','" . $row['nombre']; 
                 $sql = $sql . "','" . $device . "')";
                 // Insert the comment of the user
                 $connection->query($sql);
