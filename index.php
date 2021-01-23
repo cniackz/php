@@ -453,7 +453,8 @@ $sql = "
         coments.comentario,
         coments.nombre,
         CONVERT_TZ((coments.fecha),'+00:00','-06:00') AS fecha,
-        coments.id
+        coments.id,
+        coments.device
     FROM
         comentarios AS coments,
         (SELECT @rownum:=0)r 
