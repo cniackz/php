@@ -374,6 +374,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         echo '<INPUT type="text" name="clave" class="input-text-clave" id="inputTextClave" >'; 
     }
 
+    echo $_SERVER['HTTP_USER_AGENT'];
+
 ?>
     <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
     <BR>
