@@ -469,7 +469,12 @@ $result = $connection->query($sql);
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
     $comentario = $comentario . $row['nombre'] . ' 🕙 ';
-    $comentario = $comentario . $row['fecha'] . ' 🕵 ' . $row['device']; 
+    if($row['device'] == 'computadora'){
+        $comentario = $comentario . $row['fecha'] . ' 🖥 ' . $row['device'];
+    } else {
+        // is cel
+        $comentario = $comentario . $row['fecha'] . ' 📱 ' . $row['device'];
+    } 
     $comentario = $comentario . '<BR>';
     $comentario = $comentario . '<span class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
