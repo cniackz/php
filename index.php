@@ -445,7 +445,7 @@ $sql = "
         @rownum:=@rownum+1 'numero',
         coments.comentario,
         coments.nombre,
-        CONVERT_TZ((comment.fecha),'+00:00','-06:00') AS comment.fecha,
+        CONVERT_TZ((coments.fecha),'+00:00','-06:00'),
         coments.id
     FROM
         comentarios AS coments,
