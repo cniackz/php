@@ -291,7 +291,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             // El resto de cosas que queremos modificar cuando es una pc
             var botones = document.getElementsByClassName("botones");
             var i = 0;
-            for(i = 0; i < botones.length; botones++){
+            for(i = 0; i < botones.length; i++){
                 botones[i].style.fontSize = '30px';
                 botones[i].style.height = '75px';
                 botones[i].style.width = '400px';
