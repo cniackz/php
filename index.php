@@ -418,6 +418,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
         </TH>
     </TR>
 </TABLE>
+<HR>
 <FORM method="post" action="insert.php">
 
 <?php
