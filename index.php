@@ -27,11 +27,6 @@ height:150px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-#clave_p
-{
-font:Verdana, Geneva, sans-serif;
-font-size:60px;
-}
 #boton_de_refrescar
 {
 width:400px;
@@ -244,15 +239,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
             //the event occurred, ya se cargo la pagina
             // Ahora si modifica el estilo:
-            // Solo cambia el Style del elemento clave_p sino es Nulo
-            // Recuerda que el elemento es dinamico y puede desaparecer
-            // si se proporciona la clave correcta a las cookies
-            if (document.getElementById("clave_p") !== null) {
-                document.getElementById("clave_p").style.fontSize = '30px';
-                document.getElementById("inputTextClave").style.fontSize = '30px';
-                document.getElementById("inputTextClave").style.height = '75px';
-            }
-
             // El resto de cosas que queremos modificar cuando es una pc
             document.getElementById("inputSubmit").style.fontSize = '30px';
             document.getElementById("inputSubmit").style.height = '75px';
@@ -368,10 +354,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
 <?php
 
-    // Este codigo es para mostrar la clave solo si se necesita
+    // Este codigo es para pedir la clave solo si se necesita
     if(!isset($_COOKIE['usuario'])) {
-        echo '<P id="clave_p">Clave:</P>';    
-        echo '<INPUT type="text" name="clave" class="input-text-clave" id="inputTextClave" >'; 
+        header('Location: login.php');
     }
 
     $useragent=$_SERVER['HTTP_USER_AGENT'];
