@@ -282,7 +282,8 @@ function carga_mas_comentarios_js(){
     var xmlhttp = new XMLHttpRequest()
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("moreComments"+ultimo_comentario.toString()).innerHTML = this.responseText;
+        var id = "moreComments" + ultimo_comentario.toString();
+        document.getElementById(id).innerHTML = this.responseText;
       }
     };
     xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
