@@ -1,9 +1,48 @@
+<!--
+################################################################################
+#
+#                                   PHP
+#
+################################################################################
+-->
 <?php
     // Este codigo es para pedir la clave solo si se necesita
     if(!isset($_COOKIE['usuario'])) {
         header('Location: login.php');
     }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16,13 +55,6 @@
 ################################################################################
 -->
 <style>
-.input-text-clave
-{
-width:800px;
-height:150px;
-font:Verdana, Geneva, sans-serif;
-font-size:60px;
-}
 .textarea-comentario
 {
 width:800px;
@@ -354,7 +386,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 #
 ################################################################################
 -->
-<!--Esta forma es donde se pone la clave y el comentario -->
+<!--Esta forma es donde se pone el comentario -->
 <BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
     Actualizar
 </BUTTON>
