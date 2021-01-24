@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $usuario     = $_POST['usuario']; 
     $contrasenia = $_POST['contrasenia'];
 
-    //echo 'if usuario is not empty';
+    // In this if I set the cookie only if user and password match
     if(!empty($usuario)) {
         // Only do this if usuario is not empty
         // Obten todos los usuarios para sacarles su password
@@ -25,13 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $password = $connection->query($find_password);
         $cookie_value = NULL;
         $row = $password->fetch_assoc();
-        echo $row['password']; // cch1987
-        echo $contrasenia;
         if ($row['password'] == $contrasenia) {
             setcookie("usuario", $contrasenia, time() + (86400 * 30), "/", 'cesarcelis.com');
         }
     }
 }
 mysqli_close($connection);
-//header('Location: login.php');
+header('Location: login.php');
 ?>
