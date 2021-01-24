@@ -62,6 +62,12 @@
 ################################################################################
 -->
 <style>
+
+#espaciador
+{
+    font-size:60px;
+}
+
 .textarea-comentario
 {
 width:800px;
@@ -403,7 +409,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             </BUTTON>
         </TH>
         <TH>
-            <DIV>A</DIV>
+            <DIV id="espaciador">A</DIV>
         </TH>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
