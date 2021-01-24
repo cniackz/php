@@ -510,7 +510,7 @@ $sql = "
     ORDER BY
         numero
     DESC
-    LIMIT 100
+    LIMIT 10
 ";
 
 $result = $connection->query($sql);
