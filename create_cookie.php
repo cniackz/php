@@ -14,17 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $usuario     = $_POST['usuario']; 
     $contrasenia = $_POST['contrasenia'];
 
-    echo 'if usuario is not empty';
+    //echo 'if usuario is not empty';
     if(!empty($usuario)) {
         // Only do this if usuario is not empty
         // Obten todos los usuarios para sacarles su password
         $find_password = "SELECT password FROM usuarios WHERE nombre = '";
         $find_password = $find_password . $usuario . "'";
-        echo 'find password: ';
-        echo $find_password;
+        //echo 'find password: ';
+        //echo $find_password;
         $password = $connection->query($find_password);
         $cookie_value = NULL;
         $row = $password->fetch_assoc();
+        echo $row['password'];
         if ($row['password'] == $contrasenia) {
             setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
         }
