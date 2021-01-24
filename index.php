@@ -251,9 +251,11 @@ function logout() {
 }
 
 
-
+var ultimo_comentario = 0;
 // Carga mas comentarios
 function load_more_comments(str) {
+
+    ultimo_comentario = parseInt(str)
 
     // load more comments
     var xmlhttp = new XMLHttpRequest()
@@ -264,6 +266,8 @@ function load_more_comments(str) {
     };
     xmlhttp.open("GET","get_more_comments.php?number_of_comments="+str,true);
     xmlhttp.send();
+
+    ultimo_comentario = ultimo_comentario - 10;
 
 }
 
@@ -562,6 +566,5 @@ $boton = '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
 $boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON>';
 echo $boton;
-
 mysqli_close($connection);
 ?>
