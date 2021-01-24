@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $usuario     = $_POST['usuario']; 
     $contrasenia = $_POST['contrasenia'];
 
+    echo 'if usuario is not empty';
     if(!empty($usuario)) {
         // Only do this if usuario is not empty
         // Obten todos los usuarios para sacarles su password
