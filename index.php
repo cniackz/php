@@ -250,10 +250,26 @@ function logout() {
     window.location.replace("http://cesarcelis.com/delete_cookie.php");    
 }
 
-// Carga todos los comentarios
-function load_all_coments() {
-    //load_all_coments
+
+
+// Carga mas comentarios
+function load_more_comments(str) {
+
+    // load more comments
+    var xmlhttp = new XMLHttpRequest()
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("moreComments").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+str,true);
+    xmlhttp.send();
+
 }
+
+
+
+
 
 // Para cambiar el estilo con Javascript
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -538,6 +554,7 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
-echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_all_coments();">Ver mas comentarios</BUTTON>';
+echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_more_comments("10");">Ver mas comentarios</BUTTON>';
+echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>
