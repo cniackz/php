@@ -334,7 +334,6 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 <?php
     // Este codigo es para pedir la clave solo si se necesita
     if(!isset($_COOKIE['usuario'])) {
-        echo 'redirect to login';
         header('Location: login.php');
     }
 ?>
