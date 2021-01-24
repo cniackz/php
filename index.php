@@ -558,10 +558,9 @@ while( $row = $result->fetch_assoc()){
 }
 //echo $ultimo_comentario;
 
-$boton = '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
+$boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
-$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON>';
+$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON></DIV>';
 echo $boton;
-echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>
