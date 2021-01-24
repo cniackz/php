@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $contrasenia = $_POST['contrasenia'];
 
     if(!empty($usuario)) {
-    //    // Only do this if usuario is not empty
-    //    // Obten todos los usuarios para sacarles su password
-    //    $find_password = "SELECT password FROM usuarios WHERE nombre = '";
-    //    $find_password = $find_password . $usuario . "'";
+        // Only do this if usuario is not empty
+        // Obten todos los usuarios para sacarles su password
+        $find_password = "SELECT password FROM usuarios WHERE nombre = '";
+        $find_password = $find_password . $usuario . "'";
     //    $password = $connection->query($find_password);
     //    $cookie_value = NULL;
     //    $row = $nombre_contrasena->fetch_assoc())
