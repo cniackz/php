@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $usuario     = $_POST['usuario']; 
     $contrasenia = $_POST['contrasenia'];
 
-    //if(!empty($usuario)) {
+    if(!empty($usuario)) {
     //    // Only do this if usuario is not empty
     //    // Obten todos los usuarios para sacarles su password
     //    $find_password = "SELECT password FROM usuarios WHERE nombre = '";
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     //    if ($row['password'] == $password) {
     //        setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
     //    }
-    //}
+    }
 }
 mysqli_close($connection);
 header('Location: login.php');
