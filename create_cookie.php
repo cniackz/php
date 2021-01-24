@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $find_password = "SELECT password FROM usuarios WHERE nombre = '";
         $find_password = $find_password . $usuario . "'";
         $password = $connection->query($find_password);
-        $cookie_value = NULL;
-        $row = $password->fetch_assoc())
+        //$cookie_value = NULL;
+        //$row = $password->fetch_assoc())
     //    if ($row['password'] == $password) {
     //        setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
     //    }
