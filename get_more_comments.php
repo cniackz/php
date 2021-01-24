@@ -14,8 +14,8 @@ $punto_b = 1;
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 
     // This code is to get the comentario and clave from the main page
-    $punto_a = $_GET['number_of_comments'] + 1;
-    $punto_b = $punto_a + 10;
+    $punto_a = $_GET['number_of_comments'] - 1;
+    $punto_b = $punto_a - 10;
 
 }
 
