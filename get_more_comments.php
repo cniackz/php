@@ -38,7 +38,7 @@ $sql = "
         device
     FROM
         comentarios 
-    WHERE id BETWEEN  " . $punto_a . " AND " . $punto_b . " ORDER BY id DESC";
+    WHERE id BETWEEN  " . $punto_b . " AND " . $punto_a . " ORDER BY id DESC";
 echo $sql;
 
 
