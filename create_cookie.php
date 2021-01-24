@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         echo $row['password']; // cch1987
         echo $contrasenia;
         if ($row['password'] == $contrasenia) {
-            setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
+            setcookie("usuario", $contrasenia, time() + (86400 * 30), "/", 'cesarcelis.com');
         }
     }
 }
