@@ -7,14 +7,15 @@
 -->
 <?php
 
-$punto_a = 50;
-$punto_b = 60;
+$punto_a = 0;
+$punto_b = 1;
 
 // From https://www.w3schools.com/php/php_superglobals_post.asp
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 
     // This code is to get the comentario and clave from the main page
-    //$punto_a = $_GET['number_of_comments'];
+    $punto_a = $_GET['number_of_comments'] + 1;
+    $punto_b = $punto_a + 10;
 
 }
 
