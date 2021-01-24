@@ -409,7 +409,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             </BUTTON>
         </TH>
         <TH>
-            <DIV id="espaciador">A</DIV>
+            <DIV id="espaciador"> Ó </DIV>
         </TH>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
