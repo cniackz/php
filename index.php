@@ -536,6 +536,7 @@ $sql = "
 $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
+$ultimo_comentario = NULL;
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
     $comentario = $comentario . $row['nombre'] . ' 🕙 ';
@@ -553,7 +554,9 @@ while( $row = $result->fetch_assoc()){
     $comentario = $comentario . $row['comentario'] . '</span></p>';
     echo $comentario;
     echo '<hr>';
+    $ultimo_comentario = $row['id'];
 }
+echo $ultimo_comentario;
 echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_more_comments(\'10\');">Ver mas comentarios</BUTTON>';
 echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
