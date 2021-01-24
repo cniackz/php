@@ -69,14 +69,7 @@ height:300px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
-.input-submit
-{
-width:300px;
-height:150px;
-font:Verdana, Geneva, sans-serif;
-font-size:60px;
-}
-#boton_de_refrescar
+.botones
 {
 width:400px;
 height:150px;
@@ -296,16 +289,17 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
             //the event occurred, ya se cargo la pagina
             // Ahora si modifica el estilo:
             // El resto de cosas que queremos modificar cuando es una pc
-            document.getElementById("inputSubmit").style.fontSize = '30px';
-            document.getElementById("inputSubmit").style.height = '75px';
-            document.getElementById("inputSubmit").style.width = '400px';
+            var botones = document.getElementsByClassName("botones");
+            var i = 0;
+            for(i = 0; i < botones.length; botones++){
+                botones[i].style.fontSize = '30px';
+                botones[i].style.height = '75px';
+                botones[i].style.width = '400px';
+            }
             document.getElementById("textareaComentario").style.fontSize = '30px';
             document.getElementById("textareaComentario").style.height = '75px';
-            document.getElementById("boton_de_refrescar").style.fontSize = '30px';
-            document.getElementById("boton_de_refrescar").style.height = '75px';
-            document.getElementById("boton_de_refrescar").style.width = '400px';
-            var i;
 
+            var i;
             // Function para eficientar el uso de los cambios de estilo en el
             // for de cada persona, asi solo tengo un for en una funcion en
             // lugar de varios fors por persona
@@ -401,12 +395,20 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 ################################################################################
 -->
 <!--Esta forma es donde se pone el comentario -->
-<BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
-    Actualizar
-</BUTTON>
-<BUTTON type="button" id="logout" onclick="logout();">
-    Salir
-</BUTTON>
+<TABLE>
+    <TR>
+        <TH>
+            <BUTTON type="button" class="botones" id="boton_de_refrescar" onclick="refrescar_comentarios();">
+                Actualizar
+            </BUTTON>
+        </TH>
+        <TH>
+            <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
+                Salir
+            </BUTTON>
+        </TH>
+    </TR>
+</TABLE>
 <FORM method="post" action="insert.php">
 
 <?php
@@ -421,7 +423,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 ?>
     <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
     <BR>
-    <INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">
+    <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
 </FORM>
 <HR>
 
