@@ -39,7 +39,7 @@ $sql = "
     FROM
         comentarios 
     WHERE id BETWEEN  " . $punto_b . " AND " . $punto_a . " ORDER BY id DESC";
-echo $sql;
+//echo $sql;
 
 
 $result = $connection->query($sql);
@@ -63,7 +63,7 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
-echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_more_comments("10");">Ver mas comentarios</BUTTON>';
-echo '<DIV id="moreComments"></DIV>';
+//echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_more_comments("10");">Ver mas comentarios</BUTTON>';
+//echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>

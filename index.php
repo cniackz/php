@@ -557,10 +557,11 @@ while( $row = $result->fetch_assoc()){
     $ultimo_comentario = $row['id'];
 }
 //echo $ultimo_comentario;
-
-$boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
+echo '<DIV id="moreComments"></DIV>';
+$boton = '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
-$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON></DIV>';
+$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON>';
 echo $boton;
+
 mysqli_close($connection);
 ?>
