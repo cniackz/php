@@ -8,7 +8,14 @@
 <?php
     // Este codigo es para pedir la clave solo si se necesita
     if(!isset($_COOKIE['usuario'])) {
+        // Si la cookie no existe, el usuario debe obtenerla a traves del logeo
         header('Location: login.php');
+    } else {
+        if($_COOKIE['usuario'] == 'hola'){
+            // Cuando el valor de la cookie es hola, significa que el valor es
+            // invalido, entonces el usuario debe logearse de nuevo
+            header('Location: login.php');
+        }
     }
 ?>
 
