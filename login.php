@@ -10,9 +10,9 @@
         echo '<INPUT type="text" name="contrasenia" class="input-text-clave" id="inputTextClave" >';
         echo '<BR>';
         echo '<BR>';
+        echo '<INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">';
     } else {
         // display chat
     }
 ?>
-    <INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">
 </FORM>
