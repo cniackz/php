@@ -11,8 +11,8 @@ if (!$connection) {
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     // This code is to get the comentario and clave from the main page
-    //$usuario     = $_POST['usuario']; 
-    //$contrasenia = $_POST['contrasenia'];
+    $usuario     = $_POST['usuario']; 
+    $contrasenia = $_POST['contrasenia'];
 
     //if(!empty($usuario)) {
     //    // Only do this if usuario is not empty
