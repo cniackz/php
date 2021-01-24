@@ -250,6 +250,10 @@ function logout() {
     window.location.replace("http://cesarcelis.com/delete_cookie.php");    
 }
 
+// Carga todos los comentarios
+function load_all_coments() {
+    //load_all_coments
+}
 
 // Para cambiar el estilo con Javascript
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -534,6 +538,6 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
-echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_all_coments();">Ver todos los comentarios</BUTTON>';
+echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_all_coments();">Ver mas comentarios</BUTTON>';
 mysqli_close($connection);
 ?>
