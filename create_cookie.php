@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         echo $find_password;
         $password = $connection->query($find_password);
         $cookie_value = NULL;
-        $row = $password->fetch_assoc());
+        $row = $password->fetch_assoc();
         if ($row['password'] == $password) {
             setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
         }
