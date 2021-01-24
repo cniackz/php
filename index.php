@@ -534,5 +534,6 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
+echo 'Ver todos los comentarios';
 mysqli_close($connection);
 ?>
