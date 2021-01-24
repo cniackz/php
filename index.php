@@ -534,6 +534,6 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
-echo 'Ver todos los comentarios';
+echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_all_coments();">Ver todos los comentarios</BUTTON>';
 mysqli_close($connection);
 ?>
