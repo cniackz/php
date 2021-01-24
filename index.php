@@ -390,6 +390,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 <BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
     Actualizar
 </BUTTON>
+<BUTTON type="button" id="logout" onclick="logout();"></BUTTON>
 <FORM method="post" action="insert.php">
 
 <?php
