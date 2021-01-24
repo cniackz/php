@@ -14,14 +14,17 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     $usuario     = $_POST['usuario']; 
     $contrasenia = $_POST['contrasenia'];
 
-    // Obten todos los usuarios para sacarles su password
-    $find_password = "SELECT password FROM usuarios WHERE nombre = '";
-    $find_password = $find_password . $usuario . "'";
-    $password = $connection->query($find_password);
-    $cookie_value = NULL;
-    $row = $nombre_contrasena->fetch_assoc())
-    if ($row['password'] == $password) {
-        setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
+    if(!empty($usuario)){
+        // Only do this if usuario is not empty
+        // Obten todos los usuarios para sacarles su password
+        $find_password = "SELECT password FROM usuarios WHERE nombre = '";
+        $find_password = $find_password . $usuario . "'";
+        $password = $connection->query($find_password);
+        $cookie_value = NULL;
+        $row = $nombre_contrasena->fetch_assoc())
+        if ($row['password'] == $password) {
+            setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
+        }
     }
 }
 mysqli_close($connection);
