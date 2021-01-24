@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $password = $connection->query($find_password);
         $cookie_value = NULL;
         $row = $password->fetch_assoc();
-        if ($row['password'] == $password) {
+        if ($row['password'] == $contrasenia) {
             setcookie("usuario", $password, time() + (86400 * 30), "/", 'cesarcelis.com');
         }
     }
