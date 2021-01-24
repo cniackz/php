@@ -554,7 +554,7 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
-echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_more_comments("10");">Ver mas comentarios</BUTTON>';
+echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_more_comments(\'10\');">Ver mas comentarios</BUTTON>';
 echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>
