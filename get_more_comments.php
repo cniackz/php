@@ -39,6 +39,7 @@ $sql = "
     FROM
         comentarios 
     WHERE id BETWEEN  " . $punto_a . " AND " . $punto_b . " ORDER BY id DESC";
+echo $sql;
 
 
 $result = $connection->query($sql);
