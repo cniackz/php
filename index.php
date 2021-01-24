@@ -253,6 +253,8 @@ function logout() {
 
 var ultimo_comentario = 0;
 // Carga mas comentarios
+// Esta funcion la mando llamar solo la primera vez desde php desde aqui
+// la segunda vez, js va a decrementar el id para obtener los siguientes 10
 function load_more_comments(str) {
 
     ultimo_comentario = parseInt(str)
@@ -270,6 +272,25 @@ function load_more_comments(str) {
     ultimo_comentario = ultimo_comentario - 10;
 
 }
+
+
+// js decrementa en 10 para los siguientes 10
+// usa la variable global para lograr esto
+function carga_mas_comentarios_js(){
+
+    // load more comments
+    var xmlhttp = new XMLHttpRequest()
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("moreComments").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
+    xmlhttp.send();
+
+    ultimo_comentario = ultimo_comentario - 10;
+}
+
 
 
 
@@ -561,10 +582,9 @@ while( $row = $result->fetch_assoc()){
     $ultimo_comentario = $row['id'];
 }
 //echo $ultimo_comentario;
-echo '<DIV id="moreComments"></DIV>';
-$boton = '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
+$boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
-$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON>';
+$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON></DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>

@@ -63,7 +63,7 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
-//echo '<BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="load_more_comments("10");">Ver mas comentarios</BUTTON>';
+echo '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas comentarios</BUTTON></DIV>';
 //echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>
