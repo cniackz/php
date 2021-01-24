@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         // Obten todos los usuarios para sacarles su password
         $find_password = "SELECT password FROM usuarios WHERE nombre = '";
         $find_password = $find_password . $usuario . "'";
+        echo 'find password: ';
         echo $find_password;
         $password = $connection->query($find_password);
         //$cookie_value = NULL;
