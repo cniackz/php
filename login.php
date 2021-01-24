@@ -13,7 +13,7 @@
         echo '<INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">';
     } else {
         // display chat (send to index.php where we display it)
-        header('Location: login.php');
+        header('Location: index.php');
     }
 ?>
 </FORM>
