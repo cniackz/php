@@ -9,6 +9,7 @@
         echo '<P id="clave_p">Constraseña:</P>';
         echo '<INPUT type="text" name="clave" class="input-text-clave" id="inputTextClave" >';
         echo '<BR>';
+        echo '<BR>';
     } else {
         // display chat
     }
