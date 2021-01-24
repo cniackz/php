@@ -233,10 +233,17 @@ font-size:60px;
 <script src='https://ili4x.github.io/inputEmoji/inputEmoji.js'></script>
 
 <script type="text/javascript">
+
 // To reload with the button actualizar
 function refrescar_comentarios() {
     location.reload();
 }
+
+// Simulate an HTTP redirect:
+function logout() {
+    window.location.replace("http://cesarcelis.com/delete_cookie.php");    
+}
+
 
 // Para cambiar el estilo con Javascript
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -390,7 +397,9 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 <BUTTON type="button" id="boton_de_refrescar" onclick="refrescar_comentarios();">
     Actualizar
 </BUTTON>
-<BUTTON type="button" id="logout" onclick="logout();"></BUTTON>
+<BUTTON type="button" id="logout" onclick="logout();">
+    Salir
+</BUTTON>
 <FORM method="post" action="insert.php">
 
 <?php
