@@ -7,13 +7,14 @@
 -->
 <?php
 
-$numero_de_comentarios = 10;
+$punto_a = 50;
+$punto_b = 60;
 
 // From https://www.w3schools.com/php/php_superglobals_post.asp
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 
     // This code is to get the comentario and clave from the main page
-    $numero_de_comentarios = $_GET['number_of_comments'];
+    //$punto_a = $_GET['number_of_comments'];
 
 }
 
@@ -29,19 +30,15 @@ if (!$connection) {
 // Query para seleccionar los comentarios de la base de datos MySQL
 $sql = "
     SELECT 
-        @rownum:=@rownum+1 'numero',
-        coments.comentario,
-        coments.nombre,
-        CONVERT_TZ((coments.fecha),'+00:00','-06:00') AS fecha,
-        coments.id,
-        coments.device
+        comentario,
+        nombre,
+        CONVERT_TZ((fecha),'+00:00','-06:00') AS fecha,
+        id,
+        device
     FROM
-        comentarios AS coments,
-        (SELECT @rownum:=0)r 
-    ORDER BY
-        numero
-    DESC
-    LIMIT " . $numero_de_comentarios;
+        comentarios 
+    WHERE id BETWEEN  " . $punto_a . " AND " . $punto_b . " ORDER BY id DESC";
+
 
 $result = $connection->query($sql);
 
