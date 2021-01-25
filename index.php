@@ -292,7 +292,7 @@ function carga_mas_comentarios_js(){
 
 function setea_estilo_para_pc(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        
+
     } else{
         //the event occurred, ya se cargo la pagina
         // Ahora si modifica el estilo:
@@ -594,7 +594,7 @@ while( $row = $result->fetch_assoc()){
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
-$boton = $boton . '\'' . $ultimo_comentario . '\');setea_estilo_por_primera_vez();">Ver mas comentarios</BUTTON></DIV>';
+$boton = $boton . '\'' . $ultimo_comentario . '\');setea_estilo_para_pc();">Ver mas comentarios</BUTTON></DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>
