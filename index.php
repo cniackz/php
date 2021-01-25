@@ -291,56 +291,60 @@ function carga_mas_comentarios_js(){
 
 
 function setea_estilo_para_pc(){
-    //the event occurred, ya se cargo la pagina
-    // Ahora si modifica el estilo:
-    // El resto de cosas que queremos modificar cuando es una pc
-    var botones = document.getElementsByClassName("botones");
-    var i = 0;
-    for(i = 0; i < botones.length; i++){
-        botones[i].style.fontSize = '30px';
-        botones[i].style.height = '75px';
-        botones[i].style.width = '400px';
-    }
-    document.getElementById("textareaComentario").style.fontSize = '30px';
-    document.getElementById("textareaComentario").style.height = '75px';
-
-    var i;
-    // Function para eficientar el uso de los cambios de estilo en el
-    // for de cada persona, asi solo tengo un for en una funcion en
-    // lugar de varios fors por persona
-    function loop_por_persona(label, comment, color){
-        for(i = 0; i < label.length; i++){
-            label[i].style.fontSize = '30px';
-            label[i].style.backgroundColor = color;
-            label[i].style.color = 'white';
-            label[i].style.marginBottom = '0px';
-            label[i].style.marginTop = '0px';
-            comment[i].style.fontSize = '30px';
-            comment[i].style.fontFamily = 'monospace';
-            comment[i].style.backgroundColor = color;
-            comment[i].style.color = 'black';
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        
+    } else{
+        //the event occurred, ya se cargo la pagina
+        // Ahora si modifica el estilo:
+        // El resto de cosas que queremos modificar cuando es una pc
+        var botones = document.getElementsByClassName("botones");
+        var i = 0;
+        for(i = 0; i < botones.length; i++){
+            botones[i].style.fontSize = '30px';
+            botones[i].style.height = '75px';
+            botones[i].style.width = '400px';
         }
-    }
+        document.getElementById("textareaComentario").style.fontSize = '30px';
+        document.getElementById("textareaComentario").style.height = '75px';
 
-    // Creando un diccionario para el usuario y su color
-    var dict = {
-        'liz': 'Violet',
-        'cesar': 'Gray',
-        'juan': 'DodgerBlue',
-        'gogo': 'SlateBlue',
-        'martha': 'MediumSeaGreen'
-    };
+        var i;
+        // Function para eficientar el uso de los cambios de estilo en el
+        // for de cada persona, asi solo tengo un for en una funcion en
+        // lugar de varios fors por persona
+        function loop_por_persona(label, comment, color){
+            for(i = 0; i < label.length; i++){
+                label[i].style.fontSize = '30px';
+                label[i].style.backgroundColor = color;
+                label[i].style.color = 'white';
+                label[i].style.marginBottom = '0px';
+                label[i].style.marginTop = '0px';
+                comment[i].style.fontSize = '30px';
+                comment[i].style.fontFamily = 'monospace';
+                comment[i].style.backgroundColor = color;
+                comment[i].style.color = 'black';
+            }
+        }
 
-    // Ahora vamos a loopear en el diccionario para setear los colors
-    for(var key in dict){
-        var color = dict[key];
-        var label = "label_de_";
-        var label = label.concat(key);
-        var comment = "comentarios_de_";
-        var comment = comment.concat(key);
-        var label = document.getElementsByClassName(label);
-        var comment = document.getElementsByClassName(comment);
-        loop_por_persona(label, comment, color);
+        // Creando un diccionario para el usuario y su color
+        var dict = {
+            'liz': 'Violet',
+            'cesar': 'Gray',
+            'juan': 'DodgerBlue',
+            'gogo': 'SlateBlue',
+            'martha': 'MediumSeaGreen'
+        };
+
+        // Ahora vamos a loopear en el diccionario para setear los colors
+        for(var key in dict){
+            var color = dict[key];
+            var label = "label_de_";
+            var label = label.concat(key);
+            var comment = "comentarios_de_";
+            var comment = comment.concat(key);
+            var label = document.getElementsByClassName(label);
+            var comment = document.getElementsByClassName(comment);
+            loop_por_persona(label, comment, color);
+        }
     }
 }
 
@@ -348,7 +352,7 @@ function setea_estilo_para_pc(){
 // esta funcion es para modificar el estilo de PC, a hice porque al jalar mas
 // comentarios con Ajax, necesito re ejecutar esta porcion de codigo de javascript
 // para poder setear los comentarios con el estilo correcto
-function setea_estilo_de_nuevo(){
+function setea_estilo_por_primera_vez(){
     // Para cambiar el estilo con Javascript
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
         // Es mobile no hagas nada por ahora
@@ -397,7 +401,7 @@ function setea_estilo_de_nuevo(){
 
 // Setea el estilo de cel y PC por primera vez
 // las siguientes veces manda a llamar de nuevo la funcion
-setea_estilo_de_nuevo();
+setea_estilo_por_primera_vez();
 </script>
 
 
@@ -590,7 +594,7 @@ while( $row = $result->fetch_assoc()){
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
-$boton = $boton . '\'' . $ultimo_comentario . '\');setea_estilo_de_nuevo();">Ver mas comentarios</BUTTON></DIV>';
+$boton = $boton . '\'' . $ultimo_comentario . '\');setea_por_primera_vez();">Ver mas comentarios</BUTTON></DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>
