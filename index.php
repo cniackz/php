@@ -275,7 +275,7 @@ function load_more_comments(str) {
 // usa la variable global para lograr esto
 function carga_mas_comentarios_js(){
 
-    ultimo_comentario = ultimo_comentario - 10;
+    ultimo_comentario = ultimo_comentario - 11;
 
     // load more comments
     var xmlhttp = new XMLHttpRequest()
