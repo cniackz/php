@@ -275,7 +275,7 @@ function load_more_comments(str) {
 // usa la variable global para lograr esto
 function carga_mas_comentarios_js(){
 
-    ultimo_comentario = ultimo_comentario - 11;
+    ultimo_comentario = ultimo_comentario - 10; // This gives the name of the new div
 
     // load more comments
     var xmlhttp = new XMLHttpRequest()
@@ -285,7 +285,9 @@ function carga_mas_comentarios_js(){
         document.getElementById(id).innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
+    // Ultimo comentario menos uno para tratar de obtener las ultimas 10 sin repetir la union
+    var ultimo_comentario_menos_uno = ultimo_comentario - 1;
+    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario_menos_uno.toString(),true);
     xmlhttp.send();
 }
 
