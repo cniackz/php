@@ -264,12 +264,11 @@ function load_more_comments(str) {
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("moreComments").innerHTML = this.responseText;
+        setea_estilo_para_pc();
       }
     };
     xmlhttp.open("GET","get_more_comments.php?number_of_comments="+str,true);
     xmlhttp.send();
-
-    setea_estilo_para_pc();
 }
 
 
@@ -285,12 +284,12 @@ function carga_mas_comentarios_js(){
       if (this.readyState == 4 && this.status == 200) {
         var id = "moreComments" + ultimo_comentario.toString();
         document.getElementById(id).innerHTML = this.responseText;
+        setea_estilo_para_pc();
       }
     };
     xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
     xmlhttp.send();
 
-    setea_estilo_para_pc();
 }
 
 
