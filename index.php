@@ -285,9 +285,7 @@ function carga_mas_comentarios_js(){
         document.getElementById(id).innerHTML = this.responseText;
       }
     };
-    // Ultimo comentario menos uno para tratar de obtener las ultimas 10 sin repetir la union
-    var ultimo_comentario_menos_uno = ultimo_comentario - 1;
-    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario_menos_uno.toString(),true);
+    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
     xmlhttp.send();
 }
 
