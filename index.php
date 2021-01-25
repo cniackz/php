@@ -268,6 +268,8 @@ function load_more_comments(str) {
     };
     xmlhttp.open("GET","get_more_comments.php?number_of_comments="+str,true);
     xmlhttp.send();
+
+    setea_estilo_para_pc();
 }
 
 
@@ -287,6 +289,8 @@ function carga_mas_comentarios_js(){
     };
     xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
     xmlhttp.send();
+
+    setea_estilo_para_pc();
 }
 
 
@@ -594,7 +598,7 @@ while( $row = $result->fetch_assoc()){
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
-$boton = $boton . '\'' . $ultimo_comentario . '\');setea_estilo_para_pc();">Ver mas comentarios</BUTTON></DIV>';
+$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas comentarios</BUTTON></DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>
