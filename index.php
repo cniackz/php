@@ -252,12 +252,13 @@ function logout() {
 
 
 var ultimo_comentario = 0;
+function init_ultimo_comentario(str){
+    ultimo_comentario = parseInt(str);
+}
 // Carga mas comentarios
 // Esta funcion la mando llamar solo la primera vez desde php desde aqui
 // la segunda vez, js va a decrementar el id para obtener los siguientes 10
 function load_more_comments(str) {
-
-    ultimo_comentario = parseInt(str)
 
     // load more comments
     var xmlhttp = new XMLHttpRequest()
@@ -266,17 +267,16 @@ function load_more_comments(str) {
         document.getElementById("moreComments").innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
+    xmlhttp.open("GET","get_more_comments.php?number_of_comments="+str,true);
     xmlhttp.send();
-
-    ultimo_comentario = ultimo_comentario - 10;
-
 }
 
 
 // js decrementa en 10 para los siguientes 10
 // usa la variable global para lograr esto
 function carga_mas_comentarios_js(){
+
+    ultimo_comentario = ultimo_comentario - 10;
 
     // load more comments
     var xmlhttp = new XMLHttpRequest()
@@ -288,8 +288,6 @@ function carga_mas_comentarios_js(){
     };
     xmlhttp.open("GET","get_more_comments.php?number_of_comments="+ultimo_comentario.toString(),true);
     xmlhttp.send();
-
-    ultimo_comentario = ultimo_comentario - 10;
 }
 
 
