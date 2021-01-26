@@ -612,10 +612,12 @@ while( $row = $result->fetch_assoc()){
 }
 //echo $primer_comentario;
 echo '
+<script type="text/javascript">
 document.addEventListener(\'DOMContentLoaded\', function() {
    // your code here
    primer_comentario = ' . $primer_comentario . ';
-}, false);';
+}, false);
+</script>';
 
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
