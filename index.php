@@ -575,6 +575,8 @@ $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 $ultimo_comentario = NULL;
+$primer_comentario = NULL;
+$contador = 0;
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
     $comentario = $comentario . $row['nombre'] . ' 🕙 ';
@@ -593,7 +595,12 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
     $ultimo_comentario = $row['id'];
+    if($contador == 0){
+        $primer_comentario = $row['id'];
+    }
+    $contador = $contador + 1;
 }
+echo $primer_comentario;
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
