@@ -250,7 +250,8 @@ function logout() {
     window.location.replace("http://cesarcelis.com/delete_cookie.php");    
 }
 
-
+var primer_comentario = 0; // El primer comentario en publicarse, pero en realidad el ultimo en publicarse por el usuario
+// Es algo asi como el primero de arriba hacia abajo y por lo tant el ultimo
 var ultimo_comentario = 0;
 // Carga mas comentarios
 // Esta funcion la mando llamar solo la primera vez desde php desde aqui
@@ -610,6 +611,12 @@ while( $row = $result->fetch_assoc()){
     $contador = $contador + 1;
 }
 //echo $primer_comentario;
+echo '
+document.addEventListener(\'DOMContentLoaded\', function() {
+   // your code here
+   primer_comentario = ' . $primer_comentario . ';
+}, false);';
+
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
