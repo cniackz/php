@@ -298,8 +298,6 @@ const interval = setInterval(function() {
    console.log('algo');
  }, 5000);
 
-clearInterval(interval); // thanks @Luca D'Amico
-
 
 function setea_estilo_para_pc(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
