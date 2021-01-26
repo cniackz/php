@@ -292,6 +292,14 @@ function carga_mas_comentarios_js(){
 
 }
 
+// Esta funcion se manda llamar cada 5 segundos, veamos si es verdad
+const interval = setInterval(function() {
+   // method to be executed;
+   console.log('algo');
+ }, 5000);
+
+clearInterval(interval); // thanks @Luca D'Amico
+
 
 function setea_estilo_para_pc(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
@@ -575,6 +583,9 @@ $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 $ultimo_comentario = NULL;
+// primer comentario es en realidad el ultimo comentario que se ha publicado,
+// le puse primer comentario, porque es el primero que se imprime, por ser el
+// mas moderno
 $primer_comentario = NULL;
 $contador = 0;
 while( $row = $result->fetch_assoc()){
@@ -600,7 +611,7 @@ while( $row = $result->fetch_assoc()){
     }
     $contador = $contador + 1;
 }
-echo $primer_comentario;
+//echo $primer_comentario;
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
