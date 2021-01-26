@@ -610,6 +610,12 @@ while( $row = $result->fetch_assoc()){
     }
     $contador = $contador + 1;
 }
+
+// Este inicializa la variable de javascript de primer comentario viniedo desde
+// php de tal suerte que asi tu codigo de javascript sabe a que ids del futuro
+// debe buscar, dado que ya sabe a partir de donde buscar y si funciona
+// ahora haz un codigo como get_more_comments pero para get_new_comments y pasale
+// el id de donde tiene que buscar nuevos ids para que los jale cada 5 segundos.
 //echo $primer_comentario;
 echo '
 <script type="text/javascript">
