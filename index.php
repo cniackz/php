@@ -483,7 +483,6 @@ setea_estilo_por_primera_vez();
         <TH>
         </TH>
         <TH>
-            <DIV id="espaciador"> Ó </DIV>
         </TH>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
