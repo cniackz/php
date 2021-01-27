@@ -8,14 +8,12 @@
 <?php
 
 $punto_a = 0;
-$punto_b = 1;
 
 // From https://www.w3schools.com/php/php_superglobals_post.asp
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 
     // This code is to get the comentario and clave from the main page
-    $punto_a = $_GET['number_of_comments'] - 1;
-    $punto_b = $punto_a - 9;
+    $punto_a = $_GET['number_of_comments'];
 
 }
 
@@ -38,7 +36,7 @@ $sql = "
         device
     FROM
         comentarios 
-    WHERE id BETWEEN  " . $punto_b . " AND " . $punto_a . " ORDER BY id DESC";
+    WHERE id >  " . $punto_a . " ORDER BY id DESC";
 //echo $sql;
 
 
@@ -63,7 +61,6 @@ while( $row = $result->fetch_assoc()){
     echo $comentario;
     echo '<hr>';
 }
-echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas comentarios</BUTTON></DIV>';
 //echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>
