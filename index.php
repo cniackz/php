@@ -319,6 +319,7 @@ function funcion_alerta(id) {
     // ahora haz que te muestre el id, pues pasamelo
     
     var content = document.getElementById(id).textContent;
+    document.getElementById("area_de_texto").textContent = content;
     alert(content);
 }
 
@@ -502,7 +503,7 @@ setea_estilo_por_primera_vez();
     }
 
 ?>
-    <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
+    <TEXTAREA id="area_de_texto" type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
     <BR>
 
 <TABLE>
