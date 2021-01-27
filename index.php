@@ -317,7 +317,9 @@ const interval = setInterval(function() {
 function funcion_alerta(id) {
     // alert("I am an alert box!");
     // ahora haz que te muestre el id, pues pasamelo
-    alert(id);
+    
+    var content = document.getElementById(id).textContent;
+    alert(content);
 }
 
 function setea_estilo_para_pc(){
