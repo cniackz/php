@@ -297,6 +297,18 @@ function carga_mas_comentarios_js(){
 const interval = setInterval(function() {
    // method to be executed;
    console.log('algo');
+
+   //load new comments
+   var xmlhttp = new XMLHttpRequest()
+   xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("moreNewComments").innerHTML = this.responseText;
+        setea_estilo_para_pc();
+      }
+    };
+    xmlhttp.open("GET","get_new_comments.php?number_of_comments="+primer_comentario.toString(),true);
+    xmlhttp.send();
+
  }, 5000);
 
 
@@ -587,6 +599,10 @@ $ultimo_comentario = NULL;
 // mas moderno
 $primer_comentario = NULL;
 $contador = 0;
+
+// put a container for the new comments retrieved with AJAX on top
+echo '<DIV id="moreNewComments"></DIV>';
+
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
     $comentario = $comentario . $row['nombre'] . ' 🕙 ';
