@@ -624,7 +624,7 @@ while( $row = $result->fetch_assoc()){
         $comentario = $comentario . $row['fecha'];
     }
     $comentario = $comentario . '<BR>';
-    $comentario = $comentario . '<span onclick="funcion_alerta(' . $row['id'] . ');" class="comentarios_de_';
+    $comentario = $comentario . '<span onclick="funcion_alerta(' . $row['comentario'] . ');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</span></p>';
     echo $comentario;
