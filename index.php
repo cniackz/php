@@ -321,6 +321,12 @@ function funcion_alerta(id) {
     var content = document.getElementById(id).textContent;
     document.getElementById("textareaComentario").textContent = content;
     alert('El area de texto ha referenciado este comentario');
+
+    // No solo quiero que copies y pegues el texto, el proximo paso que sea
+    // Poner ese texto como en una div superior y que cuando el comentario
+    // se publique haga referencia a esa div
+    // "Comentario anterior"
+    //     "Comentario nuevo sobre el comentario anterior"
 }
 
 function setea_estilo_para_pc(){
