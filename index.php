@@ -481,9 +481,6 @@ setea_estilo_por_primera_vez();
 <TABLE>
     <TR>
         <TH>
-            <BUTTON type="button" class="botones" id="boton_de_refrescar" onclick="refrescar_comentarios();">
-                Actualizar
-            </BUTTON>
         </TH>
         <TH>
             <DIV id="espaciador"> Ó </DIV>
