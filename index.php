@@ -314,8 +314,10 @@ const interval = setInterval(function() {
 
 // Cuando le den click a un comentario, sale una alerta, es solo para probar
 // lo que me pidio mi papa que se comente un comentario especifico
-function funcion_alerta() {
-    alert("I am an alert box!");
+function funcion_alerta(id) {
+    // alert("I am an alert box!");
+    // ahora haz que te muestre el id, pues pasamelo
+    alert(id);
 }
 
 function setea_estilo_para_pc(){
@@ -622,7 +624,7 @@ while( $row = $result->fetch_assoc()){
         $comentario = $comentario . $row['fecha'];
     }
     $comentario = $comentario . '<BR>';
-    $comentario = $comentario . '<span onclick="funcion_alerta();" class="comentarios_de_';
+    $comentario = $comentario . '<span onclick="funcion_alerta(' . $row['id'] . ');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</span></p>';
     echo $comentario;
