@@ -478,19 +478,7 @@ setea_estilo_por_primera_vez();
 ################################################################################
 -->
 <!--Esta forma es donde se pone el comentario -->
-<TABLE>
-    <TR>
-        <TH>
-        </TH>
-        <TH>
-        </TH>
-        <TH>
-            <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
-                Salir
-            </BUTTON>
-        </TH>
-    </TR>
-</TABLE>
+
 <HR>
 <FORM method="post" action="insert.php">
 
@@ -506,7 +494,24 @@ setea_estilo_por_primera_vez();
 ?>
     <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
     <BR>
-    <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
+
+<TABLE>
+    <TR>
+        <TH>
+            <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
+        </TH>
+        <TH>
+            <DIV id="espaciador"> Ó </DIV>
+        </TH>
+        <TH>
+            <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
+                Salir
+            </BUTTON>
+        </TH>
+    </TR>
+</TABLE>
+
+    
 </FORM>
 <HR>
 
