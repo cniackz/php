@@ -312,6 +312,12 @@ const interval = setInterval(function() {
  }, 5000);
 
 
+// Cuando le den click a un comentario, sale una alerta, es solo para probar
+// lo que me pidio mi papa que se comente un comentario especifico
+function funcion_alerta() {
+    alert("I am an alert box!");
+}
+
 function setea_estilo_para_pc(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 
@@ -616,7 +622,7 @@ while( $row = $result->fetch_assoc()){
         $comentario = $comentario . $row['fecha'];
     }
     $comentario = $comentario . '<BR>';
-    $comentario = $comentario . '<span class="comentarios_de_';
+    $comentario = $comentario . '<span onclick="funcion_alerta();" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</span></p>';
     echo $comentario;
