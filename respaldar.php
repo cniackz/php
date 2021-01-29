@@ -1,16 +1,25 @@
 <?php
-$select = "SELECT * FROM table_name";
 
-$export = mysql_query ( $select ) or die ( "Sql error : " . mysql_error( ) );
+$connection = mysqli_connect('localhost', 'root', '', 'cesar');
+if (!$connection) {
+ echo "Error: Unable to connect to MySQL." . PHP_EOL;
+ echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+ echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+ exit;
+}
 
-$fields = mysql_num_fields ( $export );
+$select = "SELECT * FROM comentarios";
+
+$export = $connection->query( $select );
+
+$fields = $export->columnCount();
 
 for ( $i = 0; $i < $fields; $i++ )
 {
-    $header .= mysql_field_name( $export , $i ) . "\t";
+    $header .= $export->getColumnMeta( $i ) . "\t";
 }
 
-while( $row = mysql_fetch_row( $export ) )
+while( $row = $export->fetch_assoc() )
 {
     $line = '';
     foreach( $row as $value )
