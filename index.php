@@ -514,22 +514,19 @@ setea_estilo_por_primera_vez();
 
 <TABLE>
     <TR>
-        <TH>
+        <TD rowspan="2">
             <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
-        </TH>
+        </TD>
+        <TD>
+            <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
+        </TD>
     </TR>
     <TR>
-        <TH>
-            <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
-        </TH>
-        <TH>
-            <DIV id="espaciador"> Ó </DIV>
-        </TH>
-        <TH>
+        <TD>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
                 Salir
             </BUTTON>
-        </TH>
+        </TD>
     </TR>
 </TABLE>
 
