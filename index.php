@@ -342,8 +342,8 @@ function setea_estilo_para_pc(){
         var i = 0;
         for(i = 0; i < botones.length; i++){
             botones[i].style.fontSize = '30px';
-            botones[i].style.height = '40px';
-            botones[i].style.width = '200px';
+            botones[i].style.height = '40px'; // Este tamano afecta solo a la PC
+            botones[i].style.width = '200px'; // Este tamano afecta solo a la PC
         }
         document.getElementById("textareaComentario").style.fontSize = '30px';
         document.getElementById("textareaComentario").style.height = '75px';
