@@ -75,6 +75,8 @@ height:300px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
+
+/*Estos botones son los del celular, no los de la mac*/
 .botones
 {
 width:400px;
@@ -340,8 +342,8 @@ function setea_estilo_para_pc(){
         var i = 0;
         for(i = 0; i < botones.length; i++){
             botones[i].style.fontSize = '30px';
-            botones[i].style.height = '75px';
-            botones[i].style.width = '400px';
+            botones[i].style.height = '40px';
+            botones[i].style.width = '200px';
         }
         document.getElementById("textareaComentario").style.fontSize = '30px';
         document.getElementById("textareaComentario").style.height = '75px';
