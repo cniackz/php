@@ -514,7 +514,9 @@ setea_estilo_por_primera_vez();
 
 <TABLE>
     <TR>
-        <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
+        <TH>
+            <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
+        </TH>
     </TR>
     <TR>
         <TH>
