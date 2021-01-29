@@ -77,8 +77,8 @@ font-size:60px;
 }
 .botones
 {
-width:200px;
-height:100px;
+width:400px;
+height:150px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
