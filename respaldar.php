@@ -20,7 +20,7 @@ $field = mysqli_field_count($conn);
 
 // create line with field names
 for($i = 0; $i < $field; $i++) {
-    $csv_export.= mysqli_fetch_field_direct($query, $i)->name.';';
+    $csv_export.= mysqli_fetch_field_direct($query, $i)->name.',';
 }
 
 // newline (seems to work both on Linux & Windows servers)
@@ -31,7 +31,7 @@ $csv_export.= '
 while($row = mysqli_fetch_array($query)) {
     // create line with field values
     for($i = 0; $i < $field; $i++) {
-        $csv_export.= '"'.$row[mysqli_fetch_field_direct($query, $i)->name].'";';
+        $csv_export.= '"'.$row[mysqli_fetch_field_direct($query, $i)->name].'",';
     }
     $csv_export.= '
 ';
