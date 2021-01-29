@@ -71,7 +71,7 @@
 .textarea-comentario
 {
 width:800px;
-height:500px;
+height:300px; /*Esto solo afecta al celular*/
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
