@@ -71,7 +71,7 @@
 .textarea-comentario
 {
 width:800px;
-height:300px;
+height:500px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
 }
