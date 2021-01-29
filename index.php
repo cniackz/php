@@ -514,7 +514,7 @@ setea_estilo_por_primera_vez();
                     <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
                 </TD>
                 <TD>
-                O
+                    <DIV id="espaciador"> Ó </DIV>
                 </TD>
                 <TD>
                     <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
@@ -525,23 +525,24 @@ setea_estilo_por_primera_vez();
         </TABLE>';
     } else {
         echo '<INPUT type="hidden" name="device" value="computadora">';
-        echo '<TABLE>
-    <TR>
-        <TD rowspan="2">
-            <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
-        </TD>
-        <TD>
-            <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
-        </TD>
-    </TR>
-    <TR>
-        <TD>
-            <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
-                Salir
-            </BUTTON>
-        </TD>
-    </TR>
-</TABLE>';
+        echo '
+        <TABLE>
+            <TR>
+                <TD rowspan="2">
+                    <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
+                </TD>
+                <TD>
+                    <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
+                </TD>
+            </TR>
+            <TR>
+                <TD>
+                    <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
+                        Salir
+                    </BUTTON>
+                </TD>
+            </TR>
+        </TABLE>';
     }
 
 ?>
