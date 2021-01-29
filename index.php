@@ -687,3 +687,5 @@ $boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas</BUTTON></DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>
+
+<a href="respaldar.php">Descargar todos los comentarios</a>
