@@ -511,10 +511,11 @@ setea_estilo_por_primera_vez();
     }
 
 ?>
-    <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
-    <BR>
 
 <TABLE>
+    <TR>
+        <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
+    </TR>
     <TR>
         <TH>
             <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
