@@ -656,7 +656,9 @@ while( $row = $result->fetch_assoc()){
     $comentario = $comentario . '<BR>';
     $comentario = $comentario . '<span id="' . $row['id'] . '" onclick="funcion_alerta(' . $row['id'] . ');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
-    $comentario = $comentario . $row['comentario'].replace(/(?:\r\n|\r|\n)/g, '<br>') . '</span></p>';
+    // str_replace("%body%", "black", "<body text='%body%'>")
+    // $row['comentario'].replace(/(?:\r\n|\r|\n)/g, '<br>')
+    $comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</span></p>';
     echo $comentario;
     echo '<hr>';
     $ultimo_comentario = $row['id'];
