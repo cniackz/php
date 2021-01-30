@@ -314,6 +314,13 @@ const interval = setInterval(function() {
  }, 5000);
 
 
+function htmlDecode(input){
+  var e = document.createElement('textarea');
+  e.innerHTML = input;
+  // handle case of empty input
+  return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+}
+
 // Cuando le den click a un comentario, sale una alerta, es solo para probar
 // lo que me pidio mi papa que se comente un comentario especifico
 function funcion_alerta(id, nombre) {
@@ -321,7 +328,7 @@ function funcion_alerta(id, nombre) {
     // ahora haz que te muestre el id, pues pasamelo
     
     var content = document.getElementById(id).textContent;
-    document.getElementById("comentario_referenciado").textContent = 'Con respecto a lo que dijo ' + nombre + htmlDecode(':<br>') + content + ', quiero decir que:';
+    document.getElementById("comentario_referenciado").textContent = 'Con respecto a lo que dijo ' + nombre + htmlDecode('<br>') + content + ', quiero decir que:';
     alert('El comentario se ha referenciado');
 
     // No solo quiero que copies y pegues el texto, el proximo paso que sea
