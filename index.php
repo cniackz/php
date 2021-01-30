@@ -663,10 +663,10 @@ while( $row = $result->fetch_assoc()){
     }
     $comentario = $comentario . '<BR>';
     if(isset($row['parent'])){
-        $sql_parent = "SELECT nombre,comentario FROM comentarios WHERE id = " . $row['parent'];
+        $sql_parent = "SELECT nombre,fecha,comentario FROM comentarios WHERE id = " . $row['parent'];
         $result_parent = $connection->query($sql_parent);
         $row_parent = $result_parent->fetch_assoc();
-        $comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
+        $comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . 'el dia ' . $row_parent['fecha'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
     }
     $comentario = $comentario . '<span id="' . $row['id'] . '" onclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
