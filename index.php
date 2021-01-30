@@ -662,7 +662,10 @@ while( $row = $result->fetch_assoc()){
     }
     $comentario = $comentario . '<BR>';
     if(isset($row['parent'])){
-        $comentario = $comentario . 'Tiene referencia';
+        $sql_parent = "SELECT comentario FROM comentarios WHERE id = " . $row['parent'];
+        $result_parent = $connection->query($sql_parent);
+        $row_parent = $result_parent->fetch_assoc();
+        $comentario = $comentario . ' Con respecto a: ' . $row_parent['comentario'];
     }
     $comentario = $comentario . '<span id="' . $row['id'] . '" onclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
