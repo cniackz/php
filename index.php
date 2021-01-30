@@ -330,6 +330,8 @@ function funcion_alerta(id, nombre) {
     // se publique haga referencia a esa div
     // "Comentario anterior"
     //     "Comentario nuevo sobre el comentario anterior"
+
+    document.getElementById("parent").value = id;
 }
 
 function setea_estilo_para_pc(){
@@ -528,6 +530,7 @@ setea_estilo_por_primera_vez();
     } else {
         echo '<INPUT type="hidden" name="device" value="computadora">';
         echo '
+        <INPUT id="parent" type="hidden" name="parent" value="">
         <DIV id="comentario_referenciado"></DIV>
         <TABLE>
             <TR>
