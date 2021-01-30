@@ -42,12 +42,15 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                 $sql = $sql . "','" . $device . "','" . $parent . "')"; 
                 if(empty($parent)){
                 $sql = $sql . "','" . $device . "',NULL)"; 
+                } else {
+                    echo 'here';
                 }
                    
                 
                 echo $sql;
                 // Insert the comment of the user
                 $connection->query($sql);
+                }
             }
         }
 
