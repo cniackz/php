@@ -17,6 +17,7 @@ $result = $connection->query($sql);
 echo '
 <FORM method="post" action="insert_cesar_juan.php">
 <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
+<BR>
 <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
 </FORM>
 <TABLE>
