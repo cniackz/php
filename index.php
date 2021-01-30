@@ -436,7 +436,7 @@ function setea_estilo_por_primera_vez(){
                         place: 'after',
                         button:'&#x1F643;',
                         fontSize:'40px',
-                        emojis: ['&#x1F642;','&#x1F641;']
+                        emojis: ['&#x1F642;','&#x1F641;','👍']
                     }
                 );
                 setea_estilo_para_pc();
