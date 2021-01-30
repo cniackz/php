@@ -706,12 +706,14 @@ echo $boton;
 mysqli_close($connection);
 ?>
 
-<a href="respaldar.php">Descargar todos los comentarios</a>
+
 
 <br>
 <h1>Informacion Adicional del Chat:</h1>
 <br>
-Usuarios en este chat:
+<a href="respaldar.php">Descargar todos los comentarios</a>
+<br>
+<h2>Usuarios en este chat:</h2>
 <?php
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 if (!$connection) {
