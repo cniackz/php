@@ -16,6 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     $clave = $_POST['clave'];
     $parent = $_POST['parent'];
 
+    if(empty($parent)){
+        $parent = 'NULL';
+    }
+
     // This code is to get the clave from the cookie
     if(isset($_COOKIE['usuario'])) {
         $clave = $_COOKIE['usuario'];
