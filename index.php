@@ -668,11 +668,11 @@ while( $row = $result->fetch_assoc()){
         $row_parent = $result_parent->fetch_assoc();
         $comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ' el dia ' . $row_parent['fecha'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
     }
-    $comentario = $comentario . '<span id="' . $row['id'] . '" onclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
+    $comentario = $comentario . '<button id="' . $row['id'] . '" onclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     // str_replace("%body%", "black", "<body text='%body%'>")
     // $row['comentario'].replace(/(?:\r\n|\r|\n)/g, '<br>')
-    $comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</span></p>';
+    $comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
     echo $comentario;
     echo '<hr>';
     $ultimo_comentario = $row['id'];
