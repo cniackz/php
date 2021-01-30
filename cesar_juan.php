@@ -10,7 +10,7 @@ if (!$connection) {
  	exit;
 }
 
-if($_COOKIE['usuario']!='juan' OR $_COOKIE['usuario']!='cesar'){
+if($_COOKIE['usuario']!='jacl1960' OR $_COOKIE['usuario']!='cch1987'){
 	echo "Lo sentimos, pero no tienes acceso a este grupo";
 	exit;
 }
