@@ -707,6 +707,9 @@ mysqli_close($connection);
 ?>
 
 <a href="respaldar.php">Descargar todos los comentarios</a>
+
+<br>
+<h1>Informacion Adicional del Chat:</h1>
 <br>
 Usuarios en este chat:
 <?php
