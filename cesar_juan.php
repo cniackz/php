@@ -10,7 +10,7 @@ if (!$connection) {
  	exit;
 }
 
-$sql = 'SELECT * FROM cesar_juan';
+$sql = 'SELECT * FROM cesar_juan ORDER BY id DESC';
 
 $result = $connection->query($sql);
 
