@@ -322,7 +322,7 @@ function funcion_alerta(id, nombre) {
     // ahora haz que te muestre el id, pues pasamelo
     
     var content = document.getElementById(id).textContent;
-    document.getElementById("comentario_referenciado").innerHTML = 'Con respecto a lo que dijo ' + nombre + ':<br>"' + content + '", quiero decir que:';
+    document.getElementById("comentario_referenciado").innerHTML = 'Con respecto a lo que dijo ' + nombre + ':<br>"' + content + '". <br>Quiero decir que:';
     alert('El comentario se ha referenciado');
 
     // No solo quiero que copies y pegues el texto, el proximo paso que sea
