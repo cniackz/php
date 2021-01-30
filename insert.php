@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     $comentario = $_POST['comentario'];
     $device = $_POST['device'];
     $clave = $_POST['clave'];
+    $parent = $_POST['parent'];
 
     // This code is to get the clave from the cookie
     if(isset($_COOKIE['usuario'])) {
@@ -29,12 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
         $query_para_obtener_las_passwords = "SELECT nombre, password FROM usuarios";
         $nombre_contrasena = $connection->query($query_para_obtener_las_passwords);
         $cookie_value = NULL;
-        $sql = "INSERT INTO comentarios (comentario, nombre, device) VALUES('";
+        $sql = "INSERT INTO comentarios (comentario, nombre, device, parent) VALUES('";
         while( $row = $nombre_contrasena->fetch_assoc()){
             if($clave == $row['password']){
                 $cookie_value = $row['password'];
                 $sql = $sql . $comentario  .  "','" . $row['nombre']; 
-                $sql = $sql . "','" . $device . "')";
+                $sql = $sql . "','" . $device . "','" . $parent . "')";
                 // Insert the comment of the user
                 $connection->query($sql);
             }
