@@ -48,7 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                 echo $sql;
                 // Insert the comment of the user
                 $connection->query($sql);
-                }
             }
         }
 
