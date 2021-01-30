@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                 if(isset($parent)){
                     $sql = $sql . "','" . $device . "','" . $parent . "')";    
                 }
+                echo $sql;
                 // Insert the comment of the user
                 $connection->query($sql);
             }
@@ -60,5 +61,5 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     }
 }
 mysqli_close($connection);
-header('Location: index.php');
+//header('Location: index.php');
 ?>
