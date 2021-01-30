@@ -55,12 +55,13 @@ while( $row = $result->fetch_assoc()){
         $comentario = $comentario . $row['fecha'];
     }
     $comentario = $comentario . '<BR>';
-    $comentario = $comentario . '<span class="comentarios_de_';
+    $comentario = $comentario . '<button ' . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
-    $comentario = $comentario . $row['comentario'] . '</span></p>';
+    $comentario = $comentario . $row['comentario'] . '</button></p>';
     echo $comentario;
     echo '<hr>';
 }
 //echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>
+
