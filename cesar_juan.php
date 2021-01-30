@@ -10,6 +10,11 @@ if (!$connection) {
  	exit;
 }
 
+if($_COOKIE['usuario']!='juan' OR $_COOKIE['usuario']!='cesar'){
+	echo "Lo sentimos, pero no tienes acceso a este grupo";
+	exit;
+}
+
 $sql = 'SELECT * FROM cesar_juan ORDER BY id DESC';
 
 $result = $connection->query($sql);
