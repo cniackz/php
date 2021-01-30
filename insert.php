@@ -39,16 +39,26 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                 $cookie_value = $row['password'];
                 $sql = $sql . $comentario  .  "','" . $row['nombre'];
 
-                $sql = $sql . "','" . $device . "','" . $parent . "')"; 
+                 
 
                 echo $sql;
+                echo '<BR>'
 
                 if(empty($parent)){
-                $sql = $sql . "','" . $device . "',NULL)"; 
+                    $sql = $sql . "','" . $device . "',NULL)";    
+                }
+                
+                echo $sql;
+                echo '<BR>'
+                
+                if(!empty($parent)){
+                    $sql = $sql . "','" . $device . "','" . $parent . "')";
                 }
                    
                 
                 echo $sql;
+                echo '<BR>'
+                
                 // Insert the comment of the user
                 $connection->query($sql);
             }
