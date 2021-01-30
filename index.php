@@ -749,7 +749,7 @@ echo '
 while( $row = $result->fetch_assoc()){
     $password = 'Confidencial';
     if($_COOKIE['usuario']==$row['password']){
-        $password = $row['password']
+        $password = $row['password'];
     }
     echo '
 
