@@ -14,10 +14,38 @@ $sql = 'SELECT * FROM cesar_juan';
 
 $result = $connection->query($sql);
 
+echo '
+<TABLE>
+	<TR>
+		<TH>
+			id
+		</TH>
+		<TH>
+			fecha
+		</TH>
+		<TH>
+			nombre
+		</TH>
+		<TH>
+			comentario
+		</TH>
+	</TR>
+';
 while( $row = $result->fetch_assoc()){
 
-	echo $row['comentario'];
+echo '
+
+	<TR>
+		<TD>' . $row['id'] . '</TD>
+		<TD>' . $row['fecha'] . '</TD>
+		<TD>' . $row['nombre'] . '</TD>
+		<TD>' . $row['comentario'] . '</TD>
+	</TR>
+';
 
 }
+echo '
+</TABLE>
+';
 
 ?>
