@@ -10,11 +10,15 @@ if (!$connection) {
  	exit;
 }
 
-echo $_COOKIE['usuario'];
-echo $_COOKIE['usuario']!='cch1987';
-
+$puede_continuar = FALSE;
 if($_COOKIE['usuario']=='cch1987'){
-	echo "Es igual";
+	$puede_continuar = TRUE;
+}
+if($_COOKIE['usuario']=='jacl1960'){
+	$puede_continuar = TRUE;
+}
+if($puede_continuar==FALSE){
+	echo 'No tienes acceso';
 	exit;
 }
 
