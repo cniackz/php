@@ -316,12 +316,12 @@ const interval = setInterval(function() {
 
 // Cuando le den click a un comentario, sale una alerta, es solo para probar
 // lo que me pidio mi papa que se comente un comentario especifico
-function funcion_alerta(id) {
+function funcion_alerta(id, nombre) {
     // alert("I am an alert box!");
     // ahora haz que te muestre el id, pues pasamelo
     
     var content = document.getElementById(id).textContent;
-    document.getElementById("comentario_referenciado").textContent = content;
+    document.getElementById("comentario_referenciado").textContent = nombre + content;
     alert('El comentario se ha referenciado');
 
     // No solo quiero que copies y pegues el texto, el proximo paso que sea
