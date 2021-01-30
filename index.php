@@ -712,7 +712,6 @@ mysqli_close($connection);
 <h1>Informacion Adicional del Chat:</h1>
 <br>
 <a href="respaldar.php">Descargar todos los comentarios</a>
-<br>
 <h2>Usuarios en este chat:</h2>
 <?php
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
