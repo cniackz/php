@@ -707,7 +707,7 @@ mysqli_close($connection);
 ?>
 
 <a href="respaldar.php">Descargar todos los comentarios</a>
-
+<br>
 Usuarios en este chat:
 <?php
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
