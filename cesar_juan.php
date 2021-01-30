@@ -15,6 +15,10 @@ $sql = 'SELECT * FROM cesar_juan';
 $result = $connection->query($sql);
 
 echo '
+<FORM method="post" action="insert_cesar_juan.php">
+<TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
+<INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
+</FORM>
 <TABLE>
 	<TR>
 		<TH>
