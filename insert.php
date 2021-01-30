@@ -42,14 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                  
 
                 echo $sql;
-                echo '<BR>'
+                echo '<BR>';
 
                 if(empty($parent)){
                     $sql = $sql . "','" . $device . "',NULL)";    
                 }
                 
                 echo $sql;
-                echo '<BR>'
+                echo '<BR>';
                 
                 if(!empty($parent)){
                     $sql = $sql . "','" . $device . "','" . $parent . "')";
@@ -57,8 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                    
                 
                 echo $sql;
-                echo '<BR>'
-                
+                echo '<BR>';
+
                 // Insert the comment of the user
                 $connection->query($sql);
             }
