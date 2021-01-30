@@ -72,5 +72,5 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     }
 }
 mysqli_close($connection);
-//header('Location: index.php');
+header('Location: index.php');
 ?>
