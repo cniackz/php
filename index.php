@@ -759,3 +759,7 @@ while( $row = $result->fetch_assoc()){
 }
 echo '</TABLE>';
 ?>
+
+<H1>Otros grupos</H1>
+<H2>Juan y Cesar</H2>
+<A HREF="cesar_juan.php">Juan y Cesar</A>
