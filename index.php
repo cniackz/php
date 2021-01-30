@@ -766,4 +766,6 @@ echo '</TABLE>';
 
 <H1>Otros grupos</H1>
 <A HREF="cesar_juan.php">Juan y Cesar</A>
+<BR>
 <A HREF="cesar_liz.php">Liz y Cesar</A>
+<BR>
