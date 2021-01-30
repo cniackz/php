@@ -747,12 +747,16 @@ echo '
     </TR>
 ';
 while( $row = $result->fetch_assoc()){
+    $password = 'Confidencial';
+    if($_COOKIE['usuario']==$row['password']){
+        $password = $row['password']
+    }
     echo '
 
     <TR>
         <TD>' . $row['id_de_usuario'] . '</TD>
         <TD>' . $row['nombre'] . '</TD>
-        <TD>' . $row['password'] . '</TD>
+        <TD>' . $password . '</TD>
     </TR>
 
     ';
