@@ -28,6 +28,7 @@ $result = $connection->query($sql);
 
 echo '
 <A HREF="index.php">Volver al grupo de la familia</A>
+<BR>
 <FORM method="post" action="insert_cesar_juan.php">
 <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
 <BR>
