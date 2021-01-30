@@ -33,7 +33,8 @@ $sql = "
         nombre,
         CONVERT_TZ((fecha),'+00:00','-06:00') AS fecha,
         id,
-        device
+        device,
+        parent
     FROM
         comentarios 
     WHERE id >  " . $punto_a . " ORDER BY id DESC";
@@ -55,6 +56,12 @@ while( $row = $result->fetch_assoc()){
         $comentario = $comentario . $row['fecha'];
     }
     $comentario = $comentario . '<BR>';
+    if(isset($row['parent'])){
+        $sql_parent = "SELECT nombre,fecha,comentario FROM comentarios WHERE id = " . $row['parent'];
+        $result_parent = $connection->query($sql_parent);
+        $row_parent = $result_parent->fetch_assoc();
+        $comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ' el dia ' . $row_parent['fecha'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
+    }
     $comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     $comentario = $comentario . $row['comentario'] . '</button></p>';
