@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                 if(empty($parent)){
                 $sql = $sql . "','" . $device . "',NULL)"; 
                 } else {
-                    echo 'here';
+                    echo "here";
                 }
                    
                 
