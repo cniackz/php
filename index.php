@@ -625,7 +625,8 @@ $sql = "
         coments.nombre,
         CONVERT_TZ((coments.fecha),'+00:00','-06:00') AS fecha,
         coments.id,
-        coments.device
+        coments.device,
+        coments.parent
     FROM
         comentarios AS coments,
         (SELECT @rownum:=0)r 
@@ -660,6 +661,9 @@ while( $row = $result->fetch_assoc()){
         $comentario = $comentario . $row['fecha'];
     }
     $comentario = $comentario . '<BR>';
+    if(isset($row['parent'])){
+        $comentario = $comentario . 'Tiene referencia';
+    }
     $comentario = $comentario . '<span id="' . $row['id'] . '" onclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
     // str_replace("%body%", "black", "<body text='%body%'>")
