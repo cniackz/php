@@ -40,6 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
                 $sql = $sql . $comentario  .  "','" . $row['nombre'];
 
                 $sql = $sql . "','" . $device . "','" . $parent . "')"; 
+
+                echo $sql;
+
                 if(empty($parent)){
                 $sql = $sql . "','" . $device . "',NULL)"; 
                 }
