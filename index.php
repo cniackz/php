@@ -665,7 +665,7 @@ while( $row = $result->fetch_assoc()){
         $sql_parent = "SELECT nombre,comentario FROM comentarios WHERE id = " . $row['parent'];
         $result_parent = $connection->query($sql_parent);
         $row_parent = $result_parent->fetch_assoc();
-        $comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ': ' . $row_parent['comentario'];
+        $comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ': ' . str_replace("\n", "<BR>", $row_parent['comentario']);
     }
     $comentario = $comentario . '<span id="' . $row['id'] . '" onclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
