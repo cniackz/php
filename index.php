@@ -707,3 +707,51 @@ mysqli_close($connection);
 ?>
 
 <a href="respaldar.php">Descargar todos los comentarios</a>
+
+Usuarios en este chat:
+<?php
+$connection = mysqli_connect('localhost', 'root', '', 'cesar');
+if (!$connection) {
+ echo "Error: Unable to connect to MySQL." . PHP_EOL;
+ echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+ echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+ exit;
+}
+$sql = "
+    SELECT 
+        id_de_usuario,
+        nombre,
+        password
+    FROM
+        usuarios
+";
+
+$result = $connection->query($sql);
+
+echo '
+<TABLE>
+    <TR>
+        <TH>
+            ID del Usuario
+        </TH>
+        <TH>
+            Nombre del Usuario
+        </TH>
+        <TH>
+            Password del Usuario
+        </TH>
+    </TR>
+';
+while( $row = $result->fetch_assoc()){
+    echo '
+
+    <TR>
+        <TD>' . $row['id_de_usuario'] . '</TD>
+        <TD>' . $row['nombre'] . '</TD>
+        <TD>' . $row['password'] . '</TD>
+    </TR>
+
+    ';
+}
+echo '</TABLE>';
+?>
