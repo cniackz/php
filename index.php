@@ -70,7 +70,7 @@
 
 .textarea-comentario
 {
-/*width:800px;*/
+/*width:800px;*/ /*Esto solo afecta al celular siempre y cuando en JS lo seties para la PC*/
 /*height:300px;*/ /*Esto solo afecta al celular*/
 font:Verdana, Geneva, sans-serif;
 /*font-size:60px;*/
@@ -79,7 +79,7 @@ font:Verdana, Geneva, sans-serif;
 /*Estos botones son los del celular, no los de la mac*/
 .botones
 {
-width:400px;
+/*width:400px;  Teoricamente solo debe afectar al cel si en JS lo seteas*/
 height:150px;
 font:Verdana, Geneva, sans-serif;
 font-size:60px;
