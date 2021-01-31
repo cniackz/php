@@ -80,9 +80,9 @@ font:Verdana, Geneva, sans-serif;
 .botones
 {
 /*width:400px;  Teoricamente solo debe afectar al cel si en JS lo seteas*/
-height:150px;
+/*height:150px; */
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 
 
