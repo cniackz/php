@@ -28,7 +28,7 @@ SELECT
 	comentario,
 	nombre,
 	id,
-	CONVERT_TZ((fecha),\'+00:00\',\'-07:00\') AS fecha
+	CONVERT_TZ((fecha),\'+00:00\',\'-05:00\') AS fecha
 FROM cesar_liz 
 ORDER BY id DESC
 ';
