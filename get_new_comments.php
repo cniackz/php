@@ -37,7 +37,7 @@ $sql = "
     SELECT 
         comentario,
         nombre,
-        CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
+        DATE_FORMAT(CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
         id,
         device,
         parent
