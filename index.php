@@ -505,6 +505,15 @@ setea_estilo_por_primera_vez();
 <!--Esta forma es donde se pone el comentario -->
 <head></head>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
+<TABLE>
+    <TR>
+        <TH>
+            <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
+                Salir
+            </BUTTON>
+        </TH>
+    </TR>
+</TABLE>
 <HR>
 <FORM method="post" action="insert.php">
 
@@ -548,9 +557,7 @@ setea_estilo_por_primera_vez();
             </TR>
             <TR>
                 <TD>
-                    <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
-                        Salir
-                    </BUTTON>
+                    
                 </TD>
             </TR>
         </TABLE>';
