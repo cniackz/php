@@ -481,7 +481,7 @@ setea_estilo_por_primera_vez();
 <!--Esta forma es donde se pone el comentario -->
 <head></head>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
-<TABLE>
+<TABLE id="topid">
     <TR>
         <TH>
             <BUTTON type="button" class="botones" onClick="document.getElementById('h1_grupos').scrollIntoView();">
@@ -679,7 +679,13 @@ document.addEventListener(\'DOMContentLoaded\', function() {
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
-$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas</BUTTON></DIV>';
+$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas</BUTTON>
+
+<BUTTON type="button" class="botones" onClick="document.getElementById(\'topid\').scrollIntoView();">
+    Arriba
+</BUTTON>
+
+</DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>
