@@ -323,7 +323,7 @@ function funcion_alerta(id, nombre) {
 
     // Voy a clonar el elemento para mostrarlo bonito en la parte de arriba
     var elVerdadero = document.getElementById(id).parentElement; // <--- We need parent cause child is just the comment
-    var elClonado   = elVerdadero.cloneNode(True); // Creamos un clon del comentario completo
+    var elClonado   = elVerdadero.cloneNode(true); // Creamos un clon del comentario completo
     var elDivDeArriba = document.getElementById('comentario_referenciado');
     elDivDeArriba.appenChild(elClonado); // Le pegamos como hijo el comentario al div de arriba
 
