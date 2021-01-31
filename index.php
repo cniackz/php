@@ -178,7 +178,9 @@ text-align: left;
 }
 
 /* Para meterle bordes a la tabla*/
-table, th, td {
+/* Pero no quiero afectar al menu...*/
+.borde_en_tabla
+{
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -747,15 +749,15 @@ $sql = "
 $result = $connection->query($sql);
 
 echo '
-<TABLE>
-    <TR>
-        <TH>
+<TABLE class="borde_en_tabla">
+    <TR class="borde_en_tabla">
+        <TH class="borde_en_tabla">
             ID del Usuario
         </TH>
-        <TH>
+        <TH class="borde_en_tabla">
             Nombre del Usuario
         </TH>
-        <TH>
+        <TH class="borde_en_tabla">
             Password del Usuario
         </TH>
     </TR>
@@ -767,7 +769,7 @@ while( $row = $result->fetch_assoc()){
     }
     echo '
 
-    <TR>
+    <TR class="borde_en_tabla">
         <TD>' . $row['id_de_usuario'] . '</TD>
         <TD>' . $row['nombre'] . '</TD>
         <TD>' . $password . '</TD>
