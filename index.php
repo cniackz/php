@@ -484,7 +484,7 @@ setea_estilo_por_primera_vez();
 <TABLE>
     <TR>
         <TH>
-            <BUTTON type="button" onClick="document.getElementById('h1_grupos').scrollIntoView();">
+            <BUTTON type="button" class="botones" onClick="document.getElementById('h1_grupos').scrollIntoView();">
                 Grupos
             </BUTTON>
         </TH>
