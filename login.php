@@ -7,7 +7,7 @@
     // Para pedir al usuario que se logie sino hay cookie
     if(!isset($_COOKIE['usuario'])) {
         // no hay cookie debe logearse
-
+        header('Location: general.php'); // Chat general, abierto al publico
     } else {
         if($_COOKIE['usuario'] == 'hola'){
             // Cuando el valor de la cookie es hola, significa que el valor es
@@ -23,7 +23,7 @@
             }
 
             // Sino es la correcta de la familia, mandalo al general
-            header('Location: general.php');
+            header('Location: general.php'); // general logeado, pagina que aun no existe jeje
         }
     }
     echo '<P id="usuario">Usuario:</P>';
