@@ -396,25 +396,6 @@ function setea_estilo_por_primera_vez(){
     // Para cambiar el estilo con Javascript
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
         // Es mobile no hagas nada por ahora
-        // Espera a que cargue la pagina para modificarla
-        document.addEventListener(
-            'DOMContentLoaded', 
-            function(event) {
-                
-                //the event occurred, ya se cargo la pagina
-                // Ponle emojis a tu textarea, ya que se cargo la pagina
-                // https://www.jqueryscript.net/form/emoji-picker-input-textarea.html
-                // https://ili4x.github.io/inputEmoji/demo.html
-                $('textarea').emoji(
-                    {
-                        place: 'after',
-                        button:'&#x1F643;',
-                        fontSize:'120px',
-                        emojis: ['&#x1F642;','&#x1F641;']
-                    }
-                );
-            }
-        )
     } else {
 
         // Es PC
