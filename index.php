@@ -503,6 +503,7 @@ setea_estilo_por_primera_vez();
         <DIV id="comentario_referenciado"></DIV>
         <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
         <BR>
+        <BR>
         <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">';
     } else {
         echo '<INPUT type="hidden" name="device" value="computadora">';
