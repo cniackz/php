@@ -337,7 +337,7 @@ function funcion_alerta(id, nombre) {
     document.getElementById("parent").value = id;
 
     // Take user up
-    $('html, body').animate({ scrollTop: 0 }, 'fast');
+    scroll(0,0);
 }
 
 function setea_estilo_para_pc(){
