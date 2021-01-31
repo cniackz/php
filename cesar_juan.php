@@ -27,6 +27,8 @@ $sql = 'SELECT * FROM cesar_juan ORDER BY id DESC';
 $result = $connection->query($sql);
 
 echo '
+<head></head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
 <A HREF="index.php">Volver al grupo de la familia</A>
 </BR>
 </BR>
