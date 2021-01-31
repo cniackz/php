@@ -93,14 +93,14 @@ font:Verdana, Geneva, sans-serif;
 background-color:Gray; 
 color:white;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px; en teoria solo debe aftar al cel si la pc la seteas en js*/
 }
 .comentarios_de_cesar
 {
 background-color:Gray; 
 color:black;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 
 
@@ -112,14 +112,14 @@ font-size:60px;
 background-color:DodgerBlue; 
 color:white;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 .comentarios_de_juan
 {
 background-color:DodgerBlue; 
 color:black;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 
 
@@ -130,14 +130,14 @@ font-size:60px;
 background-color:SlateBlue; 
 color:white;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 .comentarios_de_gogo
 {
 background-color:SlateBlue; 
 color:black;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 
 
@@ -148,14 +148,14 @@ font-size:60px;
 background-color:MediumSeaGreen; 
 color:white;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 .comentarios_de_martha
 {
 background-color:MediumSeaGreen; 
 color:black;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 
 
@@ -167,14 +167,14 @@ font-size:60px;
 background-color:Violet;
 color:white;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 .comentarios_de_liz
 {
 background-color:Violet;
 color:black;
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 
 
