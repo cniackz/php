@@ -1,3 +1,5 @@
+<head></head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
 <FORM method="post" action="create_cookie.php">
 
 <?php
