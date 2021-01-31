@@ -96,6 +96,7 @@ background-color:Gray;
 color:black;
 font:Verdana, Geneva, sans-serif;
 /*font-size:60px;*/
+text-align: left;
 }
 
 
