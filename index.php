@@ -425,6 +425,7 @@ function setea_estilo_por_primera_vez(){
                 // https://ili4x.github.io/inputEmoji/demo.html
                 $('textarea').emoji(
                     {
+                        rowSize: 3,
                         place: 'after',
                         button:'&#x1F643;',
                         fontSize:'40px',
