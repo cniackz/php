@@ -116,6 +116,7 @@ background-color:DodgerBlue;
 color:black;
 font:Verdana, Geneva, sans-serif;
 /*font-size:60px;*/
+text-align: left;
 }
 
 
@@ -134,6 +135,7 @@ background-color:SlateBlue;
 color:black;
 font:Verdana, Geneva, sans-serif;
 /*font-size:60px;*/
+text-align: left;
 }
 
 
@@ -152,6 +154,7 @@ background-color:MediumSeaGreen;
 color:black;
 font:Verdana, Geneva, sans-serif;
 /*font-size:60px;*/
+text-align: left;
 }
 
 
@@ -171,6 +174,7 @@ background-color:Violet;
 color:black;
 font:Verdana, Geneva, sans-serif;
 /*font-size:60px;*/
+text-align: left;
 }
 
 
