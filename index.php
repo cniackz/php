@@ -317,9 +317,9 @@ function funcion_alerta(id, nombre) {
     // alert("I am an alert box!");
     // ahora haz que te muestre el id, pues pasamelo
     
-    var content = document.getElementById(id).textContent;
-    document.getElementById("comentario_referenciado").innerHTML = 'Con respecto a lo que dijo ' + nombre + ':<br>"' + content + '". <br>Quiero decir que:';
-    alert('El comentario se ha referenciado');
+    //var content = document.getElementById(id).textContent;
+    //document.getElementById("comentario_referenciado").innerHTML = 'Con respecto a lo que dijo ' + nombre + ':<br>"' + content + '". <br>Quiero decir que:';
+    //alert('El comentario se ha referenciado');
 
     // Voy a clonar el elemento para mostrarlo bonito en la parte de arriba
     var elVerdadero = document.getElementById(id).parentElement; // <--- We need parent cause child is just the comment
@@ -335,6 +335,9 @@ function funcion_alerta(id, nombre) {
     //     "Comentario nuevo sobre el comentario anterior"
 
     document.getElementById("parent").value = id;
+
+    // Take user up
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
 }
 
 function setea_estilo_para_pc(){
