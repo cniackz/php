@@ -425,6 +425,20 @@ function setea_estilo_por_primera_vez(){
 // Setea el estilo de cel y PC por primera vez
 // las siguientes veces manda a llamar de nuevo la funcion
 setea_estilo_por_primera_vez();
+
+// Para que cuando el usuario le pique, la referencia misma se quite y no tenga que darle reload a la pagina
+function quita_la_referencia(){
+    var referencia = document.getElementById('comentario_referenciado');
+    referencia.textContent = null; // Esto quita el texto pero falta quitar el input con el valor
+    var parent = document.getElementById('parent');
+    parent.value = ''; // para que en la base de datos no se inserte ningun numero de referencia en parent
+    // Pruebalo
+    // 1. Haz un comentario referenciado
+    // 2. Quita la referencia
+    // 3. Manda el comentario
+    // 4. Se espera que no haiga referencia en el comentario
+}
+
 </script>
 
 
@@ -497,7 +511,7 @@ setea_estilo_por_primera_vez();
 </TABLE>
 <HR>
 <FORM method="post" action="insert.php">
-<DIV id="comentario_referenciado"></DIV>
+<DIV id="comentario_referenciado" onclick="quita_la_referencia();" ></DIV>
 <?php
 
     $useragent=$_SERVER['HTTP_USER_AGENT'];
