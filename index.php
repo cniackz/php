@@ -70,10 +70,10 @@
 
 .textarea-comentario
 {
-width:800px;
-height:300px; /*Esto solo afecta al celular*/
+/*width:800px;*/
+/*height:300px;*/ /*Esto solo afecta al celular*/
 font:Verdana, Geneva, sans-serif;
-font-size:60px;
+/*font-size:60px;*/
 }
 
 /*Estos botones son los del celular, no los de la mac*/
