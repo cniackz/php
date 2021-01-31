@@ -7,11 +7,12 @@
     // Para pedir al usuario que se logie sino hay cookie
     if(!isset($_COOKIE['usuario'])) {
         // no hay cookie debe logearse
-        header('Location: general.php'); // Chat general, abierto al publico
+        setcookie("usuario", "hola", time() + (86400 * 30), "/", 'cesarcelis.com');
     } else {
         if($_COOKIE['usuario'] == 'hola'){
             // Cuando el valor de la cookie es hola, significa que el valor es
             // invalido, entonces el usuario debe logearse de nuevo
+            header('Location: general.php'); // No mejor mandalo a una pagina de distraccion
         } else {
             
             // Si hay cookie si es la correcta mandalo a index.php donde esta el chat de la familia
