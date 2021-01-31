@@ -63,11 +63,6 @@
 -->
 <style>
 
-#espaciador
-{
-    font-size:60px;
-}
-
 .textarea-comentario
 {
 /*width:800px;*/ /*Esto solo afecta al celular siempre y cuando en JS lo seties para la PC*/
