@@ -7,12 +7,12 @@
     // Para pedir al usuario que se logie sino hay cookie
     if(!isset($_COOKIE['usuario'])) {
         // no hay cookie debe logearse
-        setcookie("usuario", "hola", time() + (86400 * 30), "/", 'cesarcelis.com');
+        setcookie("usuario", "nuevo", time() + (86400 * 30), "/", 'cesarcelis.com');
     } else {
         if($_COOKIE['usuario'] == 'hola'){
             // Cuando el valor de la cookie es hola, significa que el valor es
             // invalido, entonces el usuario debe logearse de nuevo
-            header('Location: general.php'); // No mejor mandalo a una pagina de distraccion // Este es el candado, quitalo solo si tu familia cae en la trampa...
+            // header('Location: general.php'); // No mejor mandalo a una pagina de distraccion // Este es el candado, quitalo solo si tu familia cae en la trampa...
         } else {
             
             // Si hay cookie si es la correcta mandalo a index.php donde esta el chat de la familia
