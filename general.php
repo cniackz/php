@@ -1,3 +1,3 @@
 <?php
-Bienvenido
+echo 'Bienvenido';
 ?>
