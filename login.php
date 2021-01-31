@@ -12,7 +12,6 @@
         if($_COOKIE['usuario'] == 'hola'){
             // Cuando el valor de la cookie es hola, significa que el valor es
             // invalido, entonces el usuario debe logearse de nuevo
-            // header('Location: general.php'); // No mejor mandalo a una pagina de distraccion // Este es el candado, quitalo solo si tu familia cae en la trampa...
         } else {
             
             // Si hay cookie si es la correcta mandalo a index.php donde esta el chat de la familia
@@ -22,9 +21,6 @@
                     header('Location: index.php');
                 }
             }
-
-            // Sino es la correcta de la familia, mandalo al general
-            // header('Location: general.php'); // general logeado, pagina que aun no existe jeje
         }
     }
     echo '<P id="usuario">Usuario:</P>';
