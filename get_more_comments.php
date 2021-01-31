@@ -71,9 +71,18 @@ while( $row = $result->fetch_assoc()){
 }
 echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas</BUTTON>
 
+
+
+<!--
+
+Este boton es para que aparezca el boton de arriba despues de que cargamos mas comentarios
+
+-->
 <BUTTON type="button" class="botones" onClick="document.getElementById(\'topid\').scrollIntoView();">
     Arriba
 </BUTTON>
+
+
 
 </DIV>';
 //echo '<DIV id="moreComments"></DIV>';
