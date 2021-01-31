@@ -25,7 +25,8 @@ if($puede_continuar==FALSE){
 $sql = 'SELECT * FROM cesar_juan ORDER BY id DESC';
 
 $result = $connection->query($sql);
-
+// https://stackoverflow.com/questions/18777103/how-to-resize-html-pages-on-mobile-phones/18777292
+// le puse el meta tag pa que se vea bien en el cel sin necesidad de usar js
 echo '
 <head></head>
 <meta content=\'width=device-width, initial-scale=1\' name=\'viewport\'/>
