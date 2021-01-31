@@ -722,7 +722,7 @@ $boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas</BUTTON>
 echo $boton;
 mysqli_close($connection);
 ?>
-<BUTTON type="button" class="botones" onClick="document.getElementById(\'topid\').scrollIntoView();">
+<BUTTON type="button" class="botones" onClick="document.getElementById('topid').scrollIntoView();">
     Arriba
 </BUTTON>
 
