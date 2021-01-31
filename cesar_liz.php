@@ -29,6 +29,14 @@ $result = $connection->query($sql);
 echo '
 <head></head>
 <meta content=\'width=device-width, initial-scale=1\' name=\'viewport\'/>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
 <A HREF="index.php">Volver al grupo de la familia</A>
 </BR>
 </BR>
