@@ -791,6 +791,7 @@ echo '</TABLE>';
     <LI>
         <BUTTON class="botones" onclick="window.location.replace('http://cesarcelis.com/cesar_juan.php');">Juan y Cesar</BUTTON>
     </LI>
+    <BR>
     <LI>
         <BUTTON class="botones" onclick="window.location.replace('http://cesarcelis.com/cesar_liz.php');">Liz y Cesar</BUTTON>
     </LI>
