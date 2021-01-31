@@ -22,7 +22,16 @@ if($puede_continuar==FALSE){
 	exit;
 }
 
-$sql = 'SELECT * FROM cesar_liz ORDER BY id DESC';
+// CONVERT_TZ((coments.fecha),'+00:00','-06:00') AS fecha,
+$sql = '
+SELECT
+	comentario,
+	nombre,
+	id,
+	CONVERT_TZ((coments.fecha),'+00:00','-06:00') AS fecha
+FROM cesar_liz 
+ORDER BY id DESC
+';
 
 $result = $connection->query($sql);
 
