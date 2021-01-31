@@ -321,6 +321,13 @@ function funcion_alerta(id, nombre) {
     document.getElementById("comentario_referenciado").innerHTML = 'Con respecto a lo que dijo ' + nombre + ':<br>"' + content + '". <br>Quiero decir que:';
     alert('El comentario se ha referenciado');
 
+    // Voy a clonar el elemento para mostrarlo bonito en la parte de arriba
+    var elVerdadero = document.getElementById(id).parentElement; // <--- We need parent cause child is just the comment
+    var elClonado   = elVerdadero.cloneNode(True); // Creamos un clon del comentario completo
+    var elDivDeArriba = document.getElementById('comentario_referenciado');
+    elDivDeArriba.appenChild(elClonado); // Le pegamos como hijo el comentario al div de arriba
+
+
     // No solo quiero que copies y pegues el texto, el proximo paso que sea
     // Poner ese texto como en una div superior y que cuando el comentario
     // se publique haga referencia a esa div
