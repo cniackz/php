@@ -718,16 +718,13 @@ document.addEventListener(\'DOMContentLoaded\', function() {
 $boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
 $boton = $boton . 'onclick="load_more_comments(';
 $boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas</BUTTON>
-
-<BUTTON type="button" class="botones" onClick="document.getElementById(\'topid\').scrollIntoView();">
-    Arriba
-</BUTTON>
-
 </DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>
-
+<BUTTON type="button" class="botones" onClick="document.getElementById(\'topid\').scrollIntoView();">
+    Arriba
+</BUTTON>
 
 
 <br>
