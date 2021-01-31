@@ -177,6 +177,12 @@ font:Verdana, Geneva, sans-serif;
 text-align: left;
 }
 
+/* Para meterle bordes a la tabla*/
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 
 </style>
 
