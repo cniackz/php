@@ -484,6 +484,9 @@ setea_estilo_por_primera_vez();
 <TABLE>
     <TR>
         <TH>
+            <input type="button" onClick="document.getElementById('h1_grupos').scrollIntoView();" />
+        </TH>
+        <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
                 Salir
             </BUTTON>
@@ -737,7 +740,7 @@ while( $row = $result->fetch_assoc()){
 echo '</TABLE>';
 ?>
 
-<H1>Otros grupos</H1>
+<H1 id="h1_grupos">Otros grupos</H1>
 <UL>
     <LI>
         <A HREF="cesar_juan.php">Juan y Cesar</A>
