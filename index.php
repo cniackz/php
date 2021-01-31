@@ -790,6 +790,7 @@ echo '</TABLE>';
 <UL>
     <LI>
         <A HREF="cesar_juan.php">Juan y Cesar</A>
+        <BUTTON onclick="window.location.replace('http://cesarcelis.com/cesar_juan.php');">Juan y Cesar</BUTTON>
     </LI>
     <LI>
         <A HREF="cesar_liz.php">Liz y Cesar</A>
