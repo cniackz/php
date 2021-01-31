@@ -10,19 +10,35 @@ if (!$connection) {
  	exit;
 }
 
+$numeroDeHoras = 0;
 $puede_continuar = FALSE;
 if($_COOKIE['usuario']=='cch1987'){
 	$puede_continuar = TRUE;
+	$numeroDeHoras = 5;
 }
 if($_COOKIE['usuario']=='jacl1960'){
 	$puede_continuar = TRUE;
+	$numeroDeHoras = 6;
 }
 if($puede_continuar==FALSE){
 	echo 'No tienes acceso';
 	exit;
 }
 
-$sql = 'SELECT * FROM cesar_juan ORDER BY id DESC';
+
+
+// CONVERT_TZ((coments.fecha),'+00:00','-06:00') AS fecha,
+$sql = '
+SELECT
+	comentario,
+	nombre,
+	id,
+	CONVERT_TZ((fecha),\'+00:00\',\'-0' . $numeroDeHoras . ':00\') AS fecha
+FROM cesar_juan 
+ORDER BY id DESC
+';
+
+
 
 $result = $connection->query($sql);
 // https://stackoverflow.com/questions/18777103/how-to-resize-html-pages-on-mobile-phones/18777292
