@@ -24,7 +24,7 @@
             }
 
             // Sino es la correcta de la familia, mandalo al general
-            header('Location: general.php'); // general logeado, pagina que aun no existe jeje
+            // header('Location: general.php'); // general logeado, pagina que aun no existe jeje
         }
     }
     echo '<P id="usuario">Usuario:</P>';
