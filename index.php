@@ -502,7 +502,8 @@ setea_estilo_por_primera_vez();
 ################################################################################
 -->
 <!--Esta forma es donde se pone el comentario -->
-
+<head></head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
 <HR>
 <FORM method="post" action="insert.php">
 
