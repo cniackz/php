@@ -715,27 +715,20 @@ document.addEventListener(\'DOMContentLoaded\', function() {
 </script>';
 
 // Despues de cargar mas comentarios, setea el estilo para PC que se vea bien
-$boton = '
-<TABLE>
-    <TR>
-        <TD>
-            <DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
-            $boton = $boton . 'onclick="load_more_comments(';
-            $boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas</BUTTON>
-            </DIV>';
+$boton = '<DIV id="moreComments"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" ';
+$boton = $boton . 'onclick="load_more_comments(';
+$boton = $boton . '\'' . $ultimo_comentario . '\');">Ver mas</BUTTON>
+
+<BUTTON type="button" class="botones" onClick="document.getElementById(\'topid\').scrollIntoView();">
+    Arriba
+</BUTTON>
+
+</DIV>';
 echo $boton;
 mysqli_close($connection);
 ?>
 
 
-        </TD>
-        <TD>
-            <BUTTON type="button" class="botones" onClick="document.getElementById('topid').scrollIntoView();">
-                Arriba
-            </BUTTON>
-        </TD>
-    </TR>
-</TABLE>
 
 <br>
 <h1>Informacion Adicional del Chat:</h1>
