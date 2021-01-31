@@ -350,6 +350,7 @@ function setea_estilo_para_pc(){
         }
         document.getElementById("textareaComentario").style.fontSize = '30px';
         document.getElementById("textareaComentario").style.height = '200px'; // Esto afecta solo a la PC
+        document.getElementById("textareaComentario").style.width = '800px'; // Esto solo afecta a la PC
 
         var i;
         // Function para eficientar el uso de los cambios de estilo en el
