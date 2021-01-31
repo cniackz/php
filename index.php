@@ -497,7 +497,7 @@ setea_estilo_por_primera_vez();
 </TABLE>
 <HR>
 <FORM method="post" action="insert.php">
-
+<DIV id="comentario_referenciado"></DIV>
 <?php
 
     $useragent=$_SERVER['HTTP_USER_AGENT'];
@@ -505,7 +505,7 @@ setea_estilo_por_primera_vez();
         echo '<INPUT type="hidden" name="device" value="celular">';
         echo '
         <INPUT id="parent" type="hidden" name="parent" value="">
-        <DIV id="comentario_referenciado"></DIV>
+        
         <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
         <BR>
         <BR>
@@ -514,7 +514,7 @@ setea_estilo_por_primera_vez();
         echo '<INPUT type="hidden" name="device" value="computadora">';
         echo '
         <INPUT id="parent" type="hidden" name="parent" value="">
-        <DIV id="comentario_referenciado"></DIV>
+        
         <TABLE>
             <TR>
                 <TD rowspan="2">
