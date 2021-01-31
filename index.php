@@ -512,7 +512,7 @@ function quita_la_referencia(){
 </TABLE>
 <HR>
 <FORM method="post" action="insert.php">
-<DIV id="comentario_referenciado" onclick="quita_la_referencia();" ></DIV>
+<BUTTON id="comentario_referenciado" onclick="quita_la_referencia();" ></BUTTON>
 <?php
 
     $useragent=$_SERVER['HTTP_USER_AGENT'];
