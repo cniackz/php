@@ -256,6 +256,11 @@ function refrescar_comentarios() {
 }
 
 // Simulate an HTTP redirect:
+function redirect(url) {
+    window.location.replace(url);    
+}
+
+// Simulate an HTTP redirect:
 function logout() {
     window.location.replace("http://cesarcelis.com/delete_cookie.php");    
 }
@@ -524,6 +529,11 @@ function quita_la_referencia(){
         <TH>
             <BUTTON type="button" class="botones" onClick="document.getElementById('h1_grupos').scrollIntoView();">
                 Grupos
+            </BUTTON>
+        </TH>
+        <TH>
+            <BUTTON type="button" class="botones" id="boton_de_logout" onclick="redirect('http://cesarcelis.com/iframe.html');">
+                Chats
             </BUTTON>
         </TH>
         <TH>
