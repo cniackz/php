@@ -479,6 +479,8 @@ function tamano_de_letra() {
   if (tamano != null) {
     fontSize = tamano;
     setea_estilo_para_pc();
+    var body = document.getElementById("body");
+    body.style.fontSize = tamano;
   }
 }
 
@@ -537,6 +539,7 @@ function tamano_de_letra() {
 -->
 <!--Esta forma es donde se pone el comentario -->
 <head></head>
+<body>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <TABLE id="topid">
     <TR>
@@ -828,3 +831,4 @@ echo '</TABLE>';
 <BR>
 <BR>
 <BR>
+</body>
