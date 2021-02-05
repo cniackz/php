@@ -545,7 +545,7 @@ function tamano_de_letra() {
     <TR>
         <TH>
             <BUTTON type="button" class="botones" onClick="document.getElementById('h1_grupos').scrollIntoView();">
-                Grupos
+                Abajo
             </BUTTON>
         </TH>
         <TH>
