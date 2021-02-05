@@ -361,17 +361,21 @@ function setea_estilo_para_pc(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 
     } else{
+
+        // To affect all fontSize at once
+        var fontSize = '20px'; // Este tamano solo afecta a la pc
+
         //the event occurred, ya se cargo la pagina
         // Ahora si modifica el estilo:
         // El resto de cosas que queremos modificar cuando es una pc
         var botones = document.getElementsByClassName("botones");
         var i = 0;
         for(i = 0; i < botones.length; i++){
-            botones[i].style.fontSize = '30px';
+            botones[i].style.fontSize = fontSize; // Este tamano solo afecta a la PC
             botones[i].style.height = '40px'; // Este tamano afecta solo a la PC
             botones[i].style.width = '200px'; // Este tamano afecta solo a la PC
         }
-        document.getElementById("textareaComentario").style.fontSize = '30px';
+        document.getElementById("textareaComentario").style.fontSize = fontSize;
         document.getElementById("textareaComentario").style.height = '200px'; // Esto afecta solo a la PC
         document.getElementById("textareaComentario").style.width = '800px'; // Esto solo afecta a la PC
 
@@ -381,7 +385,7 @@ function setea_estilo_para_pc(){
         // lugar de varios fors por persona
         function loop_por_persona(label, comment, color){
             for(i = 0; i < label.length; i++){
-                label[i].style.fontSize = '30px';
+                label[i].style.fontSize = fontSize;
                 label[i].style.backgroundColor = color;
                 label[i].style.color = 'white';
                 label[i].style.marginBottom = '0px';
