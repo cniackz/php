@@ -390,7 +390,7 @@ function setea_estilo_para_pc(){
                 label[i].style.color = 'white';
                 label[i].style.marginBottom = '0px';
                 label[i].style.marginTop = '0px';
-                comment[i].style.fontSize = '25px';
+                comment[i].style.fontSize = fontSize;
                 comment[i].style.fontFamily = 'monospace';
                 comment[i].style.backgroundColor = color;
                 comment[i].style.color = 'black';
