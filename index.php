@@ -476,7 +476,7 @@ function quita_la_referencia(){
 // setea el tamano de letra desde JS
 function tamano_de_letra() {
   var tamano = prompt("Por favor ponga el tamano de letra", "20px");
-  if (person != null) {
+  if (tamano != null) {
     fontSize = tamano;
     setea_estilo_para_pc();
   }
