@@ -539,7 +539,7 @@ function tamano_de_letra() {
 -->
 <!--Esta forma es donde se pone el comentario -->
 <head></head>
-<body>
+<body id="body">
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <TABLE id="topid">
     <TR>
