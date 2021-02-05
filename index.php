@@ -357,13 +357,14 @@ function funcion_alerta(id, nombre) {
     scroll(0,0);
 }
 
+// To affect all fontSize at once
+var fontSize = '20px'; // Este tamano solo afecta a la pc
 function setea_estilo_para_pc(){
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 
     } else{
 
-        // To affect all fontSize at once
-        var fontSize = '20px'; // Este tamano solo afecta a la pc
+
 
         //the event occurred, ya se cargo la pagina
         // Ahora si modifica el estilo:
@@ -472,6 +473,14 @@ function quita_la_referencia(){
     // 4. Se espera que no haiga referencia en el comentario
 }
 
+// setea el tamano de letra desde JS
+function tamano_de_letra() {
+  var tamano = prompt("Por favor ponga el tamano de letra", "20px");
+  if (person != null) {
+    fontSize = tamano;
+  }
+}
+
 </script>
 
 
@@ -543,6 +552,11 @@ function quita_la_referencia(){
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
                 Salir
+            </BUTTON>
+        </TH>
+        <TH>
+            <BUTTON type="button" class="botones" id="tamano_de_letra" onclick="tamano_de_letra();">
+                Tamano
             </BUTTON>
         </TH>
     </TR>
