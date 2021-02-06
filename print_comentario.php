@@ -1,7 +1,7 @@
 <?php
 
 // Aqui esta la funcion que se llama get_comments
-// require 'display_comments.php';
+// require 'display_comments.php'; // No lo importes aqui porque ya se importo en otro lado, es problematico no como en python
 
 function print_comentario($nombre, $device, $fecha, $comentario, $id, $hierarchy){
 
