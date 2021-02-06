@@ -714,10 +714,18 @@ while( $row = $result->fetch_assoc()){
             $row_parent['device'],
             $row_parent['fecha'],
             $row_parent['comentario'],
-            $row_parent['id']
+            $row_parent['id'],
+            'parent'
         );
     }
-    print_comentario($row['nombre'], $row['device'], $row['fecha'], $row['comentario'], $row['id']);
+    print_comentario(
+        $row['nombre'], 
+        $row['device'], 
+        $row['fecha'], 
+        $row['comentario'], 
+        $row['id'],
+        'child'
+    );
     //$comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     //$comentario = $comentario . $row['nombre'] .'">'; 
     // str_replace("%body%", "black", "<body text='%body%'>")
