@@ -110,6 +110,8 @@ funcion display_comments_function($connection, $tiempo){
     }
 
 
+    $where_clause = '';
+    $limit = '';
     /*
     ################################################################################
     #
