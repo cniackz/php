@@ -7,6 +7,9 @@
 -->
 <?php
 
+// Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
+require 'display_comments.php';
+
 $punto_a = 0;
 $punto_b = 1;
 
@@ -34,22 +37,24 @@ if($_COOKIE['usuario']=='cch1987'){
     $number_of_hour = 5; // Para tener la hora de toronto
 }
 
-// Query para seleccionar los comentarios de la base de datos MySQL
-// DATE_FORMAT(CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha, <--- solo me da la hora en am y pm
-$sql = "
-    SELECT 
-        comentario,
-        nombre,
-        CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
-        id,
-        device
-    FROM
-        comentarios 
-    WHERE id BETWEEN  " . $punto_b . " AND " . $punto_a . " ORDER BY id DESC";
-//echo $sql;
 
 
-$result = $connection->query($sql);
+
+/*
+################################################################################
+#
+# Query para seleccionar los comentarios de la base de datos
+#
+################################################################################
+*/
+// Estamos usando una funcion core llamada get_comments, que es usada por otros
+// modulos, reusando codigo core lib yes
+$where_clause = 'WHERE id BETWEEN ' . $punto_b . ' AND ' . $punto_a . ' ';
+$limit = '';
+$result = get_comments($connection, $where_clause, $number_of_hour, $limit);
+
+
+
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
