@@ -2,7 +2,7 @@
 
 function print_parrafo($nombre, $device, $fecha, $comentario, $id, $parent){
 
-echo '
+$parrafo = '
 
 <p class="label_de_$nombre">
     $device
@@ -11,6 +11,7 @@ echo '
 </p>
 
     ';
+echo $parrafo;
 
 }
 
