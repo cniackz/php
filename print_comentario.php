@@ -6,7 +6,9 @@ $parrafo = "
 
 <p class=\"label_de_$nombre\">
     $nombre 🕙 $fecha $device<BR>
-    $comentario
+    <button id=\"$id\" ondblclick=\"funcion_alerta($id, '$nombre');\" class=\"comentario_de_$nombre\">
+        $comentario
+    </button>
 </p>
 
 ";
