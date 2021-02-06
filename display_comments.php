@@ -8,7 +8,7 @@
 // de tal suerte que si cambias un row en el select se cabmia para los 3
 // ejemplo, quieres 8 pm en lugar de 20 horas, ya solo cambias un lugar
 // y no tres, es hacer core functions pero atomticas.
-function get_comments($db_connection, $where_clause, $number_of_hour){
+function get_comments($db_connection, $where_clause, $number_of_hour, $limit){
     // Query para seleccionar los comentarios de la base de datos MySQL
     // --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
     $fechirri = "CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha";
@@ -27,7 +27,8 @@ function get_comments($db_connection, $where_clause, $number_of_hour){
         
         ORDER BY
             id DESC
-        LIMIT 50
+        
+        $limit
     ";
 
     return $db_connection->query($sql);
