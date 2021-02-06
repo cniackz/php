@@ -47,30 +47,28 @@
                 Abajo
             </BUTTON>
         </TH>
+<?php
+if($_COOKIE['usuario']=='jacl1960' or $_COOKIE['usuario']=='cch1987'){
+    echo '
         <TH>
-            <!--BUTTON type="button" class="botones" id="boton_de_logout" onclick="redirect('http://cesarcelis.com/iframe.html');">
-                Chats
-            </BUTTON-->
-            <?php
-                if($_COOKIE['usuario']=='jacl1960' or $_COOKIE['usuario']=='cch1987'){
-                    echo '<BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">
-                    Juan y Cesar</BUTTON>';
-                }
-                if($_COOKIE['usuario']=='larh1989' or $_COOKIE['usuario']=='cch1987'){
-                    echo '<BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_liz.php\');">
-                    Liz y Cesar</BUTTON>';
-                }
-            ?>
-        </TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">
+                Juan y Cesar
+            </BUTTON>
+        </TH>';
+}
+if($_COOKIE['usuario']=='larh1989' or $_COOKIE['usuario']=='cch1987'){
+    echo '
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_liz.php\');">
+                Liz y Cesar
+            </BUTTON>
+        </TH>';
+}
+?>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
                 Salir
             </BUTTON>
-        </TH>
-        <TH>
-            <!--BUTTON type="button" class="botones" id="tamano_de_letra" onclick="tamano_de_letra();">
-                Tamano
-            </BUTTON-->
         </TH>
     </TR>
 </TABLE>
