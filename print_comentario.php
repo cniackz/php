@@ -5,24 +5,25 @@
 
 function print_comentario($nombre, $device, $fecha, $comentario, $id, $hierarchy){
 
-$comentario = str_replace("\n", "<BR>", $comentario);
+    $comentario = str_replace("\n", "<BR>", $comentario);
 
-if($device == 'computadora'){
-    $device = ' 🖥 ';
-} elseif($device == 'celular') {
-    // is cel
-    $device = ' 📱 ';
-} else {
-    $device = '';
-}
+    if($device == 'computadora'){
+        $device = ' 🖥 ';
+    } elseif($device == 'celular') {
+        // is cel
+        $device = ' 📱 ';
+    } else {
+        $device = '';
+    }
 
-if($hierarchy == 'parent'){
-    $hierarchy = 'margin-left: 0px';
-} elseif ($hierarchy == 'child'){
-    $hierarchy = 'margin-left: 10px';
-}
+    // Es para que el comentario hijo se haga mas a la derecha del padre y se idente
+    if($hierarchy == 'parent'){
+        $hierarchy = 'margin-left: 0px';
+    } elseif ($hierarchy == 'child'){
+        $hierarchy = 'margin-left: 10px';
+    }
 
-$parrafo = "
+    $parrafo = "
 
 <p style=\"$hierarchy\" class=\"label_de_$nombre\">
     $nombre 🕙 $fecha $device<BR>
@@ -31,8 +32,8 @@ $parrafo = "
     </button>
 </p>
 
-";
-echo $parrafo;
+    ";
+    echo $parrafo;
 
 }
 
