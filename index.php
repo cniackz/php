@@ -43,7 +43,7 @@
 <TABLE id="topid">
     <TR>
         <TH>
-            <BUTTON type="button" class="botones" onClick="document.getElementById('h1_grupos').scrollIntoView();">
+            <BUTTON type="button" class="botones" onClick="document.getElementById('aditional_info').scrollIntoView();">
                 Abajo
             </BUTTON>
         </TH>
@@ -172,7 +172,7 @@ mysqli_close($connection);
 
 
 <br>
-<h1>Informacion Adicional del Chat:</h1>
+<h1 id="aditional_info">Informacion Adicional del Chat:</h1>
 <br>
 <a href="respaldar.php">Descargar todos los comentarios</a>
 <h2>Usuarios en este chat:</h2>
