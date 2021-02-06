@@ -144,6 +144,7 @@ function display_comments_function($connection, $tiempo, $punto_a){
     ################################################################################
     */
     if($tiempo=='pasado'){
+        $punto_b = $punto_a - 9;
         $where_clause = 'WHERE id BETWEEN ' . $punto_b . ' AND ' . $punto_a . ' ';
         $limit = '';
     }

@@ -23,14 +23,12 @@ require 'display_comments.php';
 
 
 $punto_a = 0;
-$punto_b = 1;
 
 // From https://www.w3schools.com/php/php_superglobals_post.asp
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 
     // This code is to get the comentario and clave from the main page
     $punto_a = $_GET['number_of_comments'] - 1;
-    $punto_b = $punto_a - 9;
 
 }
 
@@ -44,7 +42,7 @@ if (!$connection) {
 }
 
 // To display comments
-display_comments_function($connection, 'pasado');
+display_comments_function($connection, 'pasado', $punto_a);
 
 echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas</BUTTON>
 
