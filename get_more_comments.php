@@ -7,23 +7,11 @@
 -->
 <?php
 
-
-
-
-
-
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php';
 
-
-
-
-
-
-
-
+// Punto inicial para obtener el comentario
 $punto_a = 0;
-
 // From https://www.w3schools.com/php/php_superglobals_post.asp
 if ($_SERVER["REQUEST_METHOD"] == 'GET'){
 
@@ -45,8 +33,6 @@ if (!$connection) {
 display_comments_function($connection, 'pasado', $punto_a);
 
 echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas</BUTTON>
-
-
 
 <!--
 
