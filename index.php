@@ -676,7 +676,7 @@ function get_comments($db_connection, $where_clause){
         LIMIT 50
     ";
 
-    return $connection->query($sql);
+    return $db_connection->query($sql);
 }
 
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
