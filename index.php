@@ -58,9 +58,9 @@
             </BUTTON>
         </TH>
         <TH>
-            <BUTTON type="button" class="botones" id="tamano_de_letra" onclick="tamano_de_letra();">
+            <!--BUTTON type="button" class="botones" id="tamano_de_letra" onclick="tamano_de_letra();">
                 Tamano
-            </BUTTON>
+            </BUTTON-->
         </TH>
     </TR>
 </TABLE>
