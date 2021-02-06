@@ -7,6 +7,9 @@
 -->
 <?php
 
+// Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
+require 'display_comments.php';
+
 $punto_a = 0;
 
 // From https://www.w3schools.com/php/php_superglobals_post.asp
@@ -34,21 +37,25 @@ if($_COOKIE['usuario']=='cch1987'){
 
 // Query para seleccionar los comentarios de la base de datos MySQL
 // DATE_FORMAT(CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha, <--- Solo me da la hora, le quita la fecha
-$sql = "
-    SELECT 
-        comentario,
-        nombre,
-        CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
-        id,
-        device,
-        parent
-    FROM
-        comentarios 
-    WHERE id >  " . $punto_a . " ORDER BY id DESC";
+//$sql = "
+//    SELECT 
+//        comentario,
+//        nombre,
+//        CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
+//        id,
+//        device,
+//        parent
+//    FROM
+//        comentarios 
+//    WHERE id >  " . $punto_a . " ORDER BY id DESC";
 //echo $sql;
 
 
-$result = $connection->query($sql);
+//$result = $connection->query($sql);
+
+$where_clause = 'WHERE id > ' . $punto_a . ' '; // For now is empty, later we need to consider id 50, id bigger than, id betwee a and b...
+$limit = '';
+$result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 // str_replace("\n", "<BR>", $row['comentario']) <--- Esto es para que respeto los enters que metimos en el comment
