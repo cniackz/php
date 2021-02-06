@@ -51,6 +51,7 @@
             <!--BUTTON type="button" class="botones" id="boton_de_logout" onclick="redirect('http://cesarcelis.com/iframe.html');">
                 Chats
             </BUTTON-->
+            <BUTTON class="botones" onclick="window.location.replace('http://cesarcelis.com/cesar_juan.php');">Juan y Cesar</BUTTON>
         </TH>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
