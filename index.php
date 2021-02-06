@@ -228,7 +228,7 @@ echo '</TABLE>';
 <H1 id="h1_grupos">Otros grupos</H1>
 <UL>
     <LI>
-        <BUTTON class="botones" onclick="window.location.replace('http://cesarcelis.com/cesar_juan.php');">Juan y Cesar</BUTTON>
+        <!--BUTTON class="botones" onclick="window.location.replace('http://cesarcelis.com/cesar_juan.php');">Juan y Cesar</BUTTON-->
     </LI>
     <BR>
     <LI>
