@@ -1,6 +1,8 @@
 <?php
 
-function print_parrafo($nombre, $device, $fecha, $comentario, $id){
+function print_comentario($nombre, $device, $fecha, $comentario, $id){
+
+$comentario = str_replace("\n", "<BR>", $comentario);
 
 $parrafo = "
 
@@ -17,6 +19,6 @@ echo $parrafo;
 }
 
 // To test
-// print_parrafo('cesar','compu','hoy','hi','1','2');
+// print_comentario('cesar','compu','hoy','hi','1');
 
 ?>

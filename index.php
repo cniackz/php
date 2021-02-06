@@ -689,29 +689,37 @@ $limit = 'LIMIT 50';
 $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 while( $row = $result->fetch_assoc()){
-    $comentario = '<p class="label_de_' . $row['nombre'] . '">';
-    $comentario = $comentario . $row['nombre'] . ' 🕙 ';
-    if($row['device'] == 'computadora'){
-        $comentario = $comentario . $row['fecha'] . ' 🖥 ';
-    } elseif($row['device'] == 'celular') {
+    //$comentario = '<p class="label_de_' . $row['nombre'] . '">';
+    //$comentario = $comentario . $row['nombre'] . ' 🕙 ';
+    //if($row['device'] == 'computadora'){
+    //    $comentario = $comentario . $row['fecha'] . ' 🖥 ';
+    //} elseif($row['device'] == 'celular') {
         // is cel
-        $comentario = $comentario . $row['fecha'] . ' 📱 ';
-    } else {
-        $comentario = $comentario . $row['fecha'];
-    }
-    $comentario = $comentario . '<BR>';
+    //    $comentario = $comentario . $row['fecha'] . ' 📱 ';
+    //} else {
+    //    $comentario = $comentario . $row['fecha'];
+    //}
+    //$comentario = $comentario . '<BR>';
+    print_comentario($row['nombre'], $row['device'], $row['fecha'], $row['comentario'], $row['id']);
     if(isset($row['parent'])){
-        $sql_parent = "SELECT nombre,fecha,comentario FROM comentarios WHERE id = " . $row['parent'];
+        $sql_parent = "SELECT nombre,fecha,comentario,device,id FROM comentarios WHERE id = " . $row['parent'];
         $result_parent = $connection->query($sql_parent);
         $row_parent = $result_parent->fetch_assoc();
-        $comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ' el dia ' . $row_parent['fecha'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
+        //$comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ' el dia ' . $row_parent['fecha'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
+        print_comentario(
+            $row_parent['nombre'],
+            $row_parent['device'],
+            $row_parent['fecha'],
+            $row_parent['comentario'],
+            $row_parent['id']
+        );
     }
-    $comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
-    $comentario = $comentario . $row['nombre'] .'">'; 
+    //$comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
+    //$comentario = $comentario . $row['nombre'] .'">'; 
     // str_replace("%body%", "black", "<body text='%body%'>")
     // $row['comentario'].replace(/(?:\r\n|\r|\n)/g, '<br>')
-    $comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
-    echo $comentario;
+    //$comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
+    //echo $comentario;
     echo '<hr>';
     $ultimo_comentario = $row['id'];
     if($contador == 0){
