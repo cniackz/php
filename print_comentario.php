@@ -4,6 +4,15 @@ function print_comentario($nombre, $device, $fecha, $comentario, $id){
 
 $comentario = str_replace("\n", "<BR>", $comentario);
 
+if($device == 'computadora'){
+    $device = ' 🖥 ';
+} elseif($device == 'celular') {
+    // is cel
+    $device = ' 📱 ';
+} else {
+    $device = '';
+}
+
 $parrafo = "
 
 <p class=\"label_de_$nombre\">
