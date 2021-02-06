@@ -168,7 +168,9 @@ function display_comments_function($connection, $tiempo){
         $contador = $contador + 1;
     }
 
-    return array($ultimo_comentario,$primer_comentario);
+    if($tiempo=='presente'){
+        return array($ultimo_comentario,$primer_comentario);
+    }
 }
 
 ?>
