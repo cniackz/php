@@ -66,7 +66,7 @@ while( $row = $result->fetch_assoc()){
     $comentario = $comentario . '<BR>';
     $comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
-    $comentario = $comentario . $row['comentario'] . '</button></p>';
+    $comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
     echo $comentario;
     echo '<hr>';
 }
