@@ -5,8 +5,7 @@ function print_parrafo($nombre, $device, $fecha, $comentario, $id, $parent){
 $parrafo = "
 
 <p class=\"label_de_$nombre\">
-    $device
-    $fecha
+    $nombre 🕙 $fecha $device<BR>
     $comentario
 </p>
 
