@@ -22,68 +22,6 @@
 <!--
 ################################################################################
 #
-#                                   JavaScript
-#
-################################################################################
--->
-
-<!-- You need both sources below to get emojis in the textarea-->
-<script
-    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"
->
-</script>
-<script src='https://ili4x.github.io/inputEmoji/inputEmoji.js'></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-################################################################################
-#
 #                                   HTML
 #
 ################################################################################
@@ -92,6 +30,13 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="javascript.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+    >
+    </script>
+    <script src='https://ili4x.github.io/inputEmoji/inputEmoji.js'></script>
 </head>
 <body id="body">
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
@@ -150,55 +95,9 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 
 }
 
-?>
-
-
-
-    
+?>  
 </FORM>
 <HR>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!--
 ################################################################################
