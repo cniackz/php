@@ -35,27 +35,24 @@ if($_COOKIE['usuario']=='cch1987'){
     $number_of_hour = 5; // Para tener la hora de toronto
 }
 
-// Query para seleccionar los comentarios de la base de datos MySQL
-// DATE_FORMAT(CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha, <--- Solo me da la hora, le quita la fecha
-//$sql = "
-//    SELECT 
-//        comentario,
-//        nombre,
-//        CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
-//        id,
-//        device,
-//        parent
-//    FROM
-//        comentarios 
-//    WHERE id >  " . $punto_a . " ORDER BY id DESC";
-//echo $sql;
 
 
-//$result = $connection->query($sql);
 
-$where_clause = 'WHERE id > ' . $punto_a . ' '; // For now is empty, later we need to consider id 50, id bigger than, id betwee a and b...
+/*
+################################################################################
+#
+# Query para seleccionar los comentarios de la base de datos
+#
+################################################################################
+*/
+// Estamos usando una funcion core llamada get_comments, que es usada por otros
+// modulos, reusando codigo core lib yes
+$where_clause = 'WHERE id > ' . $punto_a . ' ';
 $limit = '';
 $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
+
+
+
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 // str_replace("\n", "<BR>", $row['comentario']) <--- Esto es para que respeto los enters que metimos en el comment
