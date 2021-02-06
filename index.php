@@ -689,23 +689,10 @@ $limit = 'LIMIT 50';
 $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 while( $row = $result->fetch_assoc()){
-    //$comentario = '<p class="label_de_' . $row['nombre'] . '">';
-    //$comentario = $comentario . $row['nombre'] . ' 🕙 ';
-    //if($row['device'] == 'computadora'){
-    //    $comentario = $comentario . $row['fecha'] . ' 🖥 ';
-    //} elseif($row['device'] == 'celular') {
-        // is cel
-    //    $comentario = $comentario . $row['fecha'] . ' 📱 ';
-    //} else {
-    //    $comentario = $comentario . $row['fecha'];
-    //}
-    //$comentario = $comentario . '<BR>';
+    // Utiliza las funciones core para imprimir parrafo padre y parrafo hijo
     $margin_left = 'parent';
     if(isset($row['parent'])){
-        //$sql_parent = "SELECT nombre,fecha,comentario,device,id FROM comentarios WHERE id = " . $row['parent'];
-        //$result_parent = $connection->query($sql_parent);
-        //$row_parent = $result_parent->fetch_assoc();
-        //$comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ' el dia ' . $row_parent['fecha'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
+        // Utiliza la funcion core para obtener la row del padre
         $where_clause = ' WHERE id = ' . $row['parent'] . ' ';
         $limit = '';
         $result_parent = get_comments($connection, $where_clause, $number_of_hour, $limit);
@@ -728,12 +715,6 @@ while( $row = $result->fetch_assoc()){
         $row['id'],
         $margin_left
     );
-    //$comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
-    //$comentario = $comentario . $row['nombre'] .'">'; 
-    // str_replace("%body%", "black", "<body text='%body%'>")
-    // $row['comentario'].replace(/(?:\r\n|\r|\n)/g, '<br>')
-    //$comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
-    //echo $comentario;
     echo '<hr>';
     $ultimo_comentario = $row['id'];
     if($contador == 0){
