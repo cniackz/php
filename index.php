@@ -56,6 +56,10 @@
                     echo '<BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">
                     Juan y Cesar</BUTTON>';
                 }
+                if($_COOKIE['usuario']=='larh1989' or $_COOKIE['usuario']=='cch1987'){
+                    echo '<BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_liz.php\');">
+                    Liz y Cesar</BUTTON>';
+                }
             ?>
         </TH>
         <TH>
@@ -224,17 +228,6 @@ while( $row = $result->fetch_assoc()){
 }
 echo '</TABLE>';
 ?>
-
-<H1 id="h1_grupos">Otros grupos</H1>
-<UL>
-    <LI>
-        <!--BUTTON class="botones" onclick="window.location.replace('http://cesarcelis.com/cesar_juan.php');">Juan y Cesar</BUTTON-->
-    </LI>
-    <BR>
-    <LI>
-        <BUTTON class="botones" onclick="window.location.replace('http://cesarcelis.com/cesar_liz.php');">Liz y Cesar</BUTTON>
-    </LI>
-</UL>
 <BR>
 <BR>
 <BR>
