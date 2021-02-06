@@ -669,13 +669,13 @@ if($_COOKIE['usuario']=='cch1987'){
 }
 
 // Query para seleccionar los comentarios de la base de datos MySQL
+// --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
 $sql = "
     SELECT 
         @rownum:=@rownum+1 'numero',
         coments.comentario,
         coments.nombre,
         coments.fecha,
-        --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
         coments.id,
         coments.device,
         coments.parent
