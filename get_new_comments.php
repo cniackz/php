@@ -33,11 +33,12 @@ if($_COOKIE['usuario']=='cch1987'){
 }
 
 // Query para seleccionar los comentarios de la base de datos MySQL
+// DATE_FORMAT(CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha, <--- Solo me da la hora, le quita la fecha
 $sql = "
     SELECT 
         comentario,
         nombre,
-        DATE_FORMAT(CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
+        CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
         id,
         device,
         parent
