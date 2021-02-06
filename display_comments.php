@@ -15,7 +15,7 @@ function get_comments($db_connection, $where_clause, $number_of_hour){
         SELECT 
             comentario,
             nombre,
-            CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
+            CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
             id,
             device,
             parent
