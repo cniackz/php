@@ -68,7 +68,7 @@ $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 // str_replace("\n", "<BR>", $row['comentario']) <--- Esto es para que respeto los enters que metimos en el comment
 while( $row = $result->fetch_assoc()){
-    print_real_comentario($row);
+    print_real_comentario($connection, $row, $number_of_hour);
 }
 //echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);

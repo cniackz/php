@@ -691,7 +691,7 @@ $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 while( $row = $result->fetch_assoc()){
     
     // Funcion definida en print_comentario.php
-    print_real_comentario($row);
+    print_real_comentario($connection, $row, $number_of_hour);
 
     // Logica para traer los comentarios mas nuevos segun recuerdo
     $ultimo_comentario = $row['id'];

@@ -3,7 +3,7 @@
 // Aqui esta la funcion que se llama get_comments
 require 'display_comments.php';
 
-function print_real_comentario($row){
+function print_real_comentario($connection, $row, $number_of_hour){
     // Utiliza las funciones core para imprimir parrafo padre y parrafo hijo
     $margin_left = 'parent';
     if(isset($row['parent'])){

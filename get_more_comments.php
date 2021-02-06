@@ -71,7 +71,7 @@ $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
-    print_real_comentario($row);
+    print_real_comentario($connection, $row, $number_of_hour);
 }
 echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas</BUTTON>
 
