@@ -150,6 +150,7 @@ funcion display_comments_function($connection, $tiempo){
 
     $ultimo_comentario = None;
     $primer_comentario = None;
+    $contador = 0;
     while( $row = $result->fetch_assoc()){
         
         // Funcion definida en print_comentario.php
