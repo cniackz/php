@@ -56,7 +56,7 @@ $parrafo = "
         $comentario
     </button>
 </p>
-
+<hr>
 ";
 echo $parrafo;
 

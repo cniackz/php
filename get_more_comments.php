@@ -71,33 +71,7 @@ $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
-    // Utiliza las funciones core para imprimir parrafo padre y parrafo hijo
-    $margin_left = 'parent';
-    if(isset($row['parent'])){
-        // Utiliza la funcion core para obtener la row del padre
-        $where_clause = ' WHERE id = ' . $row['parent'] . ' ';
-        $limit = '';
-        $result_parent = get_comments($connection, $where_clause, $number_of_hour, $limit);
-        $row_parent = $result_parent->fetch_assoc();
-        print_comentario(
-            $row_parent['nombre'],
-            $row_parent['device'],
-            $row_parent['fecha'],
-            $row_parent['comentario'],
-            $row_parent['id'],
-            $margin_left
-        );
-        $margin_left = 'child';
-    }
-    print_comentario(
-        $row['nombre'], 
-        $row['device'], 
-        $row['fecha'], 
-        $row['comentario'], 
-        $row['id'],
-        $margin_left
-    );
-    echo '<hr>';
+    print_real_comentario($row);
 }
 echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas</BUTTON>
 
