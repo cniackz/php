@@ -53,7 +53,8 @@
             </BUTTON-->
             <?php
                 if($_COOKIE['usuario']=='jacl1960' or $_COOKIE['usuario']=='cch1987'){
-                    echo '<BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">Juan y Cesar</BUTTON>';
+                    echo '<BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">
+                    Juan y Cesar</BUTTON>';
                 }
             ?>
         </TH>
