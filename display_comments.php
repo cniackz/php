@@ -11,11 +11,12 @@
 function get_comments($db_connection, $where_clause, $number_of_hour){
     // Query para seleccionar los comentarios de la base de datos MySQL
     // --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
+    $fechirri = "CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha";
     $sql = "
         SELECT 
             comentario,
             nombre,
-            CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
+            $fechirri,
             id,
             device,
             parent
