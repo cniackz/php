@@ -70,7 +70,7 @@ if (!$connection) {
 //    print_real_comentario($connection, $row, $number_of_hour);
 //}
 
-display_comments_function($connection, 'futuro');
+display_comments_function($connection, 'futuro', $punto_a);
 
 //echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);

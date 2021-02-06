@@ -101,7 +101,7 @@ function print_real_comentario($connection, $row, $number_of_hour){
     echo '<hr>'; // Solo imprimelo al final del real comentario que incluye al padre y al hijo
 }
 
-function display_comments_function($connection, $tiempo){
+function display_comments_function($connection, $tiempo, $punto_a){
 
     // Get my cookie
     $number_of_hour = 6;

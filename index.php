@@ -678,7 +678,7 @@ $primer_comentario = NULL;
 echo '<DIV id="moreNewComments"></DIV>';
 
 // To display comments
-list($ultimo_comentario,$primer_comentario) = display_comments_function($connection, 'presente');
+list($ultimo_comentario,$primer_comentario) = display_comments_function($connection, 'presente', '');
 
 // Este inicializa la variable de javascript de primer comentario viniedo desde
 // php de tal suerte que asi tu codigo de javascript sabe a que ids del futuro
