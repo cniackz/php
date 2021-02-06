@@ -40,10 +40,10 @@ if (!$connection) {
 }
 
 // Get my cookie
-$number_of_hour = 6;
-if($_COOKIE['usuario']=='cch1987'){
-    $number_of_hour = 5; // Para tener la hora de toronto
-}
+//$number_of_hour = 6;
+//if($_COOKIE['usuario']=='cch1987'){
+//    $number_of_hour = 5; // Para tener la hora de toronto
+//}
 
 
 
@@ -57,18 +57,21 @@ if($_COOKIE['usuario']=='cch1987'){
 */
 // Estamos usando una funcion core llamada get_comments, que es usada por otros
 // modulos, reusando codigo core lib yes
-$where_clause = 'WHERE id > ' . $punto_a . ' ';
-$limit = '';
-$result = get_comments($connection, $where_clause, $number_of_hour, $limit);
+//$where_clause = 'WHERE id > ' . $punto_a . ' ';
+//$limit = '';
+//$result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 
 
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 // str_replace("\n", "<BR>", $row['comentario']) <--- Esto es para que respeto los enters que metimos en el comment
-while( $row = $result->fetch_assoc()){
-    print_real_comentario($connection, $row, $number_of_hour);
-}
+//while( $row = $result->fetch_assoc()){
+//    print_real_comentario($connection, $row, $number_of_hour);
+//}
+
+display_comments_function($connection, 'futuro');
+
 //echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);
 ?>
