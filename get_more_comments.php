@@ -71,21 +71,6 @@ $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
-    //$comentario = '<p class="label_de_' . $row['nombre'] . '">';
-    //$comentario = $comentario . $row['nombre'] . ' 🕙 ';
-    //if($row['device'] == 'computadora'){
-    //    $comentario = $comentario . $row['fecha'] . ' 🖥 ';
-    //} elseif($row['device'] == 'celular') {
-    //    // is cel
-    //    $comentario = $comentario . $row['fecha'] . ' 📱 ';
-    //} else {
-    //    $comentario = $comentario . $row['fecha'];
-    //}
-    //$comentario = $comentario . '<BR>';
-    //$comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
-    //$comentario = $comentario . $row['nombre'] .'">'; 
-    //$comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
-    //echo $comentario;
     // Utiliza las funciones core para imprimir parrafo padre y parrafo hijo
     $margin_left = 'parent';
     if(isset($row['parent'])){
