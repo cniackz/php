@@ -21,7 +21,10 @@ function get_comments($db_connection, $where_clause, $number_of_hour){
             device,
             parent
         FROM
-            comentarios 
+            comentarios
+        
+        $where_clause
+        
         ORDER BY
             id DESC
         LIMIT 50
