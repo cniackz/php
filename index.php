@@ -654,6 +654,31 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 ################################################################################
 -->
 <?php
+
+function get_comments($db_connection, $where_clause){
+    // Query para seleccionar los comentarios de la base de datos MySQL
+    // --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
+    $sql = "
+        SELECT 
+            @rownum:=@rownum+1 'numero',
+            coments.comentario,
+            coments.nombre,
+            CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
+            coments.id,
+            coments.device,
+            coments.parent
+        FROM
+            comentarios AS coments,
+            (SELECT @rownum:=0)r 
+        ORDER BY
+            numero
+        DESC
+        LIMIT 50
+    ";
+
+    return $connection->query($sql);
+}
+
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 if (!$connection) {
  echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -668,28 +693,6 @@ if($_COOKIE['usuario']=='cch1987'){
     $number_of_hour = 5; // Para tener la hora de toronto
 }
 
-// Query para seleccionar los comentarios de la base de datos MySQL
-// --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
-$sql = "
-    SELECT 
-        @rownum:=@rownum+1 'numero',
-        coments.comentario,
-        coments.nombre,
-        CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
-        coments.id,
-        coments.device,
-        coments.parent
-    FROM
-        comentarios AS coments,
-        (SELECT @rownum:=0)r 
-    ORDER BY
-        numero
-    DESC
-    LIMIT 50
-";
-
-$result = $connection->query($sql);
-
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 $ultimo_comentario = NULL;
 // primer comentario es en realidad el ultimo comentario que se ha publicado,
@@ -700,6 +703,9 @@ $contador = 0;
 
 // put a container for the new comments retrieved with AJAX on top
 echo '<DIV id="moreNewComments"></DIV>';
+
+$where_clause = '' // For now is empty, later we need to consider id 50, id bigger than, id betwee a and b...
+$result = get_comments($connection, $where_clause)
 
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
