@@ -2,15 +2,15 @@
 
 function print_parrafo($nombre, $device, $fecha, $comentario, $id, $parent){
 
-$parrafo = '
+$parrafo = "
 
-<p class="label_de_$nombre">
+<p class=\"label_de_$nombre\">
     $device
     $fecha
     $comentario
 </p>
 
-    ';
+";
 echo $parrafo;
 
 }
