@@ -701,10 +701,12 @@ while( $row = $result->fetch_assoc()){
     //}
     //$comentario = $comentario . '<BR>';
     if(isset($row['parent'])){
-        $sql_parent = "SELECT nombre,fecha,comentario,device,id FROM comentarios WHERE id = " . $row['parent'];
-        $result_parent = $connection->query($sql_parent);
-        $row_parent = $result_parent->fetch_assoc();
+        //$sql_parent = "SELECT nombre,fecha,comentario,device,id FROM comentarios WHERE id = " . $row['parent'];
+        //$result_parent = $connection->query($sql_parent);
+        //$row_parent = $result_parent->fetch_assoc();
         //$comentario = $comentario . ' Con respecto a lo que dijo ' . $row_parent['nombre'] . ' el dia ' . $row_parent['fecha'] . ':<BR>' . str_replace("\n", "<BR>", $row_parent['comentario']) . '<BR>Quiero decir que:<BR>';
+        $where_clause = ' WHERE id = ' . $row['parent'] . ' ';
+        $row_parent = get_comments($connection, $where_clause, $number_of_hour, $limit);
         print_comentario(
             $row_parent['nombre'],
             $row_parent['device'],
