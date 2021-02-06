@@ -51,6 +51,7 @@ $sql = "
 $result = $connection->query($sql);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
+// str_replace("\n", "<BR>", $row['comentario']) <--- Esto es para que respeto los enters que metimos en el comment
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
     $comentario = $comentario . $row['nombre'] . ' 🕙 ';
@@ -71,7 +72,7 @@ while( $row = $result->fetch_assoc()){
     }
     $comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     $comentario = $comentario . $row['nombre'] .'">'; 
-    $comentario = $comentario . $row['comentario'] . '</button></p>';
+    $comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
     echo $comentario;
     echo '<hr>';
 }
