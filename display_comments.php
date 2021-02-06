@@ -13,19 +13,16 @@ function get_comments($db_connection, $where_clause, $number_of_hour){
     // --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
     $sql = "
         SELECT 
-            @rownum:=@rownum+1 'numero',
-            coments.comentario,
-            coments.nombre,
+            comentario,
+            nombre,
             CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
-            coments.id,
-            coments.device,
-            coments.parent
+            id,
+            device,
+            parent
         FROM
-            comentarios AS coments,
-            (SELECT @rownum:=0)r 
+            comentarios 
         ORDER BY
-            numero
-        DESC
+            id DESC
         LIMIT 50
     ";
 
