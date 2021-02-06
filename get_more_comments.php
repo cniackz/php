@@ -7,8 +7,21 @@
 -->
 <?php
 
+
+
+
+
+
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php';
+require 'print_comentario.php';
+
+
+
+
+
+
+
 
 $punto_a = 0;
 $punto_b = 1;
@@ -58,21 +71,47 @@ $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 while( $row = $result->fetch_assoc()){
-    $comentario = '<p class="label_de_' . $row['nombre'] . '">';
-    $comentario = $comentario . $row['nombre'] . ' 🕙 ';
-    if($row['device'] == 'computadora'){
-        $comentario = $comentario . $row['fecha'] . ' 🖥 ';
-    } elseif($row['device'] == 'celular') {
-        // is cel
-        $comentario = $comentario . $row['fecha'] . ' 📱 ';
-    } else {
-        $comentario = $comentario . $row['fecha'];
+    //$comentario = '<p class="label_de_' . $row['nombre'] . '">';
+    //$comentario = $comentario . $row['nombre'] . ' 🕙 ';
+    //if($row['device'] == 'computadora'){
+    //    $comentario = $comentario . $row['fecha'] . ' 🖥 ';
+    //} elseif($row['device'] == 'celular') {
+    //    // is cel
+    //    $comentario = $comentario . $row['fecha'] . ' 📱 ';
+    //} else {
+    //    $comentario = $comentario . $row['fecha'];
+    //}
+    //$comentario = $comentario . '<BR>';
+    //$comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
+    //$comentario = $comentario . $row['nombre'] .'">'; 
+    //$comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
+    //echo $comentario;
+    // Utiliza las funciones core para imprimir parrafo padre y parrafo hijo
+    $margin_left = 'parent';
+    if(isset($row['parent'])){
+        // Utiliza la funcion core para obtener la row del padre
+        $where_clause = ' WHERE id = ' . $row['parent'] . ' ';
+        $limit = '';
+        $result_parent = get_comments($connection, $where_clause, $number_of_hour, $limit);
+        $row_parent = $result_parent->fetch_assoc();
+        print_comentario(
+            $row_parent['nombre'],
+            $row_parent['device'],
+            $row_parent['fecha'],
+            $row_parent['comentario'],
+            $row_parent['id'],
+            $margin_left
+        );
+        $margin_left = 'child';
     }
-    $comentario = $comentario . '<BR>';
-    $comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
-    $comentario = $comentario . $row['nombre'] .'">'; 
-    $comentario = $comentario . str_replace("\n", "<BR>", $row['comentario']) . '</button></p>';
-    echo $comentario;
+    print_comentario(
+        $row['nombre'], 
+        $row['device'], 
+        $row['fecha'], 
+        $row['comentario'], 
+        $row['id'],
+        $margin_left
+    );
     echo '<hr>';
 }
 echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas</BUTTON>
