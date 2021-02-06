@@ -658,6 +658,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php'; // get_comments.php
 
+// To get db connection
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 if (!$connection) {
  echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -666,45 +667,18 @@ if (!$connection) {
  exit;
 }
 
-// Get my cookie
-//$number_of_hour = 6;
-//if($_COOKIE['usuario']=='cch1987'){
-//    $number_of_hour = 5; // Para tener la hora de toronto
-//}
-
 // From: https://www.w3schools.com/php/php_mysql_select.asp
 $ultimo_comentario = NULL;
 // primer comentario es en realidad el ultimo comentario que se ha publicado,
 // le puse primer comentario, porque es el primero que se imprime, por ser el
 // mas moderno
 $primer_comentario = NULL;
-//$contador = 0;
 
 // put a container for the new comments retrieved with AJAX on top
 echo '<DIV id="moreNewComments"></DIV>';
 
-//$where_clause = ''; // For now is empty, later we need to consider id 50, id bigger than, id betwee a and b...
-//$limit = 'LIMIT 50';
-//$result = get_comments($connection, $where_clause, $number_of_hour, $limit);
-
-//while( $row = $result->fetch_assoc()){
-    
-    // Funcion definida en print_comentario.php
-//    print_real_comentario($connection, $row, $number_of_hour);
-
-    // Logica para traer los comentarios mas nuevos segun recuerdo
-    // obtiene el ultimo comentario, me refiero a cuando es 0
-    // para saber cual es elc omentario mas top y el mas botton
-//    $ultimo_comentario = $row['id'];
-//    if($contador == 0){
-//        $primer_comentario = $row['id'];
-//    }
-//    $contador = $contador + 1;
-//}
-
+// To display comments
 list($ultimo_comentario,$primer_comentario) = display_comments_function($connection, 'presente');
-
-
 
 // Este inicializa la variable de javascript de primer comentario viniedo desde
 // php de tal suerte que asi tu codigo de javascript sabe a que ids del futuro
