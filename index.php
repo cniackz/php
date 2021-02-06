@@ -655,7 +655,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 -->
 <?php
 
-function get_comments($db_connection, $where_clause){
+function get_comments($db_connection, $where_clause, $number_of_hour){
     // Query para seleccionar los comentarios de la base de datos MySQL
     // --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
     $sql = "
@@ -705,7 +705,7 @@ $contador = 0;
 echo '<DIV id="moreNewComments"></DIV>';
 
 $where_clause = '' // For now is empty, later we need to consider id 50, id bigger than, id betwee a and b...
-$result = get_comments($connection, $where_clause)
+$result = get_comments($connection, $where_clause, $number_of_hour)
 
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
