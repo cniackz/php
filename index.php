@@ -700,7 +700,6 @@ while( $row = $result->fetch_assoc()){
     //    $comentario = $comentario . $row['fecha'];
     //}
     //$comentario = $comentario . '<BR>';
-    print_comentario($row['nombre'], $row['device'], $row['fecha'], $row['comentario'], $row['id']);
     if(isset($row['parent'])){
         $sql_parent = "SELECT nombre,fecha,comentario,device,id FROM comentarios WHERE id = " . $row['parent'];
         $result_parent = $connection->query($sql_parent);
@@ -714,6 +713,7 @@ while( $row = $result->fetch_assoc()){
             $row_parent['id']
         );
     }
+    print_comentario($row['nombre'], $row['device'], $row['fecha'], $row['comentario'], $row['id']);
     //$comentario = $comentario . '<button id="' . $row['id'] . '" ondblclick="funcion_alerta(' . $row['id'] . ',\''. $row['nombre'] .'\');" class="comentarios_de_';
     //$comentario = $comentario . $row['nombre'] .'">'; 
     // str_replace("%body%", "black", "<body text='%body%'>")
