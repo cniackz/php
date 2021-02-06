@@ -90,7 +90,7 @@
 -->
 <!--Esta forma es donde se pone el comentario -->
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="javascript.js"></script>
 </head>
 <body id="body">
