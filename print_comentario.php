@@ -1,7 +1,7 @@
 <?php
 
 // Aqui esta la funcion que se llama get_comments
-require 'display_comments.php';
+// require 'display_comments.php';
 
 function print_comentario($nombre, $device, $fecha, $comentario, $id, $hierarchy){
 
