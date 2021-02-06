@@ -657,6 +657,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php';
+require 'print_comentario.php';
 
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 if (!$connection) {

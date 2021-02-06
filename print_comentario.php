@@ -1,6 +1,6 @@
 <?php
 
-function print_parrafo($nombre, $device, $fecha, $comentario, $id, $parent){
+function print_parrafo($nombre, $device, $fecha, $comentario, $id){
 
 $parrafo = "
 
@@ -16,6 +16,7 @@ echo $parrafo;
 
 }
 
-print_parrafo('cesar','compu','hoy','hi','1','2');
+// To test
+// print_parrafo('cesar','compu','hoy','hi','1','2');
 
 ?>
