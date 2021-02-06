@@ -705,7 +705,7 @@ $contador = 0;
 echo '<DIV id="moreNewComments"></DIV>';
 
 $where_clause = '' // For now is empty, later we need to consider id 50, id bigger than, id betwee a and b...
-$result = get_comments($connection, $where_clause, $number_of_hour)
+$result = get_comments($connection, $where_clause, $number_of_hour);
 
 while( $row = $result->fetch_assoc()){
     $comentario = '<p class="label_de_' . $row['nombre'] . '">';
