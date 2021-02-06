@@ -30,7 +30,7 @@ $parrafo = "
         $comentario
     </button>
 </p>
-<hr>
+
 ";
 echo $parrafo;
 
@@ -63,6 +63,7 @@ function print_real_comentario($connection, $row, $number_of_hour){
         $row['id'],
         $margin_left
     );
+    echo '<hr>'; // Solo imprimelo al final del real comentario que incluye al padre y al hijo
 }
 
 // To test
