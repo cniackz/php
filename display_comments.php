@@ -101,7 +101,71 @@ function print_real_comentario($connection, $row, $number_of_hour){
     echo '<hr>'; // Solo imprimelo al final del real comentario que incluye al padre y al hijo
 }
 
-// To test
-// print_comentario('cesar','compu','hoy','hi','1');
+funcion display_comments($connection, $tiempo){
+
+    // Get my cookie
+    $number_of_hour = 6;
+    if($_COOKIE['usuario']=='cch1987'){
+        $number_of_hour = 5; // Para tener la hora de toronto
+    }
+
+
+    /*
+    ################################################################################
+    #
+    # Future comments
+    #
+    ################################################################################
+    */
+    if($tiempo=='futuro'){
+        $where_clause = 'WHERE id > ' . $punto_a . ' ';
+        $limit = '';
+    }
+
+    /*
+    ################################################################################
+    #
+    # Present comments
+    #
+    ################################################################################
+    */
+    if($tiempo=='presente'){
+        $where_clause = ''; // For now is empty, later we need to consider id 50, id bigger than, id betwee a and b...
+        $limit = 'LIMIT 50';
+    }
+
+    /*
+    ################################################################################
+    #
+    # Old comments
+    #
+    ################################################################################
+    */
+    if($tiempo=='pasado'){
+        $where_clause = 'WHERE id BETWEEN ' . $punto_b . ' AND ' . $punto_a . ' ';
+        $limit = '';
+    }
+
+    $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
+
+    $ultimo_comentario = None
+    $primer_comentario = None
+    while( $row = $result->fetch_assoc()){
+        
+        // Funcion definida en print_comentario.php
+        print_real_comentario($connection, $row, $number_of_hour);
+
+        // Logica para traer los comentarios mas nuevos segun recuerdo
+        // obtiene el ultimo comentario, me refiero a cuando es 0
+        // para saber cual es elc omentario mas top y el mas botton
+        $ultimo_comentario = $row['id'];
+        if($contador == 0){
+            $primer_comentario = $row['id'];
+        }
+        $contador = $contador + 1;
+    }
+
+    return array($ultimo_comentario,$primer_comentario);
+}
 
 ?>

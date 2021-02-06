@@ -13,7 +13,6 @@
 
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php';
-require 'print_comentario.php';
 
 
 

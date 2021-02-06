@@ -657,7 +657,6 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php'; // get_comments.php
-require 'print_comentario.php';
 
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 if (!$connection) {
@@ -694,6 +693,8 @@ while( $row = $result->fetch_assoc()){
     print_real_comentario($connection, $row, $number_of_hour);
 
     // Logica para traer los comentarios mas nuevos segun recuerdo
+    // obtiene el ultimo comentario, me refiero a cuando es 0
+    // para saber cual es elc omentario mas top y el mas botton
     $ultimo_comentario = $row['id'];
     if($contador == 0){
         $primer_comentario = $row['id'];
