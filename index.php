@@ -655,29 +655,8 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 -->
 <?php
 
-function get_comments($db_connection, $where_clause, $number_of_hour){
-    // Query para seleccionar los comentarios de la base de datos MySQL
-    // --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
-    $sql = "
-        SELECT 
-            @rownum:=@rownum+1 'numero',
-            coments.comentario,
-            coments.nombre,
-            CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha,
-            coments.id,
-            coments.device,
-            coments.parent
-        FROM
-            comentarios AS coments,
-            (SELECT @rownum:=0)r 
-        ORDER BY
-            numero
-        DESC
-        LIMIT 50
-    ";
-
-    return $db_connection->query($sql);
-}
+// Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
+require 'display_comments.php';
 
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 if (!$connection) {
