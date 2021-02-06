@@ -1,5 +1,8 @@
 <?php
 
+// Aqui esta la funcion que se llama get_comments
+require 'display_comments.php';
+
 function print_real_comentario($row){
     // Utiliza las funciones core para imprimir parrafo padre y parrafo hijo
     $margin_left = 'parent';
