@@ -40,7 +40,7 @@ if (!$connection) {
 }
 
 // To display comments
-display_comments_function($connection, 'presente');
+display_comments_function($connection, 'futuro');
 
 mysqli_close($connection);
 ?>

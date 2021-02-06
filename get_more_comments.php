@@ -44,7 +44,7 @@ if (!$connection) {
 }
 
 // To display comments
-display_comments_function($connection, 'presente');
+display_comments_function($connection, 'pasado');
 
 echo '<DIV id="moreComments' . ($_GET['number_of_comments'] - 10) . '"><BUTTON type="button" class="botones" id="boton_cargar_comentarios" onclick="carga_mas_comentarios_js();">Ver mas</BUTTON>
 
