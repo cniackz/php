@@ -1,5 +1,34 @@
 <?php
 
+function print_real_comentario($row){
+    // Utiliza las funciones core para imprimir parrafo padre y parrafo hijo
+    $margin_left = 'parent';
+    if(isset($row['parent'])){
+        // Utiliza la funcion core para obtener la row del padre
+        $where_clause = ' WHERE id = ' . $row['parent'] . ' ';
+        $limit = '';
+        $result_parent = get_comments($connection, $where_clause, $number_of_hour, $limit);
+        $row_parent = $result_parent->fetch_assoc();
+        print_comentario(
+            $row_parent['nombre'],
+            $row_parent['device'],
+            $row_parent['fecha'],
+            $row_parent['comentario'],
+            $row_parent['id'],
+            $margin_left
+        );
+        $margin_left = 'child';
+    }
+    print_comentario(
+        $row['nombre'], 
+        $row['device'], 
+        $row['fecha'], 
+        $row['comentario'], 
+        $row['id'],
+        $margin_left
+    );
+}
+
 function print_comentario($nombre, $device, $fecha, $comentario, $id, $hierarchy){
 
 $comentario = str_replace("\n", "<BR>", $comentario);
