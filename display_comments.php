@@ -148,8 +148,8 @@ funcion display_comments_function($connection, $tiempo){
 
     $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
-    $ultimo_comentario = None
-    $primer_comentario = None
+    $ultimo_comentario = None;
+    $primer_comentario = None;
     while( $row = $result->fetch_assoc()){
         
         // Funcion definida en print_comentario.php
