@@ -64,6 +64,14 @@ if($_COOKIE['usuario']=='larh1989' or $_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>';
 }
+if($_COOKIE['usuario']=='mahp1965' or $_COOKIE['usuario']=='cch1987'){
+    echo '
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_martha.php\');">
+                Martha y Cesar
+            </BUTTON>
+        </TH>';
+}
 ?>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
