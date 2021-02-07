@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
         echo "comentario is empty";
     } else {
         
-        $sql = "INSERT INTO public_comments (comentario, nombre) VALUES($comentario, $nombre)";
+        $sql = "INSERT INTO public_comments (comentario, nombre) VALUES('$comentario', '$nombre')";
         echo $sql;
         $connection->query($sql);
     }
