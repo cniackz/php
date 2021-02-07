@@ -60,5 +60,7 @@
 <BR>
 <a href="https://www.hackerrank.com/celis_hernandez1" style="color:white;">HackerRank</a>
 <BR>
+<a href="https://stackoverflow.com/users/11947315/cesar-celis" style="color:white;">stackoverflow</a>
+<BR>
 <p style="color:white;">Phone: +1 416 827 8578<p>
 <p style="color:white;">Email: celis.hernandez.cesar@gmail.com<p>
