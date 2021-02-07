@@ -17,6 +17,29 @@
             header('Location: login.php');
         }
     }
+    $puede_continuar = FALSE;
+    if($_COOKIE['usuario']=='cch1987'){
+        $puede_continuar = TRUE;
+    }
+    if($_COOKIE['usuario']=='ejch1994'){
+        $puede_continuar = TRUE;
+    }
+    if($_COOKIE['usuario']=='mar1985'){
+        $puede_continuar = TRUE;
+    }
+    if($_COOKIE['usuario']=='mahp1965'){
+        $puede_continuar = TRUE;
+    }
+    if($_COOKIE['usuario']=='jacl1960'){
+        $puede_continuar = TRUE;
+    }
+    if($_COOKIE['usuario']=='larh1989'){
+        $puede_continuar = TRUE;
+    }
+    if($puede_continuar==FALSE){
+        echo 'No tienes acceso';
+        exit;
+    }
 ?>
 
 <!--

@@ -10,7 +10,7 @@
     // Para pedir al usuario que se logie sino hay cookie
     if(!isset($_COOKIE['usuario'])) {
         // no hay cookie debe logearse
-        setcookie("usuario", "nuevo", time() + (86400 * 30), "/", 'cesarcelis.com');
+        setcookie("usuario", "hola", time() + (86400 * 30), "/", 'cesarcelis.com');
     } else {
         if($_COOKIE['usuario'] == 'hola'){
             // Cuando el valor de la cookie es hola, significa que el valor es
