@@ -44,3 +44,4 @@
 ?>
 </FORM>
 </BODY>
+<a href="cesar_public.php" style="color:white;">Blog Publico</a>
