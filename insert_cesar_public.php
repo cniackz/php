@@ -24,5 +24,5 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     }
 }
 mysqli_close($connection);
-//header('Location: cesar_public.php');
+header('Location: cesar_public.php');
 ?>
