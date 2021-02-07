@@ -52,4 +52,6 @@
 <BR>
 <a href="https://www.instagram.com/cesarcelis5/" style="color:white;">Instagram</a>
 <BR>
+<a href="https://www.pinterest.ca/celishernandezcesar/_saved/" style="color:white;">Pinterest</a>
+<BR>
 <p style="color:white;">Phone: +1 416 827 8578<p>
