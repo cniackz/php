@@ -50,6 +50,6 @@
 <BR>
 <a href="https://www.linkedin.com/in/cesar-celis-75775b59/" style="color:white;">LinkedIn</a>
 <BR>
-<a href="https://www.instagram.com/cesarcelis5/" style="color:white;">Blog Publico</a>
+<a href="https://www.instagram.com/cesarcelis5/" style="color:white;">Instagram</a>
 <BR>
 <p style="color:white;">Phone: +1 416 827 8578<p>
