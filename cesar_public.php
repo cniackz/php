@@ -38,7 +38,7 @@ table, th, td {
 }
 </style>
 
-<A HREF="index.php">Volver al grupo de la familia</A>
+
 </BR>
 </BR>
 <FORM method="post" action="insert_cesar_gogo.php">
