@@ -1,5 +1,5 @@
 <?php
-
+require 'core_lib.php';
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 
 if (!$connection) {
