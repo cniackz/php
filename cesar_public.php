@@ -41,7 +41,7 @@ table, th, td {
 
 </BR>
 </BR>
-<FORM method="post" action="insert_cesar_gogo.php">
+<FORM method="post" action="insert_cesar_public.php">
 <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
 <BR>
 <BR>
