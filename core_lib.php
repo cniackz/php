@@ -23,7 +23,7 @@ function check_password($password){
 
 	// Main logic
 	$final_result = FALSE;
-	$sql = 'SELECT password FROM usuarios WHERE password = $password';
+	$sql = "SELECT password FROM usuarios WHERE password = '$password'";
 	$result = $connection->query($sql);
 	$row = $result->fetch_assoc();
 	if(isset($row['password'])){
