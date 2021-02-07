@@ -7,6 +7,8 @@
 
 <?php
 
+require 'core_lib.php';
+
     // Para pedir al usuario que se logie sino hay cookie
     if(!isset($_COOKIE['usuario'])) {
         // no hay cookie debe logearse
@@ -18,19 +20,8 @@
         } else {
             
             // Si hay cookie si es la correcta mandalo a index.php donde esta el chat de la familia
-            $passwords = array(
-                "cch1987", 
-                "ejch1994", 
-                "jacl1960", 
-                "mahp1965", 
-                "larh1989",
-                "mar1985",
-                "mjch1986"
-            );
-            for ($x = 0; $x < count($passwords); $x++) {
-                if($_COOKIE['usuario'] == $passwords[$x]){
-                    header('Location: index.php');
-                }
+            if(check_password($_COOKIE['usuario'])){
+                header('Location: index.php');
             }
         }
     }
