@@ -136,6 +136,11 @@ if($_COOKIE['usuario']=='cch1987'){
                 Gogo y Cesar
             </BUTTON>
         </TH>
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_liz.php\');">
+                Liz y Cesar
+            </BUTTON>
+        </TH>
     </TR>
     ';
 }
