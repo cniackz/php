@@ -1,6 +1,6 @@
 <?php
 
-function get_db_connectio(){
+function get_db_connection(){
 
 	// To get db connection
 	$connection = mysqli_connect('localhost', 'root', '', 'cesar');
@@ -19,7 +19,7 @@ function check_password($password){
 	// Return TRUE if password exist
 	// Return FALSE if password does not exist
 
-	$connection = get_db_connectio();
+	$connection = get_db_connection();
 
 	// Main logic
 	$final_result = FALSE;
@@ -34,6 +34,21 @@ function check_password($password){
 
 	mysqli_close($connection);
 
+	return $final_result;
+}
+
+function get_username($password){
+	$final_result = FALSE;
+	$connection = get_db_connection();
+	$sql = "SELECT nombre FROM usuarios WHERE password='$password'";
+	$result = $connection->query($sql);
+	$row = $result->fetch_assoc();
+	if(isset($row['nombre'])){
+		$final_result = $row['nombre'];
+	} else {
+		$final_result = FALSE;
+	}
+	mysqli_close($connection);
 	return $final_result;
 }
 
