@@ -152,7 +152,9 @@ function setea_estilo_para_pc(){
             'cesar': 'Gray',
             'juan': 'DodgerBlue',
             'gogo': 'SlateBlue',
-            'martha': 'MediumSeaGreen'
+            'martha': 'MediumSeaGreen',
+            'jacqui': 'Orange',
+            'mario': 'Tomato',
         };
 
         // Ahora vamos a loopear en el diccionario para setear los colors

@@ -111,6 +111,22 @@ font:Verdana, Geneva, sans-serif;
 text-align: left;
 }
 
+.label_de_mario
+{
+background-color:Tomatoe;
+color:white;
+font:Verdana, Geneva, sans-serif;
+/*font-size:60px;*/
+}
+.comentarios_de_mario
+{
+background-color:Tomatoe;
+color:black;
+font:Verdana, Geneva, sans-serif;
+/*font-size:60px;*/
+text-align: left;
+}
+
 /* Para meterle bordes a la tabla*/
 /* Pero no quiero afectar al menu...*/
 .borde_en_tabla
