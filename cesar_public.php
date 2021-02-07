@@ -42,10 +42,11 @@ table, th, td {
 </BR>
 </BR>
 <FORM method="post" action="insert_cesar_public.php">
+<input type="text" id="nombre" name="nombre" value="anonimo"><br>
 <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
 <BR>
 <BR>
-<INPUT type="submit" value="Enviar/Actualizar" class="botones" id="inputSubmit">
+<INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
 </FORM>
 <TABLE>
 	<TR>
