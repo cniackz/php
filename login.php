@@ -55,3 +55,5 @@
 <a href="https://www.pinterest.ca/celishernandezcesar/_saved/" style="color:white;">Pinterest</a>
 <BR>
 <p style="color:white;">Phone: +1 416 827 8578<p>
+<BR>
+<p style="color:white;">Email: celis.hernandez.cesar@gmail.com<p>
