@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     } else {
         
         $sql = "INSERT INTO public_comments (comentario, nombre) VALUES($comentario, $nombre)";
+        $connection->query($sql);
     }
 }
 mysqli_close($connection);
