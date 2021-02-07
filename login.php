@@ -1,4 +1,6 @@
-<head></head>
+<head>
+    <script src="snow.js"></script>
+</head>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <BODY style="background-color: Black">
 <FORM method="post" action="create_cookie.php">
