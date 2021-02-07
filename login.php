@@ -20,9 +20,9 @@ require 'core_lib.php';
         } else {
             
             // Si hay cookie si es la correcta mandalo a index.php donde esta el chat de la familia
-            //if(check_password($_COOKIE['usuario'])){
-            //    header('Location: index.php');
-            //}
+            if(check_password($_COOKIE['usuario'])==TRUE){
+                header('Location: index.php');
+            }
         }
     }
     echo '<P id="usuario" style="color:white;">Usuario:</P>';
