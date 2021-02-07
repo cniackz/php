@@ -6,6 +6,9 @@
 ################################################################################
 -->
 <?php
+
+require 'core_lib.php';
+
     // Este codigo es para pedir la clave solo si se necesita
     if(!isset($_COOKIE['usuario'])) {
         // Si la cookie no existe, el usuario debe obtenerla a traves del logeo
@@ -18,22 +21,7 @@
         }
     }
     $puede_continuar = FALSE;
-    if($_COOKIE['usuario']=='cch1987'){
-        $puede_continuar = TRUE;
-    }
-    if($_COOKIE['usuario']=='ejch1994'){
-        $puede_continuar = TRUE;
-    }
-    if($_COOKIE['usuario']=='mar1985'){
-        $puede_continuar = TRUE;
-    }
-    if($_COOKIE['usuario']=='mahp1965'){
-        $puede_continuar = TRUE;
-    }
-    if($_COOKIE['usuario']=='jacl1960'){
-        $puede_continuar = TRUE;
-    }
-    if($_COOKIE['usuario']=='larh1989'){
+    if(check_password($_COOKIE['usuario'])){
         $puede_continuar = TRUE;
     }
     if($puede_continuar==FALSE){
