@@ -118,6 +118,25 @@ if($_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>
     </TR>
+    <TR>
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_martha.php\');">
+                Martha y Cesar
+            </BUTTON>
+        </TH>
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">
+                Juan y Cesar
+            </BUTTON>
+        </TH>
+    </TR>
+    <TR>
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_gogo.php\');">
+                Gogo y Cesar
+            </BUTTON>
+        </TH>
+    </TR>
     ';
 }
 ?>
