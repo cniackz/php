@@ -24,7 +24,7 @@
                 "mar1985",
                 "mjch1986"
             );
-            for ($x = 0; $x < 5; $x++) {
+            for ($x = 0; $x < count($passwords); $x++) {
                 if($_COOKIE['usuario'] == $passwords[$x]){
                     header('Location: index.php');
                 }
