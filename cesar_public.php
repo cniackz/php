@@ -42,6 +42,7 @@ table, th, td {
 </BR>
 </BR>
 <FORM method="post" action="insert_cesar_public.php">
+<label for="nombre">name:</label><br>
 <input type="text" id="nombre" name="nombre" value="anonimo"><br>
 <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
 <BR>
