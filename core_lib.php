@@ -51,5 +51,6 @@ function get_username($password){
 	mysqli_close($connection);
 	return $final_result;
 }
+echo get_username('cch1987');
 
 ?>
