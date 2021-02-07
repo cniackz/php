@@ -1,4 +1,4 @@
-<?
+<?php
 
 function get_db_connectio(){
 
