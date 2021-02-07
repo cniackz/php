@@ -48,4 +48,4 @@
 <BR>
 <a href="https://www.facebook.com/cesar.celis.92372/" style="color:white;">Facebook</a>
 <BR>
-<a href="https://www.linkedin.com/in/cesar-celis-75775b59/" style="color:white;">Facebook</a>
+<a href="https://www.linkedin.com/in/cesar-celis-75775b59/" style="color:white;">LinkedIn</a>
