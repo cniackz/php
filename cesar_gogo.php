@@ -12,11 +12,11 @@ if (!$connection) {
 
 $numeroDeHoras = 0;
 $puede_continuar = FALSE;
-if($_COOKIE['usuario']=='cch1987'){
+if(get_username($_COOKIE['usuario'])=='cesar'){
 	$puede_continuar = TRUE;
 	$numeroDeHoras = 5;
 }
-if($_COOKIE['usuario']=='ejch1994'){
+if(get_username($_COOKIE['usuario'])=='gogo'){
 	$puede_continuar = TRUE;
 	$numeroDeHoras = 6;
 }
