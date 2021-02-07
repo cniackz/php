@@ -37,8 +37,7 @@
         $puede_continuar = TRUE;
     }
     if($puede_continuar==FALSE){
-        echo 'No tienes acceso';
-        exit;
+        header('Location: login.php');
     }
 ?>
 
