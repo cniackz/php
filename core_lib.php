@@ -36,5 +36,5 @@ function check_password($password){
 
 	return $final_result;
 }
-
+echo check_password('cch1987');
 ?>
