@@ -58,7 +58,7 @@ require 'core_lib.php';
             </BUTTON>
         </TH>
 <?php
-if($_COOKIE['usuario']=='jacl1960'){
+if(get_username($_COOKIE['usuario'])=='juan'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">
@@ -66,7 +66,7 @@ if($_COOKIE['usuario']=='jacl1960'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='larh1989'){
+if(get_username($_COOKIE['usuario'])=='liz'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_liz.php\');">
@@ -74,7 +74,7 @@ if($_COOKIE['usuario']=='larh1989'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='mahp1965'){
+if(get_username($_COOKIE['usuario'])=='martha'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_martha.php\');">
@@ -82,7 +82,7 @@ if($_COOKIE['usuario']=='mahp1965'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='ejch1994'){
+if(get_username($_COOKIE['usuario'])=='gogo'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_gogo.php\');">
@@ -90,7 +90,7 @@ if($_COOKIE['usuario']=='ejch1994'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='mar1985'){
+if(get_username($_COOKIE['usuario'])=='mario'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_mario.php\');">
@@ -98,7 +98,7 @@ if($_COOKIE['usuario']=='mar1985'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='mjch1986'){
+if(get_username($_COOKIE['usuario'])=='jacqui'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_jacqui.php\');">
@@ -114,7 +114,6 @@ if($_COOKIE['usuario']=='mjch1986'){
         </TH>
     </TR>
 <?php
-//require 'core_lib.php';
 if(get_username($_COOKIE['usuario'])=='cesar'){
     echo '
     <TR>
