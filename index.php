@@ -80,6 +80,22 @@ if($_COOKIE['usuario']=='ejch1994' or $_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>';
 }
+if($_COOKIE['usuario']=='mar1985' or $_COOKIE['usuario']=='cch1987'){
+    echo '
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_mario.php\');">
+                Mario y Cesar
+            </BUTTON>
+        </TH>';
+}
+if($_COOKIE['usuario']=='mjch1986' or $_COOKIE['usuario']=='cch1987'){
+    echo '
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_jacqui.php\');">
+                Jacqui y Cesar
+            </BUTTON>
+        </TH>';
+}
 ?>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
