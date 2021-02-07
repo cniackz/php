@@ -56,5 +56,7 @@
 <BR>
 <a href="https://www.youtube.com/channel/UC4vCaH2pNRlOSURWHrC_44g" style="color:white;">YouTube</a>
 <BR>
+<a href="https://twitter.com/cesarce76288277" style="color:white;">Twitter</a>
+<BR>
 <p style="color:white;">Phone: +1 416 827 8578<p>
 <p style="color:white;">Email: celis.hernandez.cesar@gmail.com<p>
