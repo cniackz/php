@@ -50,5 +50,5 @@
 <BR>
 <a href="https://www.linkedin.com/in/cesar-celis-75775b59/" style="color:white;">LinkedIn</a>
 <BR>
-Phone: +1 416 827 8578
+<p style="color:white;">Phone: +1 416 827 8578<p>
 <BR>
