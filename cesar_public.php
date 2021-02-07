@@ -48,7 +48,8 @@ table, th, td {
 <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
 <BR>
 <BR>
-<INPUT type="submit" value="Enviar" class="botones" id="inputSubmit">
+<INPUT type="submit" value="Enviar" class="botones" id="inputSubmit"><BR>
+<button onClick="window.location.reload();">Actualizar</button>
 </FORM>
 <TABLE>
 	<TR>
