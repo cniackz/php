@@ -1,5 +1,5 @@
 <?php
-
+require 'core_lib.php';
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 
 if (!$connection) {
@@ -12,11 +12,11 @@ if (!$connection) {
 
 $numeroDeHoras = 0;
 $puede_continuar = FALSE;
-if($_COOKIE['usuario']=='cch1987'){
+if(get_username($_COOKIE['usuario'])=='cesar'){
 	$puede_continuar = TRUE;
 	$numeroDeHoras = 5;
 }
-if($_COOKIE['usuario']=='mar1985'){
+if(get_username($_COOKIE['usuario'])=='mario'){
 	$puede_continuar = TRUE;
 	$numeroDeHoras = 6;
 }
