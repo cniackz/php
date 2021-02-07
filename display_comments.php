@@ -105,7 +105,7 @@ function display_comments_function($connection, $tiempo, $punto_a){
 
     // Get my cookie
     $number_of_hour = 6;
-    if($_COOKIE['usuario']=='cch1987'){
+    if(get_username($_COOKIE['usuario'])=='cesar'){
         $number_of_hour = 5; // Para tener la hora de toronto
     }
 
