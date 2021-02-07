@@ -12,43 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
 
     // This code is to get the comentario and clave from the main page
     $comentario = $_POST['comentario'];
-    $device = $_POST['device'];
-    $clave = $_POST['clave'];
-    $parent = $_POST['parent'];
+    $nombre = $_POST['nombre'];
 
-
-
-    // This code is to get the clave from the cookie
-    if(isset($_COOKIE['usuario'])) {
-        $clave = $_COOKIE['usuario'];
-    }
-
-
-    if(empty($comentario)){
+    if(empty($comentario) or empty($nombre)){
         echo "comentario is empty";
     } else {
         
-        // Obten todos los usuarios para sacarles su password
-        $query_para_obtener_las_passwords = "SELECT nombre, password FROM usuarios";
-        $nombre_contrasena = $connection->query($query_para_obtener_las_passwords);
-        $cookie_value = NULL;
-        $sql = "INSERT INTO public_comments (comentario, nombre) VALUES('";
-        
-        while( $row = $nombre_contrasena->fetch_assoc()){
-            if($clave == $row['password']){
-                $cookie_value = $row['password'];
-                $sql = $sql . $comentario  .  "','" . $row['nombre'] . "')";
-
-                // Insert the comment of the user
-                $connection->query($sql);
-            }
-        }
-
-        // This code is to set the cookie with the clave if clave is correct the first time
-        if (!empty($cookie_value)) {
-            $cookie_name = "usuario";
-            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", 'cesarcelis.com');
-        }
+        $sql = "INSERT INTO public_comments (comentario, nombre) VALUES($comentario, $nombre)";
     }
 }
 mysqli_close($connection);
