@@ -57,5 +57,4 @@
 <a href="https://www.youtube.com/channel/UC4vCaH2pNRlOSURWHrC_44g" style="color:white;">YouTube</a>
 <BR>
 <p style="color:white;">Phone: +1 416 827 8578<p>
-<BR>
 <p style="color:white;">Email: celis.hernandez.cesar@gmail.com<p>
