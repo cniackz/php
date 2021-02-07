@@ -1,5 +1,5 @@
 <?php
-
+require 'core_lib.php';
 $connection = mysqli_connect('localhost', 'root', '', 'cesar');
 
 if (!$connection) {
@@ -11,10 +11,10 @@ if (!$connection) {
 }
 
 $puede_continuar = FALSE;
-if($_COOKIE['usuario']=='cch1987'){
+if(get_username($_COOKIE['usuario'])=='cesar'){
 	$puede_continuar = TRUE;
 }
-if($_COOKIE['usuario']=='larh1989'){
+if(get_username($_COOKIE['usuario'])=='liz'){
 	$puede_continuar = TRUE;
 }
 if($puede_continuar==FALSE){
