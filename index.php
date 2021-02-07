@@ -112,6 +112,11 @@ if($_COOKIE['usuario']=='cch1987'){
                 Jacqui y Cesar
             </BUTTON>
         </TH>
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_mario.php\');">
+                Mario y Cesar
+            </BUTTON>
+        </TH>
     </TR>
     ';
 }
