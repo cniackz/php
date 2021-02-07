@@ -114,7 +114,7 @@ if($_COOKIE['usuario']=='mjch1986'){
         </TH>
     </TR>
 <?php
-require 'core_lib.php';
+//require 'core_lib.php';
 if(get_username($_COOKIE['usuario'])=='cesar'){
     echo '
     <TR>
