@@ -34,7 +34,7 @@
     }
     echo '<P id="usuario" style="color:white;">Usuario:</P>';
     echo '<INPUT type="text" name="usuario" class="to_be_defined">';
-    echo '<P id="clave_p">Constraseña:</P>';
+    echo '<P id="clave_p" style="color:white;">Constraseña:</P>';
     echo '<INPUT type="password" name="contrasenia" class="input-text-clave" id="inputTextClave" >';
     echo '<BR>';
     echo '<BR>';
