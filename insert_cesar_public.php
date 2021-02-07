@@ -19,9 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     } else {
         
         $sql = "INSERT INTO public_comments (comentario, nombre) VALUES($comentario, $nombre)";
+        echo $sql;
         $connection->query($sql);
     }
 }
 mysqli_close($connection);
-header('Location: cesar_public.php');
+//header('Location: cesar_public.php');
 ?>
