@@ -103,6 +103,19 @@ if($_COOKIE['usuario']=='mjch1986'){
             </BUTTON>
         </TH>
     </TR>
+<?php
+if($_COOKIE['usuario']=='cch1987'){
+    echo '
+    <TR>
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_jacqui.php\');">
+                Jacqui y Cesar
+            </BUTTON>
+        </TH>
+    </TR>
+    ';
+}
+?>
 </TABLE>
 <HR>
 <FORM method="post" action="insert.php">
