@@ -48,7 +48,7 @@
             </BUTTON>
         </TH>
 <?php
-if($_COOKIE['usuario']=='jacl1960' or $_COOKIE['usuario']=='cch1987'){
+if($_COOKIE['usuario']=='jacl1960'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_juan.php\');">
@@ -56,7 +56,7 @@ if($_COOKIE['usuario']=='jacl1960' or $_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='larh1989' or $_COOKIE['usuario']=='cch1987'){
+if($_COOKIE['usuario']=='larh1989'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_liz.php\');">
@@ -64,7 +64,7 @@ if($_COOKIE['usuario']=='larh1989' or $_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='mahp1965' or $_COOKIE['usuario']=='cch1987'){
+if($_COOKIE['usuario']=='mahp1965'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_martha.php\');">
@@ -72,7 +72,7 @@ if($_COOKIE['usuario']=='mahp1965' or $_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='ejch1994' or $_COOKIE['usuario']=='cch1987'){
+if($_COOKIE['usuario']=='ejch1994'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_gogo.php\');">
@@ -80,7 +80,7 @@ if($_COOKIE['usuario']=='ejch1994' or $_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='mar1985' or $_COOKIE['usuario']=='cch1987'){
+if($_COOKIE['usuario']=='mar1985'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_mario.php\');">
@@ -88,7 +88,7 @@ if($_COOKIE['usuario']=='mar1985' or $_COOKIE['usuario']=='cch1987'){
             </BUTTON>
         </TH>';
 }
-if($_COOKIE['usuario']=='mjch1986' or $_COOKIE['usuario']=='cch1987'){
+if($_COOKIE['usuario']=='mjch1986'){
     echo '
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_jacqui.php\');">
