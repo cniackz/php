@@ -16,7 +16,7 @@ if($_COOKIE['usuario']=='cch1987'){
 	$puede_continuar = TRUE;
 	$numeroDeHoras = 5;
 }
-if($_COOKIE['usuario']=='ejch1994'){
+if($_COOKIE['usuario']=='mar1985'){
 	$puede_continuar = TRUE;
 	$numeroDeHoras = 6;
 }
