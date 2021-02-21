@@ -59,12 +59,12 @@ function print_comentario($nombre, $device, $fecha, $comentario, $id, $hierarchy
 
     $parrafo = "
 
-<p style=\"$hierarchy\" class=\"label_de_$nombre\">
+<div style=\"$hierarchy\" class=\"label_de_$nombre\">
     $nombre 🕙 $fecha $device<BR>
-    <button id=\"$id\" ondblclick=\"funcion_alerta($id, '$nombre');\" class=\"comentarios_de_$nombre\">
+    <p id=\"$id\" ondblclick=\"funcion_alerta($id, '$nombre');\" class=\"comentarios_de_$nombre\">
         $comentario
-    </button>
-</p>
+    </p>
+</div>
 
     ";
     echo $parrafo;
