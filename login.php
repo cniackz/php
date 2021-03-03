@@ -55,3 +55,5 @@ require 'core_lib.php';
 <BR>
 <p style="color:white;">Phone: +1 416 827 8578<p>
 <p style="color:white;">Email: celis.hernandez.cesar@gmail.com<p>
+<BR>
+<a href="https://meet.google.com/udc-mcdo-okm" style="color:white;">junta</a>
