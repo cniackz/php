@@ -9,6 +9,7 @@
 
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php';
+require 'core_lib.php'; // <---- Al parece necesito esto para que display_comments_function pueda usar get_username
 
 // Punto inicial para obtener el comentario
 $punto_a = 0;

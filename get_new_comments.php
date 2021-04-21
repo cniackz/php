@@ -9,6 +9,7 @@
 
 // Aqui esta la funcion que tiene la query para traer los comentarios de la base de datos
 require 'display_comments.php';
+require 'core_lib.php'; // <---- Al parece necesito esto para que display_comments_function pueda usar get_username
 
 // Starting point to get the comment
 $punto_a = 0;
@@ -30,7 +31,7 @@ if (!$connection) {
 }
 
 // Display comments
-display_comments_function($connection, 'futuro', $punto_a);
+display_comments_function($connection, 'futuro', $punto_a); // <--- Esta funcion esta fallando con 500 en Marzo 3
 
 //echo '<DIV id="moreComments"></DIV>';
 mysqli_close($connection);

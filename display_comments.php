@@ -13,7 +13,7 @@ function get_comments($db_connection, $where_clause, $number_of_hour, $limit){
     // --DATE_FORMAT(CONVERT_TZ((coments.fecha),'+00:00','-0" . $number_of_hour . ":00'), '%r') AS fecha,
     $fechirri = "CONVERT_TZ((fecha),'+00:00','-0" . $number_of_hour . ":00') AS fecha";
     $sql = "
-        SELECT 
+        SELECT
             comentario,
             nombre,
             $fechirri,
@@ -22,12 +22,12 @@ function get_comments($db_connection, $where_clause, $number_of_hour, $limit){
             parent
         FROM
             comentarios
-        
+
         $where_clause
-        
+
         ORDER BY
             id DESC
-        
+
         $limit
     ";
 
@@ -91,10 +91,10 @@ function print_real_comentario($connection, $row, $number_of_hour){
         $margin_left = 'child';
     }
     print_comentario(
-        $row['nombre'], 
-        $row['device'], 
-        $row['fecha'], 
-        $row['comentario'], 
+        $row['nombre'],
+        $row['device'],
+        $row['fecha'],
+        $row['comentario'],
         $row['id'],
         $margin_left
     );
@@ -155,7 +155,7 @@ function display_comments_function($connection, $tiempo, $punto_a){
     $primer_comentario = None;
     $contador = 0;
     while( $row = $result->fetch_assoc()){
-        
+
         // Funcion definida en print_comentario.php
         print_real_comentario($connection, $row, $number_of_hour);
 
