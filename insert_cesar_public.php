@@ -12,13 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
 
     // This code is to get the comentario and clave from the main page
     $comentario = $_POST['comentario'];
-    $nombre = $_POST['nombre'];
 
-    if(empty($comentario) or empty($nombre)){
+    if(empty($comentario)){
         echo "comentario is empty";
     } else {
-        
-        $sql = "INSERT INTO public_comments (comentario, nombre) VALUES('$comentario', '$nombre')";
+        $sql = "INSERT INTO public_comments (comentario) VALUES('$comentario')";
         echo $sql;
         $connection->query($sql);
     }
