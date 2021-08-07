@@ -1,5 +1,8 @@
 Por favor indiquen si van a o no van:
-<table style="border: 1px;">
+table, th, td {
+  border: 1px solid black;
+}
+<table>
   <tr>
     <th>
       Invitado(s)
