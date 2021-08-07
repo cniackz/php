@@ -11,15 +11,14 @@ if (!$connection) {
 }
 
 
-// CONVERT_TZ((coments.fecha),'+00:00','-06:00') AS fecha,
+
 $sql = '
 SELECT
-    comentario,
-    nombre,
-    id,
-    fecha
-FROM public_comments
-ORDER BY id DESC
+    comentario
+FROM
+    public_comments
+ORDER BY
+    id DESC
 ';
 
 
@@ -35,48 +34,30 @@ echo '
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  word-break: break-all;
 }
 </style>
 
+<script>
+    function focusInput() {
+        document.getElementById("input1").focus();
+    }
+</script>
 
-</BR>
-</BR>
 
+<body onload="focusInput()">
 <FORM method="post" action="insert_cesar_public.php">
 
-    <label for="comentario">Comentario:</label><br>
-        <TEXTAREA type="text" name="comentario" class="textarea-comentario" id="textareaComentario"></TEXTAREA>
-        <BR>
-        <BR>
 
-    <INPUT type="submit" value="Enviar" class="botones" id="inputSubmit"><BR><BR>
-    <button onClick="window.location.reload();">Actualizar</button>
+    <input name="comentario" type="text" id="input1"/>
+    <input type="submit" style="position: absolute; left: -9999px"/>
+
 </FORM>
-
-<TABLE>
-    <TR>
-        <TH>
-            id
-        </TH>
-        <TH>
-            fecha
-        </TH>
-        <TH>
-            nombre
-        </TH>
-        <TH>
-            comentario
-        </TH>
-    </TR>
-';
+<TABLE>';
 while( $row = $result->fetch_assoc()){
 
 echo '
-
     <TR>
-        <TD>' . $row['id'] . '</TD>
-        <TD>' . $row['fecha'] . '</TD>
-        <TD>' . $row['nombre'] . '</TD>
         <TD>' . $row['comentario'] . '</TD>
     </TR>
 ';
