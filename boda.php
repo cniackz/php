@@ -1,2 +1,16 @@
 Por favor indiquen si van a o no van:
-Dario y Clau 
+<table>
+  <th>
+    <td>
+      Invitado(s)
+    </td>
+  <td>
+    Respuesta
+  </td>
+  </th>
+  <tr>
+    <td>
+      Dario y Clau 
+    </td>
+  </tr>
+</table>
