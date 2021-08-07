@@ -1,5 +1,5 @@
 Por favor indiquen si van a o no van:
-<table>
+<table style="border: 1px;">
   <tr>
     <th>
       Invitado(s)
