@@ -8,7 +8,7 @@ table, th, td {
 </style>
 </head>
 <body>
-Por favor indiquen si van a o no van:
+Por favor indiquen si van a o no van a nuestra boda:
 <table>
   <tr>
     <th>
