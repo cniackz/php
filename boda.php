@@ -1,13 +1,13 @@
 Por favor indiquen si van a o no van:
 <table>
-  <th>
-    <td>
+  <tr>
+    <th>
       Invitado(s)
-    </td>
-  <td>
-    Respuesta
-  </td>
-  </th>
+    </th>
+    <th>
+      Respuesta
+    </th>
+  </tr>
   <tr>
     <td>
       Dario y Clau 
