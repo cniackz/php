@@ -1,7 +1,14 @@
-Por favor indiquen si van a o no van:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
 table, th, td {
   border: 1px solid black;
 }
+</style>
+</head>
+<body>
+Por favor indiquen si van a o no van:
 <table>
   <tr>
     <th>
@@ -17,3 +24,5 @@ table, th, td {
     </td>
   </tr>
 </table>
+</body>
+</html>
