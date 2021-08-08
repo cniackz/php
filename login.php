@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <title>ccelis</title>
     <script src="snow.js"></script>
 </head>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
