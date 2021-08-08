@@ -37,7 +37,6 @@ require 'core_lib.php';
     echo '<INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">';
 ?>
 </FORM>
-</BODY>
 <a href="cesar_public.php" style="color:white;">Blog Publico</a>
 <BR>
 <a href="https://www.facebook.com/cesar.celis.92372/" style="color:white;">Facebook</a>
@@ -61,4 +60,5 @@ require 'core_lib.php';
 <p style="color:white;">Phone: +1 416 827 8578<p>
 <p style="color:white;">Email: celis.hernandez.cesar@gmail.com<p>
 <BR>
+</body>
 </html>
