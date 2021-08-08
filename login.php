@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <script src="snow.js"></script>
 </head>
