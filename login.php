@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>ccelis</title>
     <script src="snow.js"></script>
@@ -60,3 +61,4 @@ require 'core_lib.php';
 <p style="color:white;">Phone: +1 416 827 8578<p>
 <p style="color:white;">Email: celis.hernandez.cesar@gmail.com<p>
 <BR>
+</html>
