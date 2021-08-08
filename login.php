@@ -2,8 +2,8 @@
 <head>
     <title>ccelis</title>
     <script src="snow.js"></script>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
 </head>
-<meta content='width=device-width, initial-scale=1' name='viewport'/>
 <BODY style="background-color: Black">
 <FORM method="post" action="create_cookie.php">
 
