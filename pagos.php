@@ -38,6 +38,12 @@
         </header>
 
         <header>
+            <h1>WiFi</h1>
+            <span> ---> </span>
+            <span>$20.00 CAD</span>
+        </header>
+
+        <header>
             <h1>Gasolina</h1>
             <span> ---> </span>
             <span>$50.00 CAD</span>
