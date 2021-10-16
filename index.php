@@ -112,11 +112,6 @@ if(get_username($_COOKIE['usuario'])=='jacqui'){
                 Salir
             </BUTTON>
         </TH>
-        <TH>
-            <BUTTON class="botones" onclick="window.location.replace('https://cesarcelis.com/pagos.php');">
-                Pagos
-            </BUTTON>
-        </TH>
     </TR>
 <?php
 if(get_username($_COOKIE['usuario'])=='cesar'){
@@ -154,6 +149,13 @@ if(get_username($_COOKIE['usuario'])=='cesar'){
         <TH>
             <BUTTON class="botones" onclick="window.location.replace(\'http://cesarcelis.com/cesar_liz.php\');">
                 Liz y Cesar
+            </BUTTON>
+        </TH>
+    </TR>
+    <TR>
+        <TH>
+            <BUTTON class="botones" onclick="window.location.replace(\'https://cesarcelis.com/pagos.php\');">
+                Pagos
             </BUTTON>
         </TH>
     </TR>
