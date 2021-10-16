@@ -49,5 +49,11 @@
             <span>$70.00 CAD</span>
         </header>
 
+        <header>
+            <h1>Restaurants</h1>
+            <span> ---> </span>
+            <span>$100.00 CAD</span>
+        </header>
+
     </body>
 </html>
