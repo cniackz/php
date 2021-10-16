@@ -108,7 +108,7 @@ if(get_username($_COOKIE['usuario'])=='jacqui'){
 }
 echo '<TH>
     <BUTTON class="botones" onclick="window.location.replace(\'https://cesarcelis.com/pagos.php\');>
-    Pagos
+        Pagos
     </BUTTON>
 </TH>'
 ?>
