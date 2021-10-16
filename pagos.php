@@ -4,7 +4,7 @@
 		<style>
 			header { border-bottom: 1px solid #000; }
 			header > h1 { display: inline-block; }
-			header span { margin-left: 100px; }
+			header p { margin-left: 100px; }
 		</style>
 	</head>
 	<body>
