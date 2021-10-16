@@ -18,6 +18,7 @@
 
         <header>
 			<h1>Benji</h1>
+			<span> ---> </span>
 			<span>$30 CAD</span>
 		</header>
 
