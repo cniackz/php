@@ -28,19 +28,25 @@
         <header id='top_header'>
             <h1>Benji</h1>
             <span> ---> </span>
-            <span>$30 CAD</span>
+            <span>$30.00 CAD</span>
         </header>
 
         <header>
             <h1>Gasolina</h1>
             <span> ---> </span>
-            <span>$50 CAD</span>
+            <span>$50.00 CAD</span>
         </header>
 
         <header>
             <h1>Car Insurance</h1>
             <span> ---> </span>
-            <span>$70 CAD</span>
+            <span>$70.00 CAD</span>
+        </header>
+
+        <header>
+            <h1>Car Loan</h1>
+            <span> ---> </span>
+            <span>$130.00 CAD</span>
         </header>
 
     </body>
