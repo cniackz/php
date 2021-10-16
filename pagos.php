@@ -44,6 +44,12 @@
         </header>
 
         <header>
+            <h1>Rent</h1>
+            <span> ---> </span>
+            <span>$525.00 CAD</span>
+        </header>
+
+        <header>
             <h1>Mobile</h1>
             <span> ---> </span>
             <span>$50.85 CAD</span>
