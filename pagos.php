@@ -26,15 +26,15 @@
         </BUTTON>
 
         <header id='top_header'>
-            <h1>LCBO</h1>
-            <span> ---> </span>
-            <span>$25.00 CAD</span>
-        </header>
-
-        <header>
             <h1>Benji</h1>
             <span> ---> </span>
             <span>$30.00 CAD</span>
+        </header>
+
+        <header>
+            <h1>LCBO</h1>
+            <span> ---> </span>
+            <span>$25.00 CAD</span>
         </header>
 
         <header>
