@@ -4,7 +4,10 @@
 		<style>
 			header { border-bottom: 1px solid #000; }
 			header > h1 { display: inline-block; }
-			header span { margin-left: 100px; }
+			header span {
+				margin-left: 100px;
+				font-size: 40px;
+			}
 		</style>
 	</head>
 	<body>
