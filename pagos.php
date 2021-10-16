@@ -44,7 +44,7 @@
         </header>
 
         <header>
-            <h1>Rent</h1>
+            <h1>Renta</h1>
             <span> ---> </span>
             <span>$525.00 CAD</span>
         </header>
