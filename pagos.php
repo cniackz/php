@@ -5,7 +5,7 @@
 			header { border-bottom: 1px solid #000; }
 			header > h1 { display: inline-block; }
 			header span {
-				margin-left: 50px;
+				margin-left: 25px;
 				font-size: 40px;
 			}
 		</style>
