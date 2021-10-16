@@ -10,20 +10,26 @@
 
 <?php
 
-require 'core_lib.php';
+    require 'core_lib.php';
+    $file = fopen("platano.log", "a");
 
     // Para pedir al usuario que se logie sino hay cookie
     if(!isset($_COOKIE['usuario'])) {
         // no hay cookie debe logearse
+        fwrite($file, '\n no hay cookie debe logearse \n');
         setcookie("usuario", "hola", time() + (86400 * 30), "/", 'cesarcelis.com');
     } else {
         if($_COOKIE['usuario'] == 'hola'){
             // Cuando el valor de la cookie es hola, significa que el valor es
             // invalido, entonces el usuario debe logearse de nuevo
+            fwrite($file, 'el valor de la cookie es hola de logearse de nuevo' . PHP_EOL);	
         } else {
             
             // Si hay cookie si es la correcta mandalo a index.php donde esta el chat de la familia
-            if(check_password($_COOKIE['usuario'])==TRUE){
+		if(check_password($_COOKIE['usuario'])==TRUE){
+			// $_COOKIE['usuario'] = 'Itautomation1!' <---- El valor es la password de cada usuario
+			$mensaje = sprintf('cookie value %s',$_COOKIE['usuario']);
+			fwrite($file, $mensaje . PHP_EOL);
                 header('Location: index.php');
             }
         }
@@ -35,6 +41,8 @@ require 'core_lib.php';
     echo '<BR>';
     echo '<BR>';
     echo '<INPUT type="submit" value="Enviar" class="input-submit" id="inputSubmit">';
+
+    fclose($file);
 ?>
 </FORM>
 <a href="cesar_public.php" style="color:white;">Blog Publico</a>

@@ -151,8 +151,8 @@ function display_comments_function($connection, $tiempo, $punto_a){
 
     $result = get_comments($connection, $where_clause, $number_of_hour, $limit);
 
-    $ultimo_comentario = None;
-    $primer_comentario = None;
+    $ultimo_comentario = 'None';
+    $primer_comentario = 'None';
     $contador = 0;
     while( $row = $result->fetch_assoc()){
 
