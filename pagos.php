@@ -56,6 +56,12 @@
         </header>
 
         <header>
+            <h1>Parents</h1>
+            <span> ---> </span>
+            <span>$200.00 CAD</span>
+        </header>
+
+        <header>
             <h1>Laundry</h1>
             <span> ---> </span>
             <span>$15.00 CAD</span>
