@@ -6,9 +6,9 @@
             Go Back
         </BUTTON>
 
-		<h1>My First Heading</h1>
-
-			<p>My first paragraph.</p>
+		<h1>Pagos</h1>
+		<h2>Benji</h2>
+		<p>30</p>
 
 	</body>
 </html>
