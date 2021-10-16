@@ -32,15 +32,15 @@
         </header>
 
         <header>
-            <h1>LCBO</h1>
-            <span> ---> </span>
-            <span>$25.00 CAD</span>
-        </header>
-
-        <header>
             <h1>WiFi</h1>
             <span> ---> </span>
             <span>$20.00 CAD</span>
+        </header>
+
+        <header>
+            <h1>LCBO</h1>
+            <span> ---> </span>
+            <span>$25.00 CAD</span>
         </header>
 
         <header>
