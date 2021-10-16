@@ -2,7 +2,7 @@
 <html>
     <head>
         <style>
-            #header {
+            #top_header {
                 border-top: 1px solid #000;
                 border-bottom: 1px solid #000;
             }
