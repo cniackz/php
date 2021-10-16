@@ -26,6 +26,12 @@
         </BUTTON>
 
         <header id='top_header'>
+            <h1>TOTAL DE GASTOS QUINCENALES</h1>
+            <span> ---> </span>
+            <span>$1513.64 CAD</span>
+        </header>
+
+        <header>
             <h1>01. WiFi</h1>
             <span> ---> </span>
             <span>$20.00 CAD</span>
