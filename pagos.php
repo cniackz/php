@@ -11,6 +11,9 @@
 				margin-left: 10px;
 				font-size: 40px;
 			}
+			BUTTON {
+				margin-bottom: 10px;
+			}
 		</style>
 	</head>
 	<body>
