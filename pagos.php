@@ -115,5 +115,8 @@
             <span>$40.00 CAD</span>
         </header>
 
+        <h2>Oct 15 2021</h2>
+        <p>Todo pagado</p>
+
     </body>
 </html>
