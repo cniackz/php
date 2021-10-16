@@ -2,8 +2,11 @@
 <html>
     <head>
         <style>
-            header {
+            #header {
                 border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+            }
+            header {
                 border-bottom: 1px solid #000;
             }
             header > h1 { display: inline-block; }
@@ -22,7 +25,7 @@
             Go Back
         </BUTTON>
 
-        <header>
+        <header id='top_header'>
             <h1>Benji</h1>
             <span> ---> </span>
             <span>$30 CAD</span>
