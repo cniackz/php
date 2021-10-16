@@ -37,5 +37,11 @@
             <span>$50 CAD</span>
         </header>
 
+        <header>
+            <h1>Car Insurance</h1>
+            <span> ---> </span>
+            <span>$70 CAD</span>
+        </header>
+
     </body>
 </html>
