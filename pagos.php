@@ -44,6 +44,12 @@
         </header>
 
         <header>
+            <h1>XYZ Storage</h1>
+            <span> ---> </span>
+            <span>$67.79 CAD</span>
+        </header>
+
+        <header>
             <h1>Gasolina</h1>
             <span> ---> </span>
             <span>$50.00 CAD</span>
