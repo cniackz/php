@@ -4,7 +4,7 @@
 		<style>
 			header { border-bottom: 1px solid #000; }
 			header > h1 { display: inline-block; }
-			header p { margin-left: 100px; }
+			header span { margin-left: 100px; }
 		</style>
 	</head>
 	<body>
@@ -15,7 +15,7 @@
 
         <header>
 			<h1>Benji</h1>
-			<p>$30 CAD</p>
+			<span>$30 CAD</span>
 		</header>
 
 	</body>
