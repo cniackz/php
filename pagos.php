@@ -26,7 +26,7 @@
         </BUTTON>
 
         <header id='top_header'>
-            <h1>TOTAL DE GASTOS QUINCENALES</h1>
+            <h1>TOTAL</h1>
             <span> ---> </span>
             <span>$1513.64 CAD</span>
         </header>
