@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<style>
-			header { border-bottom: 1px solid #000; }
+			header {
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #000;
+			}
 			header > h1 { display: inline-block; }
 			header span {
 				margin-left: 10px;
