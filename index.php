@@ -106,6 +106,11 @@ if(get_username($_COOKIE['usuario'])=='jacqui'){
             </BUTTON>
         </TH>';
 }
+echo '<TH>
+    <BUTTON class="botones" onclick="window.location.replace(\'https://cesarcelis.com/pagos.php\');>
+        Pagos
+    </BUTTON>
+</TH>'
 ?>
         <TH>
             <BUTTON type="button" class="botones" id="boton_de_logout" onclick="logout();">
