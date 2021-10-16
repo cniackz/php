@@ -106,7 +106,7 @@
         <header>
             <h1>13. Deuda con Marlene</h1>
             <span> ---> </span>
-            <span>$70.00 CAD</span>
+            <span>$40.00 CAD</span>
         </header>
 
     </body>
