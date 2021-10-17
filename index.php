@@ -50,6 +50,11 @@ require 'core_lib.php';
 </head>
 <body id="body">
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+<canvas id="canvas" width="400" height="400"
+style="background-color:#333">
+</canvas>
+
 <TABLE id="topid">
     <TR>
         <TH>
