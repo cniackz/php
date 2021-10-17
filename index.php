@@ -52,6 +52,8 @@ require 'core_lib.php';
 <body id="body">
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
+<iframe src="https://www.cesarcelis.com/clock.php" title="time"></iframe>
+
 <TABLE id="topid">
     <TR>
         <TH>
