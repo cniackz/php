@@ -52,7 +52,7 @@
         <header>
             <h1>04. Mobile</h1>
             <span> ---> </span>
-            <span>$50.85 CAD</span>
+            <span>$25.50 CAD</span>
         </header>
 
         <header>
@@ -112,7 +112,7 @@
         <header>
             <h1>14. YouTube Premium</h1>
             <span> ---> </span>
-            <span>$15.00 CAD</span>
+            <span>$7.50 CAD</span>
         </header>
 
         <header>
