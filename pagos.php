@@ -110,15 +110,15 @@
         </header>
 
         <header>
-            <h1>14. Deuda con Marlene</h1>
-            <span> ---> </span>
-            <span>$40.00 CAD</span>
-        </header>
-
-        <header>
             <h1>14. YouTube Premium</h1>
             <span> ---> </span>
             <span>$15.00 CAD</span>
+        </header>
+
+        <header>
+            <h1>15. Deuda con Marlene</h1>
+            <span> ---> </span>
+            <span>$40.00 CAD</span>
         </header>
 
     </body>
