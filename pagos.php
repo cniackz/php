@@ -115,8 +115,11 @@
             <span>$40.00 CAD</span>
         </header>
 
-        <h2>Oct 15 2021</h2>
-        <p>Todo pagado</p>
+        <header>
+            <h1>14. YouTube Premium</h1>
+            <span> ---> </span>
+            <span>$15.00 CAD</span>
+        </header>
 
     </body>
 </html>
