@@ -28,7 +28,7 @@
         <header id='top_header'>
             <h1>TOTAL</h1>
             <span> ---> </span>
-            <span>$1513.64 CAD</span>
+            <span>$1463.00 CAD</span>
         </header>
 
         <header>
@@ -94,7 +94,7 @@
         <header>
             <h1>11. XYZ Storage</h1>
             <span> ---> </span>
-            <span>$67.79 CAD</span>
+            <span>$35.00 CAD</span>
         </header>
 
         <header>
